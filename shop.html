@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Boutique | YMS STORE</title>
+
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/header.css">
+
+<link rel="stylesheet" href="css/products.css">
+
+<link rel="stylesheet" href="css/shop.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+<!-- HEADER -->
+
+<header class="main-header">
+
+
+<div class="container header-container">
+
+
+<a href="index.html" class="logo">
+
+<img src="images/logo.png">
+
+</a>
+
+
+
+
+<div class="search-box">
+
+
+<input 
+type="text"
+id="shopSearch"
+placeholder="Rechercher un produit...">
+
+
+<button>
+
+<i class="fa-solid fa-search"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="header-actions">
+
+
+<a class="header-icon">
+
+<i class="fa-regular fa-heart"></i>
+
+</a>
+
+
+
+<a class="header-icon cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>0</span>
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<!-- BANNER -->
+
+
+<section class="shop-banner">
+
+
+<div class="container">
+
+
+<h1>
+
+Notre Boutique
+
+</h1>
+
+
+<p>
+
+Découvrez notre collection exclusive.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- SHOP AREA -->
+
+
+<section class="shop-section">
+
+
+<div class="container shop-layout">
+
+
+
+
+
+<!-- FILTRES -->
+
+
+<aside class="filters">
+
+
+<h3>
+
+Catégories
+
+</h3>
+
+
+
+<button data-category="all">
+
+Tous
+
+</button>
+
+
+
+<button data-category="chaussures">
+
+Chaussures
+
+</button>
+
+
+
+<button data-category="homme">
+
+Homme
+
+</button>
+
+
+
+<button data-category="femme">
+
+Femme
+
+</button>
+
+
+
+<button data-category="accessoires">
+
+Accessoires
+
+</button>
+
+
+
+
+
+
+<h3>
+
+Trier
+
+</h3>
+
+
+
+<select id="sortProducts">
+
+
+<option value="default">
+
+Normal
+
+</option>
+
+
+<option value="low">
+
+Prix croissant
+
+</option>
+
+
+<option value="high">
+
+Prix décroissant
+
+</option>
+
+
+
+</select>
+
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+
+<!-- PRODUITS -->
+
+
+<div class="shop-products">
+
+
+
+<div class="products-grid" id="productContainer">
+
+
+
+<!-- PRODUITS JS -->
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<script src="js/shop.js"></script>
+
+<script src="js/panier.js"></script>
+
+<script src="js/favoris.js"></script>
+
+
+</body>
+
+
+</html>

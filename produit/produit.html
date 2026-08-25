@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Produit | YMS STORE</title>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS GLOBAL
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/header.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/products.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="produit.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+====================================================== -->
+
+<div class="top-bar">
+
+    <div class="container top-container">
+
+        <div class="top-left">
+
+            <span>
+                <i class="fa-solid fa-truck-fast"></i>
+                Livraison rapide partout en RDC
+            </span>
+
+            <span>
+                <i class="fa-solid fa-shield-halved"></i>
+                Paiement sécurisé
+            </span>
+
+        </div>
+
+
+        <div class="top-right">
+
+            <a
+                href="https://wa.me/243971917222"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+
+
+            <a
+                href="https://www.facebook.com/share/1GtFgpfAXX/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+            >
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+
+            <a
+                href="https://www.instagram.com/ymseraphin1"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+            >
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+
+            <a
+                href="https://www.tiktok.com/@ymseraphin"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+            >
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+
+            <a
+                href="https://www.youtube.com/@seraphinyms"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+            >
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="main-header">
+
+    <div class="container header-container">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <a href="../index.html">
+
+                <img
+                    src="../assets/image/IMG_3474.PNG"
+                    alt="YMS STORE"
+                >
+
+            </a>
+
+        </div>
+
+
+
+        <!-- RECHERCHE -->
+
+        <div class="search-box">
+
+            <label
+                for="productSearch"
+                class="sr-only"
+            >
+                Rechercher un produit
+            </label>
+
+            <input
+                type="search"
+                id="productSearch"
+                placeholder="Rechercher un produit..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                id="searchButton"
+                aria-label="Rechercher"
+            >
+
+                <i class="fa-solid fa-search"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ACTIONS -->
+
+        <div class="header-actions">
+
+
+            <a
+                href="../client/login.html"
+                class="header-icon"
+                title="Mon compte"
+                aria-label="Mon compte"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+            </a>
+
+
+            <button
+                type="button"
+                class="header-icon cart"
+                id="openCart"
+                title="Panier"
+                aria-label="Ouvrir le panier"
+            >
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="cartCount">
+                    0
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="mobile-menu"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
+
+<nav
+    class="navigation"
+    id="mainNavigation"
+>
+
+    <div class="container nav-container">
+
+        <ul class="nav-menu">
+
+            <li>
+
+                <a href="../index.html">
+                    Accueil
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="../boutique/index.html">
+                    Boutique
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="../boutique/homme.html">
+                    Homme
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="../boutique/femme.html">
+                    Femme
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="../boutique/chaussures.html">
+                    Chaussures
+                </a>
+
+            </li>
+
+
+            <li class="sale-menu">
+
+                <a href="../boutique/promotions.html">
+                    Promotions
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     FIL D'ARIANE
+====================================================== -->
+
+<section class="product-breadcrumb">
+
+    <div class="container">
+
+        <a href="../index.html">
+            Accueil
+        </a>
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+        <a href="../boutique/index.html">
+            Boutique
+        </a>
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+        <span id="breadcrumbProduct">
+            Produit
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUIT
+====================================================== -->
+
+<main class="product-detail">
+
+    <div class="container">
+
+
+        <div class="product-detail-grid">
+
+
+            <!-- =================================================
+                 GALERIE
+            ================================================== -->
+
+            <section class="product-gallery">
+
+
+                <div class="product-main-image">
+
+                    <span
+                        class="product-detail-badge"
+                        id="productBadge"
+                        hidden
+                    >
+                        Nouveau
+                    </span>
+
+
+                    <img
+                        id="productMainImage"
+                        src="../assets/products/sneakers-premium.jpg"
+                        alt="Produit"
+                    >
+
+
+                    <button
+                        type="button"
+                        class="gallery-arrow gallery-prev"
+                        id="galleryPrev"
+                        aria-label="Image précédente"
+                    >
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="gallery-arrow gallery-next"
+                        id="galleryNext"
+                        aria-label="Image suivante"
+                    >
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- MINIATURES -->
+
+                <div
+                    class="product-thumbnails"
+                    id="productThumbnails"
+                >
+
+                    <button
+                        type="button"
+                        class="product-thumbnail active"
+                    >
+
+                        <img
+                            src="../assets/products/sneakers-premium.jpg"
+                            alt="Vue du produit"
+                        >
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INFORMATIONS
+            ================================================== -->
+
+            <section class="product-detail-info">
+
+
+                <span
+                    class="product-category"
+                    id="productCategory"
+                >
+                    Chaussures
+                </span>
+
+
+                <h1 id="productName">
+                    Sneakers Premium
+                </h1>
+
+
+
+                <!-- NOTE -->
+
+                <div class="product-rating">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <span id="productReviews">
+                        45 avis
+                    </span>
+
+                </div>
+
+
+
+                <!-- PRIX -->
+
+                <div class="product-detail-price">
+
+                    <strong id="productPrice">
+                        65$
+                    </strong>
+
+                    <span
+                        id="productOldPrice"
+                        class="old-price"
+                    >
+                        80$
+                    </span>
+
+                    <span
+                        id="productDiscount"
+                        class="discount"
+                    >
+                        -20%
+                    </span>
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="product-description">
+
+                    <h3>
+                        Description
+                    </h3>
+
+                    <p id="productDescription">
+
+                        Découvrez ce produit premium
+                        sélectionné par YMS STORE.
+                        Une combinaison parfaite entre
+                        qualité, élégance et confort.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- STOCK -->
+
+                <div class="product-stock">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span id="productStock">
+                        Disponible en stock
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     OPTIONS
+                ================================================== -->
+
+                <div
+                    class="product-options"
+                    id="productOptions"
+                >
+
+
+                    <!-- TAILLE -->
+
+                    <div class="product-option">
+
+                        <label for="productSize">
+                            Taille
+                        </label>
+
+                        <select id="productSize">
+
+                            <option value="">
+                                Choisir une taille
+                            </option>
+
+                            <option value="S">
+                                S
+                            </option>
+
+                            <option value="M">
+                                M
+                            </option>
+
+                            <option value="L">
+                                L
+                            </option>
+
+                            <option value="XL">
+                                XL
+                            </option>
+
+                            <option value="XXL">
+                                XXL
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- COULEUR -->
+
+                    <div class="product-option">
+
+                        <label for="productColor">
+                            Couleur
+                        </label>
+
+                        <select id="productColor">
+
+                            <option value="">
+                                Choisir une couleur
+                            </option>
+
+                            <option value="Noir">
+                                Noir
+                            </option>
+
+                            <option value="Blanc">
+                                Blanc
+                            </option>
+
+                            <option value="Rouge">
+                                Rouge
+                            </option>
+
+                            <option value="Bleu">
+                                Bleu
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUANTITÉ
+                ================================================== -->
+
+                <div class="quantity-section">
+
+                    <label>
+                        Quantité
+                    </label>
+
+
+                    <div class="quantity-control">
+
+                        <button
+                            type="button"
+                            id="decreaseQuantity"
+                            aria-label="Diminuer la quantité"
+                        >
+
+                            <i class="fa-solid fa-minus"></i>
+
+                        </button>
+
+
+                        <input
+                            type="number"
+                            id="productQuantity"
+                            value="1"
+                            min="1"
+                            max="99"
+                        >
+
+
+                        <button
+                            type="button"
+                            id="increaseQuantity"
+                            aria-label="Augmenter la quantité"
+                        >
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ACTIONS
+                ================================================== -->
+
+                <div class="product-detail-actions">
+
+
+                    <button
+                        type="button"
+                        class="detail-add-cart"
+                        id="detailAddCart"
+                    >
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Ajouter au panier
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="detail-favorite"
+                        id="detailFavorite"
+                        aria-label="Ajouter aux favoris"
+                    >
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                    href="#"
+                    id="productWhatsapp"
+                    class="product-whatsapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Commander sur WhatsApp
+
+                </a>
+
+
+
+                <!-- GARANTIES -->
+
+                <div class="product-benefits">
+
+
+                    <div class="benefit">
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                        <div>
+
+                            <strong>
+                                Livraison rapide
+                            </strong>
+
+                            <span>
+                                Partout en RDC
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <div>
+
+                            <strong>
+                                Paiement sécurisé
+                            </strong>
+
+                            <span>
+                                Commande protégée
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                        <div>
+
+                            <strong>
+                                Assistance
+                            </strong>
+
+                            <span>
+                                Service client YMS STORE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     PRODUITS SIMILAIRES
+====================================================== -->
+
+<section class="related-products">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                YMS STORE
+            </span>
+
+            <h2>
+                Vous pourriez aussi aimer
+            </h2>
+
+            <p>
+                Découvrez d'autres produits sélectionnés
+                pour vous.
+            </p>
+
+        </div>
+
+
+        <div
+            class="products-grid"
+            id="relatedProducts"
+        >
+
+            <!-- Généré par produit.js -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MINI PANIER
+====================================================== -->
+
+<div
+    class="mini-cart-overlay"
+    id="miniCartOverlay"
+    hidden
+></div>
+
+
+<aside
+    class="mini-cart"
+    id="miniCart"
+    aria-hidden="true"
+>
+
+    <div class="mini-cart-header">
+
+        <div>
+
+            <span class="cart-label">
+                YMS STORE
+            </span>
+
+            <h3>
+                Votre panier
+            </h3>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="close-cart"
+            id="closeCart"
+            aria-label="Fermer le panier"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <div
+        class="mini-cart-products"
+        id="miniCartProducts"
+    >
+
+        <div class="empty-cart">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <p>
+                Votre panier est vide.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="mini-cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                0$
+            </strong>
+
+        </div>
+
+
+        <a
+            href="#"
+            class="checkout-whatsapp"
+            id="checkoutWhatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Commander sur WhatsApp
+
+        </a>
+
+
+        <a
+            href="../client/commande.html"
+            class="checkout-btn"
+        >
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            Finaliser la commande
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     TOAST
+====================================================== -->
+
+<div
+    class="shop-toast"
+    id="shopToast"
+    role="status"
+    aria-live="polite"
+>
+
+    <i class="fa-solid fa-check"></i>
+
+    <span>
+        Produit ajouté au panier
+    </span>
+
+</div>
+
+
+
+<!-- =====================================================
+     SCRIPTS
+====================================================== -->
+
+<script src="../js/app.js"></script>
+
+<script src="../js/panier.js"></script>
+
+<script src="../js/recherche.js"></script>
+
+<script src="produit.js"></script>
+
+
+</body>
+
+</html>

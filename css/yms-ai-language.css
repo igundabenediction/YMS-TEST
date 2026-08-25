@@ -1,0 +1,622 @@
+/* =====================================================
+   YMS STORE
+   LANGUE + ASSISTANT IA
+===================================================== */
+
+
+/* =====================================================
+   SELECTEUR DE LANGUE
+===================================================== */
+
+/* =====================================================
+   YMS STORE — TRADUCTEUR
+   POSITION : HAUT À DROITE
+===================================================== */
+
+.yms-language-selector {
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    z-index: 99999;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Bouton principal */
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 30px;
+
+    background: rgba(20, 20, 20, 0.95);
+    color: #fff;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.language-toggle:hover {
+    transform: translateY(-2px);
+    background: #111;
+}
+
+/* Code FR / EN / SW */
+
+#currentLanguage {
+    font-weight: 700;
+}
+
+/* Flèche */
+
+.language-toggle i {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.yms-language-selector.active
+.language-toggle i {
+    transform: rotate(180deg);
+}
+
+/* =====================================================
+   MENU DES LANGUES
+===================================================== */
+
+.language-menu {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    right: 0;
+
+    width: 170px;
+
+    padding: 8px;
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.20);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition: all 0.25s ease;
+}
+
+/* Menu ouvert */
+
+.language-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Boutons */
+
+.language-menu button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #222;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.language-menu button:hover {
+    background: #f2f2f2;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .yms-language-selector {
+        top: 12px;
+        right: 12px;
+    }
+
+    .language-toggle {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .language-menu {
+        width: 155px;
+    }
+
+}
+
+/* =====================================================
+   ASSISTANT IA BUTTON
+===================================================== */
+
+.yms-ai-button {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    z-index: 9999;
+
+    border: none;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        135deg,
+        #111,
+        #333
+    );
+
+    color: #fff;
+
+    min-width: 62px;
+
+    height: 62px;
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
+    transition: .3s;
+
+}
+
+
+.yms-ai-button i {
+
+    font-size: 22px;
+
+}
+
+
+.yms-ai-button:hover {
+
+    transform: scale(1.06);
+
+}
+
+
+.yms-ai-button span {
+
+    display: none;
+
+}
+
+
+/* =====================================================
+   FENÊTRE IA
+===================================================== */
+
+.yms-ai-chat {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 100px;
+
+    width: 370px;
+
+    max-width: calc(100vw - 30px);
+
+    height: 560px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.25);
+
+    display: none;
+
+    flex-direction: column;
+
+    border: 1px solid #eee;
+
+}
+
+
+.yms-ai-chat.active {
+
+    display: flex;
+
+    animation: aiOpen .25s ease;
+
+}
+
+
+@keyframes aiOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px) scale(.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* =====================================================
+   HEADER IA
+===================================================== */
+
+.yms-ai-header {
+
+    background: linear-gradient(
+        135deg,
+        #111,
+        #292929
+    );
+
+    color: #fff;
+
+    padding: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.yms-ai-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.yms-ai-avatar {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff;
+
+    color: #111;
+
+}
+
+
+.yms-ai-title strong {
+
+    display: block;
+
+    font-size: 15px;
+
+}
+
+
+.yms-ai-title small {
+
+    display: block;
+
+    opacity: .7;
+
+    font-size: 11px;
+
+}
+
+
+#closeYmsAi {
+
+    border: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+}
+
+
+/* =====================================================
+   MESSAGES
+===================================================== */
+
+.yms-ai-messages {
+
+    flex: 1;
+
+    padding: 16px;
+
+    overflow-y: auto;
+
+    background: #f7f7f7;
+
+}
+
+
+.ai-message,
+.user-message {
+
+    display: flex;
+
+    gap: 9px;
+
+    margin-bottom: 14px;
+
+}
+
+
+.user-message {
+
+    justify-content: flex-end;
+
+}
+
+
+.message-avatar {
+
+    width: 32px;
+
+    height: 32px;
+
+    min-width: 32px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+}
+
+
+.message-content {
+
+    max-width: 78%;
+
+    background: #fff;
+
+    padding: 11px 13px;
+
+    border-radius: 13px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+
+}
+
+
+.user-message .message-content {
+
+    background: #111;
+
+    color: #fff;
+
+}
+
+
+/* =====================================================
+   SUGGESTIONS
+===================================================== */
+
+.yms-ai-suggestions {
+
+    display: flex;
+
+    gap: 6px;
+
+    padding: 9px;
+
+    overflow-x: auto;
+
+    border-top: 1px solid #eee;
+
+}
+
+
+.yms-ai-suggestions button {
+
+    white-space: nowrap;
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 7px 11px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+}
+
+
+.yms-ai-suggestions button:hover {
+
+    background: #111;
+
+    color: #fff;
+
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.yms-ai-input {
+
+    display: flex;
+
+    padding: 10px;
+
+    border-top: 1px solid #eee;
+
+    background: #fff;
+
+}
+
+
+.yms-ai-input input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 11px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+}
+
+
+.yms-ai-input button {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    color: #fff;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .language-selector {
+
+        top: 80px;
+
+        right: 15px;
+
+    }
+
+
+    .yms-ai-button {
+
+        right: 15px;
+
+        bottom: 15px;
+
+    }
+
+
+    .yms-ai-chat {
+
+        right: 10px;
+
+        bottom: 85px;
+
+        width: calc(100vw - 20px);
+
+        height: 70vh;
+
+    }
+
+}

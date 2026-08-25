@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sacs | YMS STORE</title>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+    <!-- =====================================================
+         CSS GLOBAL
+    ====================================================== -->
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/products.css">
+
+    <!-- CSS SAC -->
+    <link rel="stylesheet" href="sacs.css">
+
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     TOP BAR
+====================================================== -->
+
+<div class="top-bar">
+
+    <div class="container top-container">
+
+        <div class="top-left">
+
+            <span>
+                <i class="fa-solid fa-truck-fast"></i>
+                Livraison rapide partout en RDC
+            </span>
+
+            <span>
+                <i class="fa-solid fa-shield-halved"></i>
+                Paiement sécurisé
+            </span>
+
+        </div>
+
+
+        <div class="top-right">
+
+            <a
+                href="https://wa.me/243972215398"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+
+            <a
+                href="https://www.facebook.com/share/1GtFgpfAXX/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+            >
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a
+                href="https://www.instagram.com/ymseraphin1"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+            >
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@ymseraphin"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+            >
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a
+                href="https://www.youtube.com/@seraphinyms"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+            >
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="main-header">
+
+    <div class="container header-container">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <a href="../index.html">
+
+                <img
+                    src="../assets/image/IMG_3474.PNG"
+                    alt="YMS STORE"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- RECHERCHE -->
+
+        <div class="search-box">
+
+            <label
+                for="productSearch"
+                class="sr-only"
+            >
+                Rechercher un produit
+            </label>
+
+            <input
+                type="search"
+                id="productSearch"
+                placeholder="Rechercher un sac..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                id="searchButton"
+                aria-label="Rechercher"
+            >
+
+                <i class="fa-solid fa-search"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="header-actions">
+
+            <a
+                href="../client/login.html"
+                class="header-icon"
+                title="Mon compte"
+                aria-label="Mon compte"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+            </a>
+
+
+            <button
+                type="button"
+                class="header-icon cart"
+                id="openCart"
+                title="Panier"
+                aria-label="Ouvrir le panier"
+            >
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="cartCount">0</span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="mobile-menu"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
+
+<nav
+    class="navigation"
+    id="mainNavigation"
+>
+
+    <div class="container nav-container">
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="../index.html">
+                    Accueil
+                </a>
+            </li>
+
+
+            <li>
+                <a href="../boutique/index.html">
+                    Boutique
+                </a>
+            </li>
+
+
+            <li>
+                <a href="../boutique/homme.html">
+                    Homme
+                </a>
+            </li>
+
+
+            <li>
+                <a href="../boutique/femme.html">
+                    Femme
+                </a>
+            </li>
+
+
+            <li>
+                <a href="../boutique/chaussures.html">
+                    Chaussures
+                </a>
+            </li>
+
+
+            <li class="active">
+                <a
+                    href="index.html"
+                    aria-current="page"
+                >
+                    Sacs
+                </a>
+            </li>
+
+
+            <li class="sale-menu">
+                <a href="../boutique/promotions.html">
+                    Promotions
+                </a>
+            </li>
+
+
+            <li>
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="shop-hero bags-hero">
+
+    <div class="container">
+
+        <span class="shop-hero-label">
+            YMS STORE • COLLECTION 2026
+        </span>
+
+        <h1>
+            Sacs & Maroquinerie
+        </h1>
+
+        <p>
+            Découvrez notre sélection de sacs élégants,
+            modernes et adaptés à tous les styles.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTENU
+====================================================== -->
+
+<main class="shop-container">
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <div class="shop-header">
+
+        <div class="shop-heading">
+
+            <span class="shop-label">
+                COLLECTION SACS
+            </span>
+
+            <h2>
+                Nos sacs
+            </h2>
+
+            <p>
+                Des modèles soigneusement sélectionnés
+                pour compléter votre style.
+            </p>
+
+        </div>
+
+
+        <!-- TRI -->
+
+        <div class="shop-sort">
+
+            <label for="sortProducts">
+                Trier par
+            </label>
+
+            <select id="sortProducts">
+
+                <option value="default">
+                    Pertinence
+                </option>
+
+                <option value="price-low">
+                    Prix croissant
+                </option>
+
+                <option value="price-high">
+                    Prix décroissant
+                </option>
+
+                <option value="name">
+                    Nom A-Z
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         LAYOUT
+    ================================================== -->
+
+    <div class="shop-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="shop-sidebar">
+
+            <div class="filter-title">
+
+                <h3>
+                    Catégories
+                </h3>
+
+                <i class="fa-solid fa-sliders"></i>
+
+            </div>
+
+
+            <div class="category-filters">
+
+                <button
+                    type="button"
+                    class="category-filter active"
+                    data-category="all"
+                >
+
+                    <span>
+                        Tous les sacs
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-filter"
+                    data-category="sacs-femme"
+                >
+
+                    <span>
+                        Sacs Femme
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-filter"
+                    data-category="sacs-homme"
+                >
+
+                    <span>
+                        Sacs Homme
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-filter"
+                    data-category="sacs-main"
+                >
+
+                    <span>
+                        Sacs à main
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-filter"
+                    data-category="sacs-dos"
+                >
+
+                    <span>
+                        Sacs à dos
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-filter"
+                    data-category="sacs-voyage"
+                >
+
+                    <span>
+                        Sacs de voyage
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-filter"
+                    data-category="portefeuilles"
+                >
+
+                    <span>
+                        Portefeuilles
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-filter"
+                    data-category="nouveautes"
+                >
+
+                    <span>
+                        Nouveautés
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="category-filter promotion-filter"
+                    data-category="promotions"
+                >
+
+                    <span>
+                        Promotions
+                    </span>
+
+                    <i class="fa-solid fa-fire"></i>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             PRODUITS
+        ================================================== -->
+
+        <section class="shop-products">
+
+            <div
+                class="products-grid"
+                id="productsGrid"
+            >
+
+
+                <!-- =================================================
+                     SAC 1
+                ================================================== -->
+
+                <article
+                    class="product-card"
+                    data-category="sacs-femme"
+                    data-name="Sac Élégance Femme"
+                    data-price="75"
+                    data-new="true"
+                    data-promotion="false"
+                >
+
+                    <div class="product-image">
+
+                        <span class="badge new">
+                            Nouveau
+                        </span>
+
+                        <img
+                            src="assets/image/1550409 (1).jpg"
+                            alt="Sac Élégance Femme"
+                            loading="lazy"
+                        >
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="favorite-btn"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="view-btn"
+                                aria-label="Voir le produit"
+                            >
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quick-cart"
+                                aria-label="Ajouter rapidement au panier"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Sacs Femme
+                        </span>
+
+                        <h3>
+                            Sac Élégance Femme
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(28)</span>
+                        </div>
+
+                        <div class="price">
+
+                            <span class="current-price">
+                                75$
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="add-cart"
+                        >
+                            Ajouter au panier
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     SAC 2
+                ================================================== -->
+
+                <article
+                    class="product-card"
+                    data-category="sacs-main"
+                    data-name="Sac à Main Luxe"
+                    data-price="95"
+                    data-new="false"
+                    data-promotion="true"
+                >
+
+                    <div class="product-image">
+
+                        <span class="badge">
+                            -15%
+                        </span>
+
+                        <img
+                            src="assets/image/1550409 (1).jpg"
+                            alt="Sac à Main Luxe"
+                            loading="lazy"
+                        >
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="favorite-btn"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="view-btn"
+                                aria-label="Voir le produit"
+                            >
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quick-cart"
+                                aria-label="Ajouter rapidement au panier"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Sacs à main
+                        </span>
+
+                        <h3>
+                            Sac à Main Luxe
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(41)</span>
+                        </div>
+
+                        <div class="price">
+
+                            <span class="current-price">
+                                95$
+                            </span>
+
+                            <span class="old-price">
+                                112$
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="add-cart"
+                        >
+                            Ajouter au panier
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     SAC 3
+                ================================================== -->
+
+                <article
+                    class="product-card"
+                    data-category="sacs-dos"
+                    data-name="Sac à Dos Urban"
+                    data-price="65"
+                    data-new="false"
+                    data-promotion="false"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="../assets/products/sac-dos-urban.jpg"
+                            alt="Sac à Dos Urban"
+                            loading="lazy"
+                        >
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="favorite-btn"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="view-btn"
+                                aria-label="Voir le produit"
+                            >
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quick-cart"
+                                aria-label="Ajouter rapidement au panier"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Sacs à dos
+                        </span>
+
+                        <h3>
+                            Sac à Dos Urban
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(35)</span>
+                        </div>
+
+                        <div class="price">
+
+                            <span class="current-price">
+                                65$
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="add-cart"
+                        >
+                            Ajouter au panier
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     SAC 4
+                ================================================== -->
+
+                <article
+                    class="product-card"
+                    data-category="sacs-voyage"
+                    data-name="Sac Voyage Premium"
+                    data-price="110"
+                    data-new="true"
+                    data-promotion="false"
+                >
+
+                    <div class="product-image">
+
+                        <span class="badge new">
+                            Nouveau
+                        </span>
+
+                        <img
+                            src="../assets/products/sac-voyage-premium.jpg"
+                            alt="Sac Voyage Premium"
+                            loading="lazy"
+                        >
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="favorite-btn"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="view-btn"
+                                aria-label="Voir le produit"
+                            >
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quick-cart"
+                                aria-label="Ajouter rapidement au panier"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Sacs de voyage
+                        </span>
+
+                        <h3>
+                            Sac Voyage Premium
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(22)</span>
+                        </div>
+
+                        <div class="price">
+
+                            <span class="current-price">
+                                110$
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="add-cart"
+                        >
+                            Ajouter au panier
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     SAC 5
+                ================================================== -->
+
+                <article
+                    class="product-card"
+                    data-category="sacs-homme"
+                    data-name="Sac Homme Business"
+                    data-price="85"
+                    data-new="false"
+                    data-promotion="false"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="../assets/products/sac-homme-business.jpg"
+                            alt="Sac Homme Business"
+                            loading="lazy"
+                        >
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="favorite-btn"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="view-btn"
+                                aria-label="Voir le produit"
+                            >
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quick-cart"
+                                aria-label="Ajouter rapidement au panier"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Sacs Homme
+                        </span>
+
+                        <h3>
+                            Sac Homme Business
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(31)</span>
+                        </div>
+
+                        <div class="price">
+
+                            <span class="current-price">
+                                85$
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="add-cart"
+                        >
+                            Ajouter au panier
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     SAC 6
+                ================================================== -->
+
+                <article
+                    class="product-card"
+                    data-category="portefeuilles"
+                    data-name="Portefeuille Premium"
+                    data-price="40"
+                    data-new="false"
+                    data-promotion="true"
+                >
+
+                    <div class="product-image">
+
+                        <span class="badge">
+                            -10%
+                        </span>
+
+                        <img
+                            src="../assets/products/portefeuille-premium.jpg"
+                            alt="Portefeuille Premium"
+                            loading="lazy"
+                        >
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="favorite-btn"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="view-btn"
+                                aria-label="Voir le produit"
+                            >
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quick-cart"
+                                aria-label="Ajouter rapidement au panier"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Portefeuilles
+                        </span>
+
+                        <h3>
+                            Portefeuille Premium
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(19)</span>
+                        </div>
+
+                        <div class="price">
+
+                            <span class="current-price">
+                                40$
+                            </span>
+
+                            <span class="old-price">
+                                45$
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="add-cart"
+                        >
+                            Ajouter au panier
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- =================================================
+                 AUCUN PRODUIT
+            ================================================== -->
+
+            <div
+                class="no-products"
+                id="noProducts"
+                hidden
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <h3>
+                    Aucun sac trouvé
+                </h3>
+
+                <p>
+                    Essayez une autre catégorie
+                    ou recherchez un autre produit.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     MINI PANIER
+====================================================== -->
+
+<div
+    class="mini-cart-overlay"
+    id="miniCartOverlay"
+    hidden
+></div>
+
+
+<aside
+    class="mini-cart"
+    id="miniCart"
+    aria-hidden="true"
+>
+
+    <div class="mini-cart-header">
+
+        <div>
+
+            <span class="cart-label">
+                YMS STORE
+            </span>
+
+            <h3>
+                Votre panier
+            </h3>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="close-cart"
+            id="closeCart"
+            aria-label="Fermer le panier"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- PRODUITS -->
+
+    <div
+        class="mini-cart-products"
+        id="miniCartProducts"
+    >
+
+        <div class="empty-cart">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <p>
+                Votre panier est vide.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="mini-cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                0$
+            </strong>
+
+        </div>
+
+
+        <a
+            href="#"
+            class="checkout-whatsapp"
+            id="checkoutWhatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Commander sur WhatsApp
+
+        </a>
+
+
+        <a
+            href="../client/commande.html"
+            class="checkout-btn"
+        >
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            Finaliser la commande
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     MODAL PRODUIT
+====================================================== -->
+
+<div
+    class="product-modal"
+    id="productModal"
+    hidden
+    aria-hidden="true"
+>
+
+    <div class="product-modal-overlay"></div>
+
+
+    <div class="product-modal-content">
+
+        <button
+            type="button"
+            class="product-modal-close"
+            id="closeProductModal"
+            aria-label="Fermer"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="product-modal-image">
+
+            <img
+                id="modalProductImage"
+                src=""
+                alt=""
+            >
+
+        </div>
+
+
+        <div class="product-modal-info">
+
+            <span
+                id="modalProductCategory"
+                class="product-category"
+            >
+                Produit
+            </span>
+
+
+            <h2 id="modalProductName">
+                Produit
+            </h2>
+
+
+            <div
+                id="modalProductRating"
+                class="rating"
+            >
+                ★★★★★
+            </div>
+
+
+            <div class="price">
+
+                <span
+                    id="modalProductPrice"
+                    class="current-price"
+                >
+                    0$
+                </span>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="modalAddCart"
+                class="add-cart"
+            >
+
+                Ajouter au panier
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+====================================================== -->
+
+<div
+    class="shop-toast"
+    id="shopToast"
+    role="status"
+    aria-live="polite"
+>
+
+    <i class="fa-solid fa-check"></i>
+
+    <span>
+        Produit ajouté au panier
+    </span>
+
+</div>
+
+
+<!-- =====================================================
+     SCRIPTS
+====================================================== -->
+
+<script src="../js/app.js"></script>
+
+<script src="../js/panier.js"></script>
+
+<script src="../js/recherche.js"></script>
+
+<script src="../js/produit.js"></script>
+
+<script src="sacs.js"></script>
+
+
+</body>
+</html>

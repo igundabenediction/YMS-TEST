@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mon Panier | YMS STORE</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS PANIER -->
+    <link rel="stylesheet" href="../assets/css/cart.css">
+
+    <style>
+
+        /* ==========================================
+           PANIER YMS STORE
+        ========================================== */
+
+        .cart-page {
+            padding: 60px 20px 100px;
+            background: #f8f8f8;
+            min-height: 70vh;
+        }
+
+        .cart-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .cart-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .cart-title span {
+            color: #c9a227;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cart-title h1 {
+            font-size: 38px;
+            margin: 8px 0;
+        }
+
+        .cart-title p {
+            color: #777;
+        }
+
+        /* PANIER VIDE */
+
+        .empty-cart {
+            display: none;
+            text-align: center;
+            background: white;
+            padding: 70px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 35px rgba(0,0,0,.06);
+        }
+
+        .empty-cart i {
+            font-size: 65px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .empty-cart h2 {
+            margin-bottom: 10px;
+        }
+
+        .empty-cart p {
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .continue-shopping {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #111;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .continue-shopping:hover {
+            background: #d4af37;
+            color: #111;
+        }
+
+        /* CONTENU */
+
+        .cart-layout {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* TABLEAU */
+
+        .cart-items {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0,0,0,.06);
+        }
+
+        .cart-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 50px;
+            gap: 15px;
+            padding: 18px 25px;
+            background: #111;
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .cart-product {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 50px;
+            gap: 15px;
+            align-items: center;
+            padding: 22px 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-product:last-child {
+            border-bottom: none;
+        }
+
+        .cart-product-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .cart-product-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #f4f4f4;
+            flex-shrink: 0;
+        }
+
+        .cart-product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-product-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cart-product-category {
+            color: #888;
+            font-size: 12px;
+        }
+
+        .cart-price {
+            font-weight: 600;
+        }
+
+        /* QUANTITE */
+
+        .quantity-control {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .quantity-control button {
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: #f5f5f5;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .quantity-control button:hover {
+            background: #d4af37;
+        }
+
+        .quantity-control span {
+            width: 35px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .remove-product {
+            border: none;
+            background: none;
+            color: #999;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .remove-product:hover {
+            color: #d00;
+        }
+
+        /* RESUME */
+
+        .cart-summary {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 35px rgba(0,0,0,.06);
+            position: sticky;
+            top: 20px;
+        }
+
+        .cart-summary h2 {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .summary-line.total {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .checkout-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            border: none;
+            background: #111;
+            color: white;
+            padding: 16px;
+            border-radius: 7px;
+            margin-top: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .checkout-btn:hover {
+            background: #d4af37;
+            color: #111;
+        }
+
+        .continue-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            border: 1px solid #ddd;
+            color: #111;
+            padding: 14px;
+            border-radius: 7px;
+            margin-top: 12px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .continue-btn:hover {
+            border-color: #d4af37;
+            color: #b08b00;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .cart-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-summary {
+                position: static;
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .cart-header {
+                display: none;
+            }
+
+            .cart-product {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                position: relative;
+            }
+
+            .cart-product-info {
+                padding-right: 35px;
+            }
+
+            .cart-product::before {
+                content: "Prix";
+                display: block;
+                font-size: 12px;
+                color: #888;
+            }
+
+            .remove-product {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- ==========================================
+     HEADER SIMPLE
+========================================== -->
+
+<header style="
+    background:#111;
+    padding:18px 20px;
+">
+
+    <div style="
+        max-width:1200px;
+        margin:auto;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    ">
+
+        <a href="../index.html">
+
+            <img
+                src="../assets/image/IMG_3474.PNG"
+                alt="YMS STORE"
+                style="height:55px; width:auto;"
+            >
+
+        </a>
+
+
+        <a
+            href="../index.html"
+            style="
+                color:white;
+                text-decoration:none;
+                display:flex;
+                align-items:center;
+                gap:8px;
+            "
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Continuer mes achats
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ==========================================
+     PAGE PANIER
+========================================== -->
+
+<main class="cart-page">
+
+    <div class="cart-container">
+
+
+        <!-- TITRE -->
+
+        <div class="cart-title">
+
+            <span>YMS STORE</span>
+
+            <h1>Mon panier</h1>
+
+            <p>
+                Vérifiez vos articles avant de passer votre commande.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+             PANIER VIDE
+        ====================================== -->
+
+        <div
+            class="empty-cart"
+            id="emptyCart"
+        >
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <h2>
+                Votre panier est vide
+            </h2>
+
+            <p>
+                Vous n'avez encore ajouté aucun produit.
+            </p>
+
+            <a
+                href="../index.html"
+                class="continue-shopping"
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                Découvrir nos produits
+
+            </a>
+
+        </div>
+
+
+        <!-- =====================================
+             PANIER
+        ====================================== -->
+
+        <div
+            class="cart-layout"
+            id="cartLayout"
+        >
+
+
+            <!-- PRODUITS -->
+
+            <div class="cart-items">
+
+
+                <div class="cart-header">
+
+                    <span>Produit</span>
+
+                    <span>Prix</span>
+
+                    <span>Quantité</span>
+
+                    <span>Total</span>
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- PRODUITS INJECTÉS PAR JS -->
+
+                <div id="cartProducts"></div>
+
+
+            </div>
+
+
+            <!-- =================================
+                 RÉSUMÉ
+            ================================== -->
+
+            <aside class="cart-summary">
+
+                <h2>
+                    Résumé de la commande
+                </h2>
+
+
+                <div class="summary-line">
+
+                    <span>
+                        Sous-total
+                    </span>
+
+                    <strong id="cartSubtotal">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line">
+
+                    <span>
+                        Livraison
+                    </span>
+
+                    <strong id="cartShipping">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="cartTotal">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="checkout-btn"
+                    id="checkoutBtn"
+                >
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Passer la commande
+
+                </button>
+
+
+                <a
+                    href="../index.html"
+                    class="continue-btn"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Continuer mes achats
+
+                </a>
+
+            </aside>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer style="
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px 20px;
+">
+
+    <p>
+        © 2026 YMS STORE — Tous droits réservés.
+    </p>
+
+</footer>
+     PANIER YMS STORE
+========================================== 
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<aside class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+
+        <div>
+            <span>YMS STORE</span>
+
+            <h2>
+                Votre panier
+            </h2>
+        </div>
+
+        <button
+            type="button"
+            id="closeCart"
+            class="close-cart"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    ></div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total-row">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                0$
+            </strong>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="checkout-btn"
+            id="checkoutBtn"
+        >
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            Passer la commande
+
+        </button>
+
+
+        <button
+            type="button"
+            class="continue-shopping"
+            id="continueShopping"
+        >
+
+            Continuer mes achats
+
+        </button>
+
+    </div>
+
+</aside>
+<script src="js/contact.js"></script>
+<script src="js/app.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/panier.js"></script>
+<script src="js/favoris.js"></script>
+<script src="js/recherche.js"></script>
+<script src="js/account.js"></script>
+</body>
+
+</html>

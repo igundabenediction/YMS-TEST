@@ -1,0 +1,1520 @@
+/* =========================================================
+   YMS STORE
+   HOMME - PREMIUM STYLE
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --men-black: #111111;
+    --men-dark: #181818;
+    --men-gold: #c9a227;
+    --men-gold-light: #e3c45d;
+
+    --men-white: #ffffff;
+    --men-light: #f7f7f7;
+    --men-gray: #777777;
+    --men-border: #e8e8e8;
+
+    --men-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.08);
+
+    --men-radius: 16px;
+
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.men-products-section,
+.men-categories {
+
+    position: relative;
+
+}
+
+
+.men-products-section img,
+.men-categories img {
+
+    max-width: 100%;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.men-hero {
+
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.90) 0%,
+            rgba(0, 0, 0, 0.65) 45%,
+            rgba(0, 0, 0, 0.15) 100%
+        ),
+
+        url("https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=2000&q=90")
+        center / cover no-repeat;
+
+}
+
+
+.men-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(201, 162, 39, 0.12),
+            transparent 50%
+        );
+
+    pointer-events: none;
+
+}
+
+
+.men-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 720px;
+
+    padding: 80px 20px;
+
+    color: var(--men-white);
+
+}
+
+
+.hero-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: var(--men-gold-light);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+.hero-label::before {
+
+    content: "";
+
+    width: 38px;
+
+    height: 2px;
+
+    background: var(--men-gold);
+
+}
+
+
+.men-hero h1 {
+
+    margin: 0 0 20px;
+
+    font-size: clamp(42px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+}
+
+
+.men-hero p {
+
+    max-width: 620px;
+
+    margin: 0 0 32px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+.hero-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 25px;
+
+    border: 1px solid var(--men-gold);
+
+    border-radius: 50px;
+
+    background: var(--men-gold);
+
+    color: var(--men-black);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.hero-button:hover {
+
+    transform: translateY(-3px);
+
+    background: transparent;
+
+    color: var(--men-white);
+
+    box-shadow:
+        0 10px 30px rgba(201, 162, 39, 0.20);
+
+}
+
+
+.hero-button i {
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.hero-button:hover i {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+
+}
+
+
+.section-heading > span {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--men-gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+.section-heading h2 {
+
+    margin: 0 0 12px;
+
+    color: var(--men-black);
+
+    font-size: clamp(30px, 4vw, 46px);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+}
+
+
+.section-heading p {
+
+    margin: 0;
+
+    color: var(--men-gray);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.men-categories {
+
+    padding: 90px 0;
+
+    background: var(--men-white);
+
+}
+
+
+.men-category-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    gap: 16px;
+
+}
+
+
+.men-category-card {
+
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 28px 18px;
+
+    border: 1px solid var(--men-border);
+
+    border-radius: var(--men-radius);
+
+    background: var(--men-white);
+
+    color: var(--men-black);
+
+    text-align: center;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.men-category-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    top: -55px;
+
+    right: -55px;
+
+    border-radius: 50%;
+
+    background: rgba(201, 162, 39, 0.08);
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+.men-category-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--men-gold);
+
+    box-shadow: var(--men-shadow);
+
+}
+
+
+.men-category-card:hover::before {
+
+    transform: scale(1.8);
+
+}
+
+
+.category-icon {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 58px;
+
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--men-black);
+
+    color: var(--men-gold-light);
+
+    font-size: 20px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.men-category-card:hover .category-icon {
+
+    transform: rotateY(180deg);
+
+    background: var(--men-gold);
+
+    color: var(--men-black);
+
+}
+
+
+.men-category-card h3 {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin: 0 0 12px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+
+.men-category-card span {
+
+    position: relative;
+
+    z-index: 1;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: var(--men-gray);
+
+    font-size: 12px;
+
+}
+
+
+.men-category-card:hover span {
+
+    color: var(--men-gold);
+
+}
+
+
+.men-category-card span i {
+
+    font-size: 10px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.men-category-card:hover span i {
+
+    transform: translateX(4px);
+
+}
+
+
+/* =========================================================
+   PRODUCTS SECTION
+========================================================= */
+
+.men-products-section {
+
+    padding: 90px 0 110px;
+
+    background: var(--men-light);
+
+}
+
+
+.men-shop-header {
+
+    margin-bottom: 40px;
+
+}
+
+
+.men-shop-header .shop-label {
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--men-gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.men-shop-header h2 {
+
+    margin: 0 0 10px;
+
+}
+
+
+.men-shop-header p {
+
+    margin: 0;
+
+    color: var(--men-gray);
+
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.men-products-section .product-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid var(--men-border);
+
+    border-radius: 14px;
+
+    background: var(--men-white);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.men-products-section .product-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.10);
+
+}
+
+
+.men-products-section .product-image {
+
+    position: relative;
+
+    height: 330px;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+}
+
+
+.men-products-section .product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.6s ease;
+
+}
+
+
+.men-products-section .product-card:hover
+.product-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.men-products-section .badge {
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 14px;
+
+    left: 14px;
+
+    padding: 7px 11px;
+
+    border-radius: 30px;
+
+    background: var(--men-black);
+
+    color: var(--men-white);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.men-products-section .badge.new {
+
+    background: var(--men-gold);
+
+    color: var(--men-black);
+
+}
+
+
+/* =========================================================
+   PRODUCT ACTIONS
+========================================================= */
+
+.men-products-section .product-actions {
+
+    position: absolute;
+
+    z-index: 4;
+
+    top: 14px;
+
+    right: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    opacity: 0;
+
+    transform: translateX(15px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.men-products-section .product-card:hover
+.product-actions {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+.men-products-section .product-actions button {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--men-white);
+
+    color: var(--men-black);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.men-products-section .product-actions button:hover {
+
+    transform: scale(1.08);
+
+    background: var(--men-gold);
+
+    color: var(--men-black);
+
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+========================================================= */
+
+.men-products-section .product-info {
+
+    padding: 22px;
+
+}
+
+
+.men-products-section .product-category {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--men-gold);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+.men-products-section .product-info h3 {
+
+    margin: 0 0 10px;
+
+    color: var(--men-black);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+}
+
+
+.men-products-section .rating {
+
+    margin-bottom: 12px;
+
+    color: var(--men-gold);
+
+    font-size: 13px;
+
+}
+
+
+.men-products-section .rating span {
+
+    color: var(--men-gray);
+
+    font-size: 11px;
+
+}
+
+
+.men-products-section .price {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 17px;
+
+}
+
+
+.men-products-section .current-price {
+
+    color: var(--men-black);
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+}
+
+
+.men-products-section .old-price {
+
+    color: #999999;
+
+    font-size: 13px;
+
+    text-decoration: line-through;
+
+}
+
+
+.men-products-section .add-cart {
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border: 1px solid var(--men-black);
+
+    border-radius: 7px;
+
+    background: var(--men-black);
+
+    color: var(--men-white);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+
+.men-products-section .add-cart:hover {
+
+    border-color: var(--men-gold);
+
+    background: var(--men-gold);
+
+    color: var(--men-black);
+
+}
+
+
+/* =========================================================
+   NO PRODUCTS
+========================================================= */
+
+.men-products-section .no-products {
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+}
+
+
+.men-products-section .no-products i {
+
+    margin-bottom: 15px;
+
+    color: var(--men-gold);
+
+    font-size: 42px;
+
+}
+
+
+.men-products-section .no-products h3 {
+
+    margin: 0 0 8px;
+
+    color: var(--men-black);
+
+    font-size: 20px;
+
+}
+
+
+.men-products-section .no-products p {
+
+    margin: 0;
+
+    color: var(--men-gray);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   MINI CART
+========================================================= */
+
+.mini-cart-overlay {
+
+    position: fixed;
+
+    z-index: 9997;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+}
+
+
+.mini-cart-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.mini-cart {
+
+    position: fixed;
+
+    z-index: 9998;
+
+    top: 0;
+
+    right: 0;
+
+    width: min(430px, 94vw);
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: var(--men-white);
+
+    box-shadow:
+        -15px 0 50px rgba(0, 0, 0, 0.15);
+
+    transform: translateX(100%);
+
+    transition:
+        transform 0.35s ease;
+
+}
+
+
+.mini-cart.active {
+
+    transform: translateX(0);
+
+}
+
+
+.mini-cart-header {
+
+    min-height: 75px;
+
+    padding: 0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--men-border);
+
+}
+
+
+.mini-cart-header h3 {
+
+    margin: 0;
+
+    color: var(--men-black);
+
+    font-size: 18px;
+
+}
+
+
+.close-cart {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f4f4f4;
+
+    color: var(--men-black);
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.close-cart:hover {
+
+    background: var(--men-gold);
+
+    transform: rotate(90deg);
+
+}
+
+
+.mini-cart-products {
+
+    flex: 1;
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+}
+
+
+.mini-cart-footer {
+
+    padding: 20px;
+
+    border-top: 1px solid var(--men-border);
+
+    background: var(--men-white);
+
+}
+
+
+.cart-total {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+    color: var(--men-gray);
+
+    font-size: 14px;
+
+}
+
+
+.cart-total strong {
+
+    color: var(--men-black);
+
+    font-size: 20px;
+
+}
+
+
+.checkout-whatsapp {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 7px;
+
+    background: #25d366;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+
+}
+
+
+.checkout-whatsapp:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETTE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+
+    .men-category-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+    }
+
+
+    .men-products-section .product-image {
+
+        height: 300px;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETTE PETITE
+========================================================= */
+
+@media (max-width: 800px) {
+
+
+    .men-hero {
+
+        min-height: 500px;
+
+    }
+
+
+    .men-hero-content {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .men-hero h1 {
+
+        font-size: clamp(38px, 10vw, 58px);
+
+    }
+
+
+    .men-categories,
+    .men-products-section {
+
+        padding: 70px 0;
+
+    }
+
+
+    .men-category-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .men-products-section .product-image {
+
+        height: 280px;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    .men-hero {
+
+        min-height: 470px;
+
+        background-position: 62% center;
+
+    }
+
+
+    .men-hero-content {
+
+        padding: 60px 18px;
+
+    }
+
+
+    .hero-label {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .hero-label::before {
+
+        width: 25px;
+
+    }
+
+
+    .men-hero h1 {
+
+        margin-bottom: 16px;
+
+        font-size: 38px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .men-hero p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .hero-button {
+
+        padding: 13px 20px;
+
+        font-size: 12px;
+
+    }
+
+
+    .men-categories,
+    .men-products-section {
+
+        padding: 55px 0;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 30px;
+
+        padding: 0 15px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .section-heading p {
+
+        font-size: 13px;
+
+    }
+
+
+    .men-category-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        padding: 0 10px;
+
+    }
+
+
+    .men-category-card {
+
+        min-height: 165px;
+
+        padding: 22px 10px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .category-icon {
+
+        width: 48px;
+
+        height: 48px;
+
+        margin-bottom: 13px;
+
+        font-size: 17px;
+
+    }
+
+
+    .men-category-card h3 {
+
+        font-size: 13px;
+
+    }
+
+
+    .men-category-card span {
+
+        font-size: 10px;
+
+    }
+
+
+    .men-products-section .product-image {
+
+        height: 230px;
+
+    }
+
+
+    .men-products-section .product-info {
+
+        padding: 15px;
+
+    }
+
+
+    .men-products-section .product-info h3 {
+
+        font-size: 14px;
+
+    }
+
+
+    .men-products-section .current-price {
+
+        font-size: 17px;
+
+    }
+
+
+    .men-products-section .product-actions {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+
+    .men-products-section .product-actions button {
+
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 11px;
+
+    }
+
+
+    .mini-cart {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS
+========================================================= */
+
+@media (max-width: 380px) {
+
+
+    .men-category-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .men-category-card {
+
+        min-height: 140px;
+
+    }
+
+
+    .men-hero h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .men-products-section .product-image {
+
+        height: 210px;
+
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+========================================================= */
+
+.men-category-card:focus-visible,
+.hero-button:focus-visible,
+.add-cart:focus-visible,
+.product-actions button:focus-visible,
+.close-cart:focus-visible {
+
+    outline: 3px solid rgba(201, 162, 39, 0.45);
+
+    outline-offset: 3px;
+
+}
+
+
+/* =========================================================
+   ANIMATION DOUCE
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .men-hero *,
+    .men-category-card *,
+    .product-card *,
+    .mini-cart,
+    .mini-cart-overlay {
+
+        transition: none !important;
+
+        animation: none !important;
+
+    }
+
+}

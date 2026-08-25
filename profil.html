@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mon Profil | YMS STORE VIP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/abonnement.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="member-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="member-sidebar">
+
+        <div class="member-logo">
+
+            <img src="../assets/image/IMG_3474.PNG" alt="YMS STORE">
+
+            <h2>YMS STORE</h2>
+
+            <span>Espace VIP</span>
+
+        </div>
+
+        <nav>
+
+            <a href="../dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Tableau de bord
+            </a>
+
+            <a href="profil.html" class="active">
+                <i class="fa-solid fa-user"></i>
+                Mon Profil
+            </a>
+
+            <a href="commandes.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Commandes
+            </a>
+
+            <a href="paiement.html">
+                <i class="fa-solid fa-credit-card"></i>
+                Paiements
+            </a>
+
+            <a href="messages.html">
+                <i class="fa-solid fa-comments"></i>
+                Messages
+            </a>
+
+            <a href="reunion.html">
+                <i class="fa-solid fa-video"></i>
+                Réunions VIP
+            </a>
+
+            <a href="#" id="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Déconnexion
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTENU -->
+    <main class="member-content">
+
+        <!-- HEADER -->
+        <header class="member-header">
+
+            <div>
+
+                <h1>
+                    Mon Profil VIP
+                </h1>
+
+                <p>
+                    Gérez vos informations personnelles
+                </p>
+
+            </div>
+
+            <div class="member-status">
+
+                <i class="fa-solid fa-crown"></i>
+
+                <span id="vipLevel">
+                    VIP
+                </span>
+
+            </div>
+
+        </header>
+
+        <!-- CARTE PROFIL -->
+        <section class="profile-main-card">
+
+            <div class="profile-left">
+
+                <img
+                id="profilePhoto"
+                src="../assets/image/default-user.png"
+                class="profile-big-photo"
+                alt="Photo membre">
+
+                <button class="vip-btn small-btn">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    Changer photo
+
+                </button>
+
+            </div>
+
+            <div class="profile-right">
+
+                <h2 id="profileName">
+                    Nom membre
+                </h2>
+
+                <span class="vip-badge" id="profilePlan">
+                    PLATINUM VIP
+                </span>
+
+                <div class="profile-info-list">
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span id="profilePhone">
+                            Téléphone
+                        </span>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span id="profileAddress">
+                            Adresse
+                        </span>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <span id="profileDate">
+                            Date inscription
+                        </span>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span id="profileStatus">
+                            ACTIF
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STATISTIQUES -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <h3 id="totalPayments">
+                    0
+                </h3>
+
+                <p>Paiements</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <h3 id="totalOrders">
+                    0
+                </h3>
+
+                <p>Commandes</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-comments"></i>
+
+                <h3 id="totalMessages">
+                    0
+                </h3>
+
+                <p>Messages</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-video"></i>
+
+                <h3 id="totalMeetings">
+                    0
+                </h3>
+
+                <p>Réunions</p>
+
+            </div>
+
+        </section>
+
+        <!-- HISTORIQUE -->
+        <section class="dashboard-card">
+
+            <h2>
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Historique Paiements
+
+            </h2>
+
+            <div id="paymentHistory">
+
+                <p>
+                    Aucun paiement enregistré.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/auth-vip.js"></script>
+<script src="../js/profil.js"></script>
+
+</body>
+</html>

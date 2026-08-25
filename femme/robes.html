@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Robes Femme | YMS STORE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS depuis femme/ -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+
+    <style>
+        .page-header {
+            padding: 70px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #111, #2b2b2b);
+            color: #fff;
+        }
+
+        .page-header span {
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .page-header p {
+            color: #ddd;
+        }
+
+        .category-products {
+            padding: 70px 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        @media(max-width: 992px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 576px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="container header-container">
+
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/image/IMG_3474.PNG" alt="YMS STORE">
+                </a>
+            </div>
+
+            <div class="search-box">
+                <input type="search" placeholder="Rechercher un produit..." id="searchInput">
+
+                <button id="searchButton">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </div>
+
+            <div class="header-actions">
+
+                <a href="../client/login.html" class="header-icon">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+
+                <a href="../panier/index.html" class="header-icon cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cartCount">0</span>
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav class="navigation">
+        <div class="container nav-container">
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="../index.html">Accueil</a>
+                </li>
+
+                <li>
+                    <a href="../homme/index.html">Homme</a>
+                </li>
+
+                <li>
+                    <a href="index.html">Femme</a>
+                </li>
+
+                <li>
+                    <a href="../chaussures/index.html">Chaussures</a>
+                </li>
+
+                <li>
+                    <a href="../promotions/index.html">Promotions</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+
+        <span>COLLECTION FEMME</span>
+
+        <h1>Robes</h1>
+
+        <p>
+            Découvrez notre sélection de robes élégantes et modernes.
+        </p>
+
+    </section>
+
+
+    <!-- PRODUITS -->
+    <section class="category-products">
+
+        <div class="container">
+
+            <div class="products-grid">
+
+
+                <!-- PRODUIT 1 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <span class="badge new">
+                            Nouveau
+                        </span>
+
+                        <img src="assets/image/1564667.jpg"
+                            alt="Robe élégante">
+
+                        <div class="product-actions">
+
+                            <a href="#" class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+
+                            <a href="#" class="quick-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Robe Élégante</h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(32)</span>
+                        </div>
+
+                        <div class="price">
+                            <span class="current-price">65$</span>
+                        </div>
+
+                        <button class="add-cart"
+                            data-id="robe-001"
+                            data-name="Robe Élégante"
+                            data-price="65"
+                            data-image="assets/image/1564639.jpg">
+
+                            Ajouter au panier
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUIT 2 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="assets/image/1564630.jpg"
+                            alt="Robe chic">
+
+                        <div class="product-actions">
+
+                            <a href="#" class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+
+                            <a href="#" class="quick-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Robe Chic</h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(28)</span>
+                        </div>
+
+                        <div class="price">
+                            <span class="current-price">75$</span>
+                        </div>
+
+                        <button class="add-cart"
+                            data-id="robe-002"
+                            data-name="Robe Chic"
+                            data-price="75"
+                            data-image="assets/image/1564640 (1).jpg">
+
+                            Ajouter au panier
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUIT 3 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <span class="badge">
+                            -15%
+                        </span>
+
+                        <img src="assets/image/1564640 (1).jpg"
+                            alt="Robe soirée">
+
+                        <div class="product-actions">
+
+                            <a href="#" class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+
+                            <a href="#" class="quick-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Robe de Soirée</h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(41)</span>
+                        </div>
+
+                        <div class="price">
+
+                            <span class="current-price">
+                                85$
+                            </span>
+
+                            <span class="old-price">
+                                100$
+                            </span>
+
+                        </div>
+
+                        <button class="add-cart"
+                            data-id="robe-003"
+                            data-name="Robe de Soirée"
+                            data-price="85"
+                            data-image="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80">
+
+                            Ajouter au panier
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUIT 4 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80"
+                            alt="Robe moderne">
+
+                        <div class="product-actions">
+
+                            <a href="#" class="favorite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+
+                            <a href="#" class="quick-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>Robe Moderne</h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(36)</span>
+                        </div>
+
+                        <div class="price">
+                            <span class="current-price">70$</span>
+                        </div>
+
+                        <button class="add-cart"
+                            data-id="robe-004"
+                            data-name="Robe Moderne"
+                            data-price="70"
+                            data-image="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80">
+
+                            Ajouter au panier
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 YMS STORE - Tous droits réservés.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JS -->
+    <script src="../js/panier.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/favoris.js"></script>
+    <script src="../js/recherche.js"></script>
+
+</body>
+
+</html>

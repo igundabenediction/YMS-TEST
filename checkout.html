@@ -1,0 +1,220 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Validation commande | YMS STORE
+</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../assets/css/account.css">
+
+
+<link rel="stylesheet" href="../assets/css/checkout.css">
+
+
+</head>
+
+
+
+<body>
+
+
+<section class="checkout-section">
+
+
+<div class="checkout-container">
+
+
+
+<h1>
+Finaliser ma commande
+</h1>
+
+
+
+<div class="checkout-grid">
+
+
+
+
+
+<div class="checkout-card">
+
+
+<h2>
+Mes informations
+</h2>
+
+
+<p>
+Nom :
+<strong id="checkoutNom"></strong>
+</p>
+
+
+<p>
+Téléphone :
+<strong id="checkoutPhone"></strong>
+</p>
+
+
+<p>
+Adresse :
+<strong id="checkoutAdresse"></strong>
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="checkout-card">
+
+
+<h2>
+Mon panier
+</h2>
+
+
+
+<div id="checkoutProducts">
+
+</div>
+
+
+
+<h3>
+
+Total :
+
+<span id="checkoutTotal">
+0$
+</span>
+
+
+</h3>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="checkout-card">
+
+
+<h2>
+Mode de paiement
+</h2>
+
+
+
+
+<label>
+
+<input 
+type="radio"
+name="paiement"
+value="M-Pesa"
+checked>
+
+M-Pesa
+
+</label>
+
+
+
+<br>
+
+
+
+<label>
+
+<input 
+type="radio"
+name="paiement"
+value="Airtel Money">
+
+Airtel Money
+
+</label>
+
+
+
+<br>
+
+
+
+<label>
+
+<input 
+type="radio"
+name="paiement"
+value="Livraison">
+
+Paiement à la livraison
+
+</label>
+
+
+
+
+<button 
+id="confirmOrder"
+class="account-btn">
+
+
+Confirmer la commande
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script src="../js/checkout.js"></script>
+
+
+</body>
+
+</html>
+```

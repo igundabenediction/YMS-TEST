@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Espace client VIP - YMS STORE"
+    >
+
+    <title>Espace Client | YMS STORE</title>
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS principal -->
+    <link
+        rel="stylesheet"
+        href="css/abonnement.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           YMS STORE
+           ESPACE CLIENT
+           ===================================================== */
+
+        :root {
+
+            --gold: #d4af37;
+            --gold-light: #f2d675;
+            --black: #0b0b0d;
+            --dark: #151519;
+            --white: #ffffff;
+            --light: #f7f7f8;
+            --text: #222229;
+            --muted: #777780;
+            --border: #e9e9ec;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family: "Poppins", sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8f8f9,
+                    #eeeeF1
+                );
+
+            color: var(--text);
+
+            min-height: 100vh;
+
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           LAYOUT
+           ===================================================== */
+
+        .client-layout {
+
+            min-height: 100vh;
+
+            display: flex;
+
+        }
+
+
+        /* =====================================================
+           SIDEBAR
+           ===================================================== */
+
+        .client-sidebar {
+
+            width: 270px;
+
+            min-height: 100vh;
+
+            position: fixed;
+
+            left: 0;
+            top: 0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #090909,
+                    #161616
+                );
+
+            color: white;
+
+            padding: 28px 18px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            z-index: 1000;
+
+            box-shadow:
+                10px 0 35px
+                rgba(0,0,0,.12);
+
+        }
+
+
+        /* =====================================================
+           LOGO
+           ===================================================== */
+
+        .client-logo {
+
+            text-align: center;
+
+            padding-bottom: 28px;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.08);
+
+        }
+
+
+        .client-logo img {
+
+            width: 78px;
+            height: 78px;
+
+            object-fit: contain;
+
+            border-radius: 50%;
+
+            background: white;
+
+            padding: 5px;
+
+            display: block;
+
+            margin: 0 auto 12px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(212,175,55,.18);
+
+        }
+
+
+        .client-logo h2 {
+
+            font-size: 20px;
+
+            letter-spacing: 1px;
+
+            font-weight: 700;
+
+        }
+
+
+        .client-logo span {
+
+            display: block;
+
+            margin-top: 4px;
+
+            color: var(--gold);
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+           ===================================================== */
+
+        .client-nav {
+
+            margin-top: 28px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 7px;
+
+        }
+
+
+        .client-nav a {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 13px 15px;
+
+            color:
+                rgba(255,255,255,.68);
+
+            border-radius: 12px;
+
+            font-size: 13px;
+
+            transition:
+                .25s ease;
+
+        }
+
+
+        .client-nav a i {
+
+            width: 20px;
+
+            text-align: center;
+
+            color: var(--gold);
+
+        }
+
+
+        .client-nav a:hover {
+
+            background:
+                rgba(212,175,55,.10);
+
+            color: white;
+
+            transform:
+                translateX(3px);
+
+        }
+
+
+        .client-nav a.active {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(212,175,55,.22),
+                    rgba(212,175,55,.07)
+                );
+
+            color: white;
+
+            border:
+                1px solid
+                rgba(212,175,55,.22);
+
+        }
+
+
+        /* =====================================================
+           DECONNEXION
+           ===================================================== */
+
+        .logout-btn {
+
+            margin-top: auto !important;
+
+            color:
+                #ff8b8b !important;
+
+        }
+
+
+        .logout-btn i {
+
+            color:
+                #ff7070 !important;
+
+        }
+
+
+        .logout-btn:hover {
+
+            background:
+                rgba(255,80,80,.10) !important;
+
+        }
+
+
+        /* =====================================================
+           CONTENU
+           ===================================================== */
+
+        .client-content {
+
+            width: calc(100% - 270px);
+
+            margin-left: 270px;
+
+            padding: 35px;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .client-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            margin-bottom: 28px;
+
+        }
+
+
+        .client-header h1 {
+
+            font-size:
+                clamp(25px, 3vw, 36px);
+
+            font-weight: 700;
+
+        }
+
+
+        .client-header h1 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .client-header p {
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            margin-top: 5px;
+
+        }
+
+
+        .client-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 11px 17px;
+
+            border-radius: 30px;
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,.05);
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+        }
+
+
+        .client-badge i {
+
+            color: var(--gold);
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .client-hero {
+
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 290px;
+
+            border-radius: 25px;
+
+            padding: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    125deg,
+                    #090909,
+                    #191713 65%,
+                    #33270b
+                );
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,.15);
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .client-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 320px;
+
+            height: 320px;
+
+            border-radius: 50%;
+
+            right: -100px;
+
+            top: -100px;
+
+            background:
+                rgba(212,175,55,.08);
+
+            border:
+                1px solid
+                rgba(212,175,55,.14);
+
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 650px;
+
+            color: white;
+
+        }
+
+
+        .hero-label {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 14px;
+
+            border-radius: 30px;
+
+            color: var(--gold);
+
+            background:
+                rgba(212,175,55,.12);
+
+            border:
+                1px solid
+                rgba(212,175,55,.25);
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: .7px;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .hero-content h2 {
+
+            font-size:
+                clamp(27px, 4vw, 45px);
+
+            line-height: 1.15;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .hero-content h2 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .hero-content p {
+
+            color:
+                rgba(255,255,255,.68);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            max-width: 580px;
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .hero-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 12px 20px;
+
+            background: var(--gold);
+
+            color: #111;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: .3s ease;
+
+        }
+
+
+        .hero-btn:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 12px 28px
+                rgba(212,175,55,.25);
+
+        }
+
+
+        /* =====================================================
+           CARTES STATISTIQUES
+           ===================================================== */
+
+        .stats-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .stat-card {
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 18px;
+
+            padding: 22px;
+
+            box-shadow:
+                0 8px 30px
+                rgba(0,0,0,.05);
+
+            transition: .3s ease;
+
+        }
+
+
+        .stat-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,.08);
+
+        }
+
+
+        .stat-icon {
+
+            width: 44px;
+            height: 44px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 13px;
+
+            background:
+                rgba(212,175,55,.12);
+
+            color: var(--gold);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .stat-card strong {
+
+            display: block;
+
+            font-size: 25px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .stat-card span {
+
+            font-size: 11px;
+
+            color: var(--muted);
+
+        }
+
+
+        /* =====================================================
+           GRID PRINCIPAL
+           ===================================================== */
+
+        .client-main-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.4fr .8fr;
+
+            gap: 22px;
+
+        }
+
+
+        .panel {
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 20px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 8px 30px
+                rgba(0,0,0,.045);
+
+        }
+
+
+        .panel-title {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .panel-title h3 {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            font-size: 16px;
+
+        }
+
+
+        .panel-title h3 i {
+
+            color: var(--gold);
+
+        }
+
+
+        .panel-title a {
+
+            font-size: 11px;
+
+            color: var(--gold);
+
+            font-weight: 600;
+
+        }
+
+
+        /* =====================================================
+           SERVICES
+           ===================================================== */
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 14px;
+
+        }
+
+
+        .service-card {
+
+            padding: 18px;
+
+            border-radius: 15px;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid
+                #eeeeef;
+
+            transition: .25s ease;
+
+        }
+
+
+        .service-card:hover {
+
+            border-color:
+                rgba(212,175,55,.4);
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .service-card i {
+
+            color: var(--gold);
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .service-card h4 {
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .service-card p {
+
+            font-size: 10px;
+
+            line-height: 1.6;
+
+            color: var(--muted);
+
+        }
+
+
+        /* =====================================================
+           PROFIL
+           ===================================================== */
+
+        .profile-mini {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding-bottom: 20px;
+
+            margin-bottom: 20px;
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+        }
+
+
+        .profile-mini img {
+
+            width: 62px;
+            height: 62px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border:
+                3px solid
+                rgba(212,175,55,.35);
+
+        }
+
+
+        .profile-mini h4 {
+
+            font-size: 14px;
+
+        }
+
+
+        .profile-mini span {
+
+            display: block;
+
+            margin-top: 3px;
+
+            color: var(--gold);
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+        }
+
+
+        .profile-info-row {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin: 13px 0;
+
+            font-size: 11px;
+
+        }
+
+
+        .profile-info-row i {
+
+            width: 28px;
+            height: 28px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 8px;
+
+            color: var(--gold);
+
+            background:
+                rgba(212,175,55,.10);
+
+        }
+
+
+        .profile-info-row span {
+
+            color: var(--muted);
+
+        }
+
+
+        /* =====================================================
+           NOTIFICATIONS
+           ===================================================== */
+
+        .notification {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+            padding: 13px 0;
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+            font-size: 11px;
+
+        }
+
+
+        .notification:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .notification i {
+
+            color: var(--gold);
+
+            margin-top: 2px;
+
+        }
+
+
+        /* =====================================================
+           MOBILE MENU
+           ===================================================== */
+
+        .mobile-header {
+
+            display: none;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1100px) {
+
+            .stats-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+            .client-main-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .client-sidebar {
+
+                width: 230px;
+
+            }
+
+            .client-content {
+
+                width:
+                    calc(100% - 230px);
+
+                margin-left: 230px;
+
+                padding: 25px;
+
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .client-sidebar {
+
+                position: relative;
+
+                width: 100%;
+
+                min-height: auto;
+
+            }
+
+
+            .client-layout {
+
+                display: block;
+
+            }
+
+
+            .client-content {
+
+                width: 100%;
+
+                margin-left: 0;
+
+                padding: 20px;
+
+            }
+
+
+            .client-header {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+            }
+
+
+            .client-hero {
+
+                padding: 30px 25px;
+
+            }
+
+
+            .stats-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .services-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 430px) {
+
+            .stats-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="client-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="client-sidebar">
+
+
+        <div class="client-logo">
+
+            <img
+                src="assets/image/IMG_3474.PNG"
+                alt="YMS STORE"
+            >
+
+            <h2>YMS STORE</h2>
+
+            <span>VIP PREMIUM</span>
+
+        </div>
+
+
+        <nav class="client-nav">
+
+
+            <a
+                href="client.html"
+                class="active"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Accueil</span>
+
+            </a>
+
+
+            <a href="pages/commandes.html">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span>Mes commandes</span>
+
+            </a>
+
+
+            <a href="pages/paiement.html">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Paiements</span>
+
+            </a>
+
+
+            <a href="pages/messages.html">
+
+                <i class="fa-solid fa-comments"></i>
+
+                <span>Messages</span>
+
+            </a>
+
+
+            <a href="pages/reunion.html">
+
+                <i class="fa-solid fa-video"></i>
+
+                <span>Réunions VIP</span>
+
+            </a>
+
+
+            <a href="profil.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Mon profil</span>
+
+            </a>
+
+
+            <a
+                href="#"
+                id="logout"
+                class="logout-btn"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Déconnexion</span>
+
+            </a>
+
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTENU
+         ===================================================== -->
+
+    <main class="client-content">
+
+
+        <!-- HEADER -->
+
+        <header class="client-header">
+
+
+            <div>
+
+                <h1>
+
+                    Bonjour,
+                    <span id="welcomeName">
+                        Membre VIP
+                    </span>
+
+                </h1>
+
+                <p>
+                    Bienvenue dans votre espace personnel YMS STORE.
+                </p>
+
+            </div>
+
+
+            <div class="client-badge">
+
+                <i class="fa-solid fa-crown"></i>
+
+                <span id="vipLevel">
+                    VIP GOLD
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="client-hero">
+
+
+            <div class="hero-content">
+
+
+                <span class="hero-label">
+
+                    <i class="fa-solid fa-crown"></i>
+
+                    ESPACE VIP
+
+                </span>
+
+
+                <h2>
+
+                    Une expérience
+                    <span>premium</span>
+                    pensée pour vous.
+
+                </h2>
+
+
+                <p>
+
+                    Gérez vos commandes, consultez vos
+                    paiements, participez aux réunions VIP
+                    et bénéficiez d'un accompagnement
+                    privilégié avec YMS STORE.
+
+                </p>
+
+
+                <a
+                    href="pages/commandes.html"
+                    class="hero-btn"
+                >
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Voir mes commandes
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STATISTIQUES
+             ================================================= -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+                <strong id="totalOrders">
+                    0
+                </strong>
+
+                <span>
+                    Commandes
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-money-bill-wave"></i>
+
+                </div>
+
+                <strong id="totalPayments">
+                    0$
+                </strong>
+
+                <span>
+                    Paiements
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+                <strong id="vipPoints">
+                    0
+                </strong>
+
+                <span>
+                    Points VIP
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-gift"></i>
+
+                </div>
+
+                <strong id="vipBenefits">
+                    0
+                </strong>
+
+                <span>
+                    Avantages
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTENU PRINCIPAL
+             ================================================= -->
+
+        <section class="client-main-grid">
+
+
+            <!-- SERVICES -->
+
+            <div class="panel">
+
+
+                <div class="panel-title">
+
+                    <h3>
+
+                        <i class="fa-solid fa-grid-2"></i>
+
+                        Services VIP
+
+                    </h3>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <div class="service-card">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <h4>
+                            Mes commandes
+                        </h4>
+
+                        <p>
+                            Consultez vos commandes,
+                            achats et historique.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                        <h4>
+                            Paiements
+                        </h4>
+
+                        <p>
+                            Consultez vos paiements
+                            et votre abonnement VIP.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <i class="fa-solid fa-video"></i>
+
+                        <h4>
+                            Réunions VIP
+                        </h4>
+
+                        <p>
+                            Rejoignez les rencontres
+                            privées de YMS STORE.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                        <h4>
+                            Support prioritaire
+                        </h4>
+
+                        <p>
+                            Contactez directement
+                            notre équipe.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROFIL -->
+
+            <div class="panel">
+
+
+                <div class="panel-title">
+
+                    <h3>
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Mon profil
+
+                    </h3>
+
+
+                    <a href="profil.html">
+                        Modifier
+                    </a>
+
+                </div>
+
+
+                <div class="profile-mini">
+
+
+                    <img
+                        id="memberPhoto"
+                        src="assets/image/default-user.png"
+                        alt="Photo du membre"
+                    >
+
+
+                    <div>
+
+                        <h4 id="memberName">
+                            Membre VIP
+                        </h4>
+
+                        <span id="memberStatus">
+                            Actif
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="profile-info-row">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span id="memberPhone">
+                        Téléphone
+                    </span>
+
+                </div>
+
+
+                <div class="profile-info-row">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span id="memberEmail">
+                        Email
+                    </span>
+
+                </div>
+
+
+                <div class="profile-info-row">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    <span id="memberDate">
+                        Date d'inscription
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- NOTIFICATIONS -->
+
+            <div class="panel">
+
+
+                <div class="panel-title">
+
+                    <h3>
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        Notifications
+
+                    </h3>
+
+                </div>
+
+
+                <div id="notificationList">
+
+
+                    <div class="notification">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Votre espace VIP est actif.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- NIVEAU VIP -->
+
+            <div class="panel">
+
+
+                <div class="panel-title">
+
+                    <h3>
+
+                        <i class="fa-solid fa-crown"></i>
+
+                        Niveau VIP
+
+                    </h3>
+
+                </div>
+
+
+                <div class="profile-info-row">
+
+                    <i class="fa-solid fa-ranking-star"></i>
+
+                    <span>
+
+                        Niveau actuel :
+                        <strong id="currentLevel">
+                            VIP GOLD
+                        </strong>
+
+                    </span>
+
+                </div>
+
+
+                <div
+                    style="
+                        margin-top:18px;
+                        height:8px;
+                        background:#eeeeef;
+                        border-radius:20px;
+                        overflow:hidden;
+                    "
+                >
+
+                    <div
+                        id="vipProgress"
+                        style="
+                            width:0%;
+                            height:100%;
+                            background:#d4af37;
+                            border-radius:20px;
+                            transition:width .6s ease;
+                        "
+                    ></div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="js/auth-vip.js"></script>
+
+<script src="js/vip-common.js"></script>
+
+<script src="js/client.js"></script>
+
+
+</body>
+
+</html>
