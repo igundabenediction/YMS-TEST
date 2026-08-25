@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mes Commandes | YMS STORE VIP</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/abonnement.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="member-layout">
+
+
+
+
+
+<!-- SIDEBAR -->
+
+
+<aside class="member-sidebar">
+
+
+<div class="member-logo">
+
+
+<img src="assets/image/IMG_3474.PNG" alt="YMS STORE">
+
+<h2>
+YMS STORE
+</h2>
+
+
+<span>
+Espace Abonné
+</span>
+
+
+</div>
+
+
+
+
+
+<nav>
+
+
+<a href="../dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+Accueil
+
+</a>
+
+
+
+<a href="commandes.html" class="active">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Mes commandes
+
+</a>
+
+
+
+
+<a href="paiement.html">
+
+<i class="fa-solid fa-credit-card"></i>
+
+Paiements
+
+</a>
+
+
+
+
+<a href="messages.html">
+
+<i class="fa-solid fa-comments"></i>
+
+Messages
+
+</a>
+
+
+
+
+<a href="reunion.html">
+
+<i class="fa-solid fa-video"></i>
+
+Réunions privées
+
+</a>
+
+
+
+
+<a href="#" id="logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Déconnexion
+
+</a>
+
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+<!-- CONTENU -->
+
+
+<main class="member-content">
+
+
+
+
+
+<header class="member-header">
+
+
+<div>
+
+<h1>
+Mes commandes VIP
+</h1>
+
+
+<p>
+Profitez de vos avantages membres YMS STORE
+</p>
+
+</div>
+
+
+
+<div class="member-status">
+
+<i class="fa-solid fa-crown"></i>
+
+VIP Premium
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<section class="dashboard-card">
+
+
+
+<h2>
+
+<i class="fa-solid fa-plus"></i>
+
+Nouvelle commande
+
+</h2>
+
+
+
+
+<div class="input-box">
+
+
+<i class="fa-solid fa-box"></i>
+
+
+<input 
+id="productName"
+placeholder="Nom du produit">
+
+
+</div>
+
+
+
+
+
+
+<div class="input-box">
+
+
+<i class="fa-solid fa-dollar-sign"></i>
+
+
+<input 
+id="productPrice"
+type="number"
+placeholder="Prix">
+
+
+</div>
+
+
+
+
+
+
+<button class="vip-btn" onclick="createOrder()">
+
+Commander
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="dashboard-card">
+
+
+
+<h2>
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+Historique commandes
+
+</h2>
+
+
+
+
+<div id="orderList">
+
+
+<p>
+Aucune commande.
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+</div>
+
+<script src="../js/auth-vip.js"></script>
+<script src="../js/vip-common.js"></script>
+<script src="../js/abonnement.js"></script>
+
+<script src="messages.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Paiements VIP | YMS STORE</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../css/abonnement.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="member-layout">
+
+
+<!-- SIDEBAR -->
+
+<aside class="member-sidebar">
+
+
+<div class="member-logo">
+
+<img src="../assets/image/IMG_3474.PNG" alt="YMS STORE">
+alt="YMS STORE">
+
+
+
+<h2>
+YMS STORE
+</h2>
+
+
+<span>
+VIP PREMIUM
+</span>
+
+
+</div>
+
+
+
+
+
+<nav>
+
+
+<a href="../dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+Accueil
+
+</a>
+
+
+
+
+<a href="commandes.html">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Commandes
+
+</a>
+
+
+
+
+
+<a href="paiement.html" class="active">
+
+<i class="fa-solid fa-credit-card"></i>
+
+Paiements
+
+</a>
+
+
+
+
+
+<a href="messages.html">
+
+<i class="fa-solid fa-comments"></i>
+
+Messages
+
+</a>
+
+
+
+
+
+<a href="reunion.html">
+
+<i class="fa-solid fa-video"></i>
+
+Réunions VIP
+
+</a>
+
+
+
+
+
+<a href="#" id="logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Déconnexion
+
+</a>
+
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+<!-- CONTENU -->
+
+<main class="member-content">
+
+
+
+
+
+
+
+<header class="member-header">
+
+
+<div>
+
+
+<h1>
+
+Paiement VIP
+
+</h1>
+
+
+<p>
+
+Gérez votre abonnement Premium YMS STORE
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="member-status">
+
+
+<i class="fa-solid fa-crown"></i>
+
+
+<span id="vipPaymentLevel">
+
+VIP PREMIUM
+
+</span>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<!-- PROFIL -->
+
+<section class="dashboard-card">
+
+
+<h2>
+
+<i class="fa-solid fa-user"></i>
+
+Compte membre
+
+</h2>
+
+
+
+
+
+<div class="payment-profile">
+
+
+
+<img 
+id="paymentPhoto"
+src="../assets/image/default-user.png"
+alt="Photo membre">
+
+
+
+
+
+<div>
+
+
+<h3 id="paymentName">
+
+Chargement...
+
+</h3>
+
+
+
+<p>
+
+<i class="fa-solid fa-star"></i>
+
+
+<span id="paymentPlan">
+
+Formule VIP
+
+</span>
+
+
+</p>
+
+
+
+<p>
+
+<i class="fa-solid fa-circle-check"></i>
+
+
+Statut :
+
+<strong id="paymentStatus">
+
+ACTIF
+
+</strong>
+
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div id="memberInfo">
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ABONNEMENT -->
+
+<section class="dashboard-card">
+
+
+<h2>
+
+<i class="fa-solid fa-crown"></i>
+
+Mon abonnement
+
+</h2>
+
+
+
+
+<div class="subscription-box">
+
+
+
+<div>
+
+
+<p>
+
+Formule actuelle
+
+</p>
+
+
+<h3 id="currentPlan">
+
+VIP GOLD
+
+</h3>
+
+
+</div>
+
+
+
+
+<div>
+
+
+<p>
+
+Prix mensuel
+
+</p>
+
+
+<h3 id="planPrice">
+
+10$
+
+</h3>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- PAIEMENT -->
+
+<section class="dashboard-card">
+
+
+<h2>
+
+<i class="fa-solid fa-wallet"></i>
+
+Effectuer un paiement
+
+</h2>
+
+
+
+
+
+
+<div class="input-box">
+
+
+<i class="fa-solid fa-money-bill"></i>
+
+
+<input
+
+id="paymentAmount"
+
+type="number"
+
+placeholder="Montant à payer">
+
+
+</div>
+
+
+
+
+
+
+
+<select
+
+id="paymentMethod"
+
+class="payment-select">
+
+
+<option value="">
+
+Sélectionner une méthode
+
+</option>
+
+
+
+<option value="M-Pesa">
+
+M-Pesa
+
+</option>
+
+
+
+
+<option value="Airtel Money">
+
+Airtel Money
+
+</option>
+
+
+
+
+<option value="Cash">
+
+Paiement Cash
+
+</option>
+
+
+
+</select>
+
+
+
+
+
+
+
+
+<div class="input-box">
+
+
+<i class="fa-solid fa-receipt"></i>
+
+
+<input
+
+id="paymentProof"
+
+placeholder="Référence transaction">
+
+
+</div>
+
+
+
+
+
+
+
+
+<button
+
+id="confirmPayment"
+
+class="vip-btn">
+
+
+<i class="fa-solid fa-lock"></i>
+
+
+Valider le paiement
+
+
+</button>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- HISTORIQUE -->
+
+<section class="dashboard-card">
+
+
+<h2>
+
+
+<i class="fa-solid fa-clock"></i>
+
+
+Historique des paiements
+
+
+</h2>
+
+
+
+
+
+
+<div id="paymentList">
+
+
+<div class="payment-empty">
+
+<i class="fa-solid fa-file-invoice"></i>
+
+
+<p>
+
+Aucun paiement enregistré.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+</main>
+
+
+</div>
+<script src="../js/vip-common.js"></script>
+<script src="../js/paiement.js"></script>
+
+
+</body>
+
+</html>

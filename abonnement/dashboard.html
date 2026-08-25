@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tableau de bord VIP | YMS STORE</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/abonnement.css">
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f0d77a;
+            --black: #090909;
+            --dark: #111111;
+            --dark-2: #171717;
+            --white: #ffffff;
+            --text: #222;
+            --muted: #777;
+            --border: rgba(212,175,55,.18);
+            --shadow: 0 20px 60px rgba(0,0,0,.08);
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f5f5f5;
+            color: var(--text);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* =====================================================
+           LAYOUT
+        ===================================================== */
+
+        .member-layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* =====================================================
+           SIDEBAR
+        ===================================================== */
+
+        .member-sidebar {
+            width: 270px;
+            min-height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 1000;
+
+            padding: 30px 18px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #080808,
+                    #121212 65%,
+                    #080808
+                );
+
+            color: #fff;
+
+            border-right: 1px solid
+                rgba(212,175,55,.15);
+
+            box-shadow:
+                15px 0 45px rgba(0,0,0,.12);
+        }
+
+        .member-logo {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .member-logo img {
+            width: 82px;
+            height: 82px;
+            object-fit: contain;
+            border-radius: 50%;
+            padding: 5px;
+            background: #fff;
+
+            box-shadow:
+                0 0 0 4px rgba(212,175,55,.08),
+                0 12px 35px rgba(212,175,55,.20);
+        }
+
+        .member-logo h2 {
+            margin-top: 14px;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .member-logo span {
+            display: block;
+            margin-top: 5px;
+            color: var(--gold);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .member-nav {
+            margin-top: 30px;
+        }
+
+        .member-nav a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            padding: 14px 16px;
+            margin-bottom: 7px;
+
+            color: rgba(255,255,255,.72);
+            border-radius: 13px;
+
+            font-size: 13px;
+            font-weight: 500;
+
+            transition: .3s ease;
+        }
+
+        .member-nav a i {
+            width: 20px;
+            text-align: center;
+            color: var(--gold);
+        }
+
+        .member-nav a:hover,
+        .member-nav a.active {
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(212,175,55,.16),
+                    rgba(212,175,55,.04)
+                );
+
+            border-left: 3px solid var(--gold);
+        }
+
+        .member-nav a.logout {
+            margin-top: 25px;
+            color: #ff8b8b;
+        }
+
+        .member-nav a.logout i {
+            color: #ff7070;
+        }
+
+        /* =====================================================
+           MAIN
+        ===================================================== */
+
+        .member-content {
+            width: calc(100% - 270px);
+            margin-left: 270px;
+            padding: 30px;
+        }
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .member-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            margin-bottom: 25px;
+        }
+
+        .member-header h1 {
+            font-size: clamp(24px, 3vw, 34px);
+            font-weight: 700;
+        }
+
+        #welcomeName {
+            color: var(--gold);
+        }
+
+        .member-header p {
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .member-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 10px 17px;
+
+            border-radius: 30px;
+
+            background: #fff;
+            border: 1px solid var(--border);
+
+            box-shadow: 0 8px 25px rgba(0,0,0,.05);
+
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* =====================================================
+           SLIDER
+        ===================================================== */
+
+        .vip-slider {
+            position: relative;
+            min-height: 310px;
+            overflow: hidden;
+            border-radius: 24px;
+            background: #090909;
+            box-shadow: var(--shadow);
+        }
+
+        .vip-slide {
+            position: absolute;
+            inset: 0;
+
+            padding: 45px;
+
+            display: flex;
+            align-items: center;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transform: scale(1.03);
+
+            transition:
+                opacity .6s ease,
+                transform .6s ease;
+
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(212,175,55,.20),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #080808,
+                    #17130a
+                );
+        }
+
+        .vip-slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        .vip-slide-content {
+            position: relative;
+            z-index: 2;
+            max-width: 680px;
+            color: #fff;
+        }
+
+        .vip-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 14px;
+            margin-bottom: 15px;
+
+            border: 1px solid rgba(212,175,55,.45);
+            border-radius: 30px;
+
+            background: rgba(212,175,55,.10);
+
+            color: var(--gold-light);
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .vip-slide h2 {
+            font-size: clamp(28px, 4vw, 46px);
+            line-height: 1.15;
+        }
+
+        .vip-slide h2 span {
+            color: var(--gold);
+        }
+
+        .vip-slide p {
+            max-width: 620px;
+            margin: 16px 0 25px;
+
+            color: rgba(255,255,255,.68);
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .vip-slide-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 12px 20px;
+
+            border-radius: 30px;
+
+            background: var(--gold);
+            color: #111;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            transition: .3s ease;
+        }
+
+        .vip-slide-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(212,175,55,.25);
+        }
+
+        .vip-slide-icon {
+            position: absolute;
+            right: 8%;
+            color: rgba(212,175,55,.09);
+            font-size: 180px;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            width: 40px;
+            height: 40px;
+
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.08);
+            color: #fff;
+
+            cursor: pointer;
+            z-index: 10;
+
+            transition: .3s;
+        }
+
+        .slider-btn:hover {
+            background: var(--gold);
+            color: #111;
+        }
+
+        .slider-prev {
+            left: 16px;
+        }
+
+        .slider-next {
+            right: 16px;
+        }
+
+        .slider-dots {
+            position: absolute;
+            left: 50%;
+            bottom: 17px;
+            transform: translateX(-50%);
+
+            display: flex;
+            gap: 7px;
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 8px;
+            height: 8px;
+            padding: 0;
+            border: 0;
+            border-radius: 10px;
+            background: rgba(255,255,255,.3);
+            cursor: pointer;
+        }
+
+        .slider-dot.active {
+            width: 25px;
+            background: var(--gold);
+        }
+
+        /* =====================================================
+           PROFILE
+        ===================================================== */
+
+        .profile-card {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            margin-top: 25px;
+            padding: 25px;
+
+            border-radius: 20px;
+
+            background: #fff;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-photo img {
+            width: 100px;
+            height: 100px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 4px solid var(--gold);
+            padding: 3px;
+        }
+
+        .profile-info h2 {
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .profile-info p {
+            margin: 6px 0;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .profile-info p i {
+            width: 20px;
+            color: var(--gold);
+        }
+
+        .account-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            margin-top: 10px;
+            padding: 7px 12px;
+
+            border-radius: 20px;
+
+            background: rgba(40,167,69,.08);
+
+            color: #249447;
+            font-size: 11px;
+        }
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .vip-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .stat-box {
+            padding: 23px;
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: var(--shadow);
+            transition: .3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-4px);
+        }
+
+        .stat-box i {
+            color: var(--gold);
+            font-size: 20px;
+        }
+
+        .stat-box h3 {
+            margin-top: 13px;
+            font-size: 25px;
+        }
+
+        .stat-box p {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        /* =====================================================
+           GRID
+        ===================================================== */
+
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .member-card {
+            padding: 23px;
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: var(--shadow);
+            transition: .3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .member-card > i {
+            color: var(--gold);
+            font-size: 24px;
+        }
+
+        .member-card h3 {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .member-card p {
+            min-height: 45px;
+            margin: 8px 0 16px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        .member-card a {
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        /* =====================================================
+           VIP PROGRESS
+        ===================================================== */
+
+        .vip-level-card,
+        .vip-circle-statistics,
+        .notifications {
+            margin-top: 25px;
+            padding: 25px;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: var(--shadow);
+        }
+
+        .vip-level-card h2,
+        .vip-circle-statistics h2,
+        .notifications h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+        }
+
+        .vip-level-card h2 i,
+        .vip-circle-statistics h2 i,
+        .notifications h2 i {
+            color: var(--gold);
+        }
+
+        .progress-container {
+            height: 10px;
+            margin-top: 22px;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #eee;
+        }
+
+        .progress-bar {
+            width: 0;
+            height: 100%;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #b88a17,
+                    var(--gold-light),
+                    var(--gold)
+                );
+
+            transition: width 1s ease;
+        }
+
+        .vip-level-card p {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        #currentLevel {
+            color: var(--gold);
+        }
+
+        /* =====================================================
+           CIRCLES
+        ===================================================== */
+
+        .circle-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 28px;
+        }
+
+        .circle-stat {
+            text-align: center;
+        }
+
+        .circle {
+            --progress: 0%;
+
+            width: 135px;
+            height: 135px;
+
+            margin: auto;
+
+            display: grid;
+            place-items: center;
+
+            position: relative;
+
+            border-radius: 50%;
+
+            background:
+                conic-gradient(
+                    var(--gold) var(--progress),
+                    #eeeeee 0
+                );
+        }
+
+        .circle::before {
+            content: "";
+            position: absolute;
+
+            width: 104px;
+            height: 104px;
+
+            border-radius: 50%;
+
+            background: #fff;
+        }
+
+        .circle-content {
+            position: relative;
+            z-index: 2;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .circle-content i {
+            color: var(--gold);
+            font-size: 18px;
+        }
+
+        .circle-content strong {
+            margin-top: 3px;
+            font-size: 20px;
+        }
+
+        .circle-content small {
+            color: var(--muted);
+            font-size: 9px;
+        }
+
+        .circle-stat h4 {
+            margin-top: 12px;
+            font-size: 12px;
+        }
+
+        .circle-stat p {
+            margin-top: 3px;
+            color: var(--muted);
+            font-size: 10px;
+        }
+
+        /* =====================================================
+           NOTIFICATIONS
+        ===================================================== */
+
+        #notificationList {
+            margin-top: 18px;
+        }
+
+        .notification-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 13px;
+
+            margin-bottom: 8px;
+
+            border-radius: 12px;
+
+            background: #fafafa;
+
+            font-size: 11px;
+        }
+
+        .notification-item i {
+            color: var(--gold);
+        }
+
+        /* =====================================================
+           MOBILE BUTTON
+        ===================================================== */
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            z-index: 2000;
+
+            width: 42px;
+            height: 42px;
+
+            border: 0;
+            border-radius: 12px;
+
+            background: #111;
+            color: var(--gold);
+
+            cursor: pointer;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1100px) {
+
+            .vip-stats,
+            .member-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .circle-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 800px) {
+
+            .member-sidebar {
+                transform: translateX(-100%);
+                transition: .3s ease;
+            }
+
+            .member-sidebar.open {
+                transform: translateX(0);
+            }
+
+            .member-content {
+                width: 100%;
+                margin-left: 0;
+                padding: 75px 18px 25px;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .member-header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .vip-stats,
+            .member-grid,
+            .circle-stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .vip-slide {
+                padding: 35px 28px;
+            }
+
+            .vip-slide-icon {
+                display: none;
+            }
+
+            .vip-slide h2 {
+                font-size: 28px;
+            }
+
+            .circle {
+                width: 125px;
+                height: 125px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MOBILE MENU
+===================================================== -->
+
+<button
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-label="Menu">
+
+    <i class="fa-solid fa-bars"></i>
+
+</button>
+
+
+<div class="member-layout">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================= -->
+
+    <aside
+        class="member-sidebar"
+        id="memberSidebar">
+
+
+        <div class="member-logo">
+
+            <img
+                src="assets/image/IMG_3474.PNG"
+                alt="YMS STORE">
+
+            <h2>YMS STORE</h2>
+
+            <span>VIP PREMIUM</span>
+
+        </div>
+
+
+        <nav class="member-nav">
+
+            <a
+                href="dashboard.html"
+                class="active">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Accueil</span>
+
+            </a>
+
+
+            <a href="pages/commandes.html">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span>Mes commandes</span>
+
+            </a>
+
+
+            <a href="pages/paiement.html">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Paiements</span>
+
+            </a>
+
+
+            <a href="pages/messages.html">
+
+                <i class="fa-solid fa-comments"></i>
+
+                <span>Messages</span>
+
+            </a>
+
+
+            <a href="pages/reunion.html">
+
+                <i class="fa-solid fa-video"></i>
+
+                <span>Réunions VIP</span>
+
+            </a>
+
+
+            <a href="profil.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Mon profil</span>
+
+            </a>
+
+
+            <a
+                href="#"
+                id="logout"
+                class="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Déconnexion</span>
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =================================================
+         CONTENU
+    ================================================= -->
+
+    <main class="member-content">
+
+
+        <!-- HEADER -->
+
+        <header class="member-header">
+
+            <div>
+
+                <h1>
+
+                    Bienvenue,
+
+                    <span id="welcomeName">
+                        Membre VIP
+                    </span>
+
+                </h1>
+
+                <p>
+                    Votre espace personnel Premium YMS STORE
+                </p>
+
+            </div>
+
+
+            <div class="member-status">
+
+                <i class="fa-solid fa-crown"></i>
+
+                <span id="vipLevel">
+                    VIP GOLD
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             SLIDER
+        ================================================= -->
+
+        <section class="vip-slider">
+
+
+            <article class="vip-slide active">
+
+                <div class="vip-slide-content">
+
+                    <span class="vip-label">
+
+                        <i class="fa-solid fa-crown"></i>
+
+                        YMS STORE VIP
+
+                    </span>
+
+                    <h2>
+
+                        Votre espace
+
+                        <span>Premium</span>
+
+                    </h2>
+
+                    <p>
+                        Bienvenue dans votre espace VIP.
+                        Retrouvez vos commandes, paiements,
+                        avantages et services exclusifs.
+                    </p>
+
+                    <a
+                        href="pages/commandes.html"
+                        class="vip-slide-btn">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Mes commandes
+
+                    </a>
+
+                </div>
+
+                <i class="fa-solid fa-crown vip-slide-icon"></i>
+
+            </article>
+
+
+            <article class="vip-slide">
+
+                <div class="vip-slide-content">
+
+                    <span class="vip-label">
+
+                        <i class="fa-solid fa-video"></i>
+
+                        RENCONTRES VIP
+
+                    </span>
+
+                    <h2>
+
+                        Des rencontres
+
+                        <span>exclusives</span>
+
+                    </h2>
+
+                    <p>
+                        Participez aux réunions privées
+                        et échangez directement avec
+                        l'équipe YMS STORE.
+                    </p>
+
+                    <a
+                        href="pages/reunion.html"
+                        class="vip-slide-btn">
+
+                        <i class="fa-solid fa-video"></i>
+
+                        Voir les réunions
+
+                    </a>
+
+                </div>
+
+                <i class="fa-solid fa-video vip-slide-icon"></i>
+
+            </article>
+
+
+            <article class="vip-slide">
+
+                <div class="vip-slide-content">
+
+                    <span class="vip-label">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                        SUPPORT VIP
+
+                    </span>
+
+                    <h2>
+
+                        Une assistance
+
+                        <span>prioritaire</span>
+
+                    </h2>
+
+                    <p>
+                        Une question concernant votre compte,
+                        une commande ou un paiement ?
+                        Notre équipe est à votre disposition.
+                    </p>
+
+                    <a
+                        href="pages/messages.html"
+                        class="vip-slide-btn">
+
+                        <i class="fa-solid fa-comments"></i>
+
+                        Contacter le support
+
+                    </a>
+
+                </div>
+
+                <i class="fa-solid fa-headset vip-slide-icon"></i>
+
+            </article>
+
+
+            <button
+                class="slider-btn slider-prev"
+                id="sliderPrev">
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+            </button>
+
+
+            <button
+                class="slider-btn slider-next"
+                id="sliderNext">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+            <div class="slider-dots">
+
+                <button
+                    class="slider-dot active"
+                    data-slide="0">
+                </button>
+
+                <button
+                    class="slider-dot"
+                    data-slide="1">
+                </button>
+
+                <button
+                    class="slider-dot"
+                    data-slide="2">
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROFIL
+        ================================================= -->
+
+        <section class="profile-card">
+
+            <div class="profile-photo">
+
+                <img
+                    id="memberPhoto"
+                    src="assets/image/default-user.png"
+                    alt="Photo du membre">
+
+            </div>
+
+
+            <div class="profile-info">
+
+                <h2 id="memberName">
+                    Membre VIP
+                </h2>
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span id="memberPhone">
+                        Non renseigné
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span id="memberEmail">
+                        Non renseigné
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    Inscrit depuis :
+
+                    <span id="memberDate">
+                        Non renseignée
+                    </span>
+
+                </p>
+
+                <div class="account-status">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Compte :
+
+                    <strong id="memberStatus">
+                        Actif
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STATISTIQUES
+        ================================================= -->
+
+        <section class="vip-stats">
+
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <h3 id="totalOrders">
+                    0
+                </h3>
+
+                <p>
+                    Commandes
+                </p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-money-bill-wave"></i>
+
+                <h3 id="totalPayments">
+                    0$
+                </h3>
+
+                <p>
+                    Paiements
+                </p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3 id="vipPoints">
+                    0
+                </h3>
+
+                <p>
+                    Points VIP
+                </p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-gift"></i>
+
+                <h3 id="vipBenefits">
+                    0
+                </h3>
+
+                <p>
+                    Avantages
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             ACCÈS RAPIDES
+        ================================================= -->
+
+        <section class="member-grid">
+
+
+            <div class="member-card">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <h3>
+                    Mes commandes
+                </h3>
+
+                <p>
+                    Consultez vos achats et votre historique.
+                </p>
+
+                <a href="pages/commandes.html">
+                    Consulter →
+                </a>
+
+            </div>
+
+
+            <div class="member-card">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <h3>
+                    Paiements
+                </h3>
+
+                <p>
+                    Consultez vos transactions et abonnements.
+                </p>
+
+                <a href="pages/paiement.html">
+                    Consulter →
+                </a>
+
+            </div>
+
+
+            <div class="member-card">
+
+                <i class="fa-solid fa-video"></i>
+
+                <h3>
+                    Réunions VIP
+                </h3>
+
+                <p>
+                    Découvrez les prochaines rencontres privées.
+                </p>
+
+                <a href="pages/reunion.html">
+                    Rejoindre →
+                </a>
+
+            </div>
+
+
+            <div class="member-card">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <h3>
+                    Support VIP
+                </h3>
+
+                <p>
+                    Contactez directement notre équipe.
+                </p>
+
+                <a href="pages/messages.html">
+                    Contacter →
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             PROGRESSION
+        ================================================= -->
+
+        <section class="vip-level-card">
+
+            <h2>
+
+                <i class="fa-solid fa-crown"></i>
+
+                Progression VIP
+
+            </h2>
+
+            <div class="progress-container">
+
+                <div
+                    id="vipProgress"
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0">
+                </div>
+
+            </div>
+
+            <p>
+
+                Niveau actuel :
+
+                <strong id="currentLevel">
+                    VIP GOLD
+                </strong>
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             STATISTIQUES CIRCULAIRES
+        ================================================= -->
+
+        <section class="vip-circle-statistics">
+
+            <h2>
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                Performance de votre compte
+
+            </h2>
+
+
+            <div class="circle-stats-grid">
+
+
+                <div class="circle-stat">
+
+                    <div
+                        class="circle"
+                        id="ordersCircle"
+                        style="--progress:0%;">
+
+                        <div class="circle-content">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            <strong id="circleOrders">
+                                0%
+                            </strong>
+
+                            <small>
+                                activité
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <h4>
+                        Activité commandes
+                    </h4>
+
+                    <p>
+                        Engagement client
+                    </p>
+
+                </div>
+
+
+                <div class="circle-stat">
+
+                    <div
+                        class="circle"
+                        style="--progress:0%;">
+
+                        <div class="circle-content">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            <strong id="circleLoyalty">
+                                0%
+                            </strong>
+
+                            <small>
+                                fidélité
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <h4>
+                        Fidélité VIP
+                    </h4>
+
+                    <p>
+                        Niveau actuel
+                    </p>
+
+                </div>
+
+
+                <div class="circle-stat">
+
+                    <div
+                        class="circle"
+                        style="--progress:0%;">
+
+                        <div class="circle-content">
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            <strong id="circlePayments">
+                                0%
+                            </strong>
+
+                            <small>
+                                paiements
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <h4>
+                        Paiements
+                    </h4>
+
+                    <p>
+                        Transactions
+                    </p>
+
+                </div>
+
+
+                <div class="circle-stat">
+
+                    <div
+                        class="circle"
+                        style="--progress:0%;">
+
+                        <div class="circle-content">
+
+                            <i class="fa-solid fa-gift"></i>
+
+                            <strong id="circleBenefits">
+                                0%
+                            </strong>
+
+                            <small>
+                                avantages
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <h4>
+                        Avantages VIP
+                    </h4>
+
+                    <p>
+                        Utilisation
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             NOTIFICATIONS
+        ================================================= -->
+
+        <section class="notifications">
+
+            <h2>
+
+                <i class="fa-solid fa-bell"></i>
+
+                Notifications VIP
+
+            </h2>
+
+            <div id="notificationList"></div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/dashboard.js"></script>
+
+
+</body>
+</html>

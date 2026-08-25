@@ -1,0 +1,5394 @@
+/*=========================================================
+YMS STORE
+VIP CLUB
+ABONNEMENT.CSS
+Version 1.0
+=========================================================*/
+
+
+:root{
+
+--gold:#d4af37;
+--gold-light:#f7d774;
+--gold-dark:#9d7410;
+
+--black:#050505;
+--black2:#101010;
+--black3:#181818;
+
+--white:#ffffff;
+
+--gray:#bcbcbc;
+
+--border:rgba(212,175,55,.18);
+
+--gradient:linear-gradient(135deg,#f7d774,#d4af37,#8f6700);
+
+--shadow:0 15px 45px rgba(0,0,0,.45);
+
+}
+
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:"Poppins",sans-serif;
+
+background:#050505;
+
+color:#fff;
+
+overflow-x:hidden;
+
+}
+
+
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:
+
+radial-gradient(circle at top right,
+rgba(212,175,55,.08),
+transparent 45%),
+
+radial-gradient(circle at bottom left,
+rgba(255,255,255,.03),
+transparent 35%);
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+
+
+.container{
+
+width:min(92%,1280px);
+
+margin:auto;
+
+}
+
+
+
+/*=====================================
+HEADER
+=====================================*/
+
+.vip-header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:999;
+
+background:rgba(5,5,5,.92);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(212,175,55,.15);
+
+transition:.4s;
+
+}
+
+
+
+.header-container{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:18px 0;
+
+}
+
+
+
+.vip-logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:700;
+
+font-size:22px;
+
+}
+
+
+
+.vip-logo img{
+
+width:65px;
+
+height:65px;
+
+object-fit:contain;
+
+}
+
+
+
+.vip-logo span{
+
+background:var(--gradient);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+
+
+/*=========================
+MENU
+=========================*/
+
+.vip-nav{
+
+display:flex;
+
+align-items:center;
+
+gap:35px;
+
+}
+
+
+
+.vip-nav a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:500;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+
+
+.vip-nav a:hover{
+
+color:var(--gold);
+
+}
+
+
+
+.vip-nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:0;
+
+height:2px;
+
+background:var(--gradient);
+
+transition:.35s;
+
+}
+
+
+
+.vip-nav a:hover::after{
+
+width:100%;
+
+}
+
+
+
+/*=========================
+BUTTONS
+=========================*/
+
+.header-buttons{
+
+display:flex;
+
+gap:15px;
+
+}
+
+
+
+.back-btn{
+
+padding:12px 22px;
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:40px;
+
+text-decoration:none;
+
+color:white;
+
+transition:.35s;
+
+}
+
+
+
+.back-btn:hover{
+
+background:#181818;
+
+}
+
+
+
+.vip-btn{
+
+padding:12px 28px;
+
+border-radius:40px;
+
+background:var(--gradient);
+
+color:#000;
+
+font-weight:700;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(212,175,55,.35);
+
+transition:.35s;
+
+}
+
+
+
+.vip-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 20px 35px rgba(212,175,55,.5);
+
+}
+
+
+
+/*====================================
+HERO
+====================================*/
+
+.vip-hero{
+
+padding-top:170px;
+
+padding-bottom:120px;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+.hero-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(circle at right,
+rgba(212,175,55,.12),
+transparent 40%),
+
+radial-gradient(circle at left,
+rgba(255,255,255,.03),
+transparent 35%);
+
+}
+
+
+
+.hero-container{
+
+display:grid;
+
+grid-template-columns:1fr 520px;
+
+gap:70px;
+
+align-items:center;
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+
+.gold-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 22px;
+
+background:rgba(212,175,55,.12);
+
+border:1px solid rgba(212,175,55,.35);
+
+border-radius:50px;
+
+color:var(--gold-light);
+
+margin-bottom:25px;
+
+font-weight:600;
+
+}
+
+
+
+.hero-content h1{
+
+font-size:64px;
+
+line-height:1.1;
+
+margin-bottom:25px;
+
+}
+
+
+
+.hero-content h1 span{
+
+background:var(--gradient);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+
+
+.hero-content p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#d7d7d7;
+
+max-width:680px;
+
+margin-bottom:40px;
+
+}
+
+
+
+/*=========================
+BUTTONS HERO
+=========================*/
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+margin-bottom:55px;
+
+}
+
+
+
+.join-btn{
+
+padding:18px 38px;
+
+border-radius:50px;
+
+background:var(--gradient);
+
+color:#000;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.35s;
+
+box-shadow:0 12px 35px rgba(212,175,55,.35);
+
+}
+
+
+
+.join-btn:hover{
+
+transform:translateY(-6px);
+
+}
+
+
+
+.discover-btn{
+
+padding:18px 38px;
+
+border-radius:50px;
+
+border:1px solid rgba(255,255,255,.15);
+
+text-decoration:none;
+
+color:white;
+
+transition:.35s;
+
+}
+
+
+
+.discover-btn:hover{
+
+background:#181818;
+
+}
+/*=========================================================
+CARTE VIP
+=========================================================*/
+
+.hero-image{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.vip-card-preview{
+
+width:360px;
+
+padding:35px;
+
+border-radius:28px;
+
+background:linear-gradient(160deg,#1d1d1d,#090909);
+
+border:1px solid rgba(212,175,55,.35);
+
+box-shadow:0 30px 60px rgba(0,0,0,.55);
+
+position:relative;
+
+overflow:hidden;
+
+transition:.45s;
+
+}
+
+.vip-card-preview::before{
+
+content:"";
+
+position:absolute;
+
+top:-80px;
+
+right:-80px;
+
+width:180px;
+
+height:180px;
+
+background:rgba(212,175,55,.12);
+
+border-radius:50%;
+
+}
+
+.vip-card-preview:hover{
+
+transform:rotateY(10deg) rotateX(6deg) translateY(-10px);
+
+}
+
+.vip-card-header{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+color:var(--gold);
+
+font-weight:700;
+
+letter-spacing:1px;
+
+margin-bottom:30px;
+
+}
+
+.vip-photo{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+margin:auto;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:45px;
+
+background:rgba(255,255,255,.05);
+
+border:3px solid var(--gold);
+
+color:var(--gold);
+
+}
+
+.vip-card-preview h3{
+
+margin-top:25px;
+
+text-align:center;
+
+font-size:26px;
+
+}
+
+.vip-card-preview p{
+
+text-align:center;
+
+margin-top:8px;
+
+color:#bbbbbb;
+
+}
+
+.vip-level{
+
+margin:25px auto;
+
+width:190px;
+
+text-align:center;
+
+padding:10px;
+
+border-radius:30px;
+
+background:var(--gradient);
+
+color:#000;
+
+font-weight:700;
+
+}
+
+.vip-qr{
+
+margin-top:25px;
+
+display:flex;
+
+justify-content:center;
+
+font-size:60px;
+
+color:var(--gold);
+
+}
+
+
+
+/*=========================================================
+STATISTIQUES
+=========================================================*/
+
+.hero-stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.stat-card{
+
+padding:22px;
+
+border-radius:18px;
+
+background:#101010;
+
+border:1px solid rgba(212,175,55,.15);
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--gold);
+
+box-shadow:0 15px 35px rgba(212,175,55,.18);
+
+}
+
+.stat-card h2{
+
+font-size:34px;
+
+color:var(--gold);
+
+margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+color:#d0d0d0;
+
+}
+
+
+
+/*=========================================================
+SECTION
+=========================================================*/
+
+.vip-benefits{
+
+padding:110px 0;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-title span{
+
+color:var(--gold);
+
+font-weight:700;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+}
+
+.section-title h2{
+
+font-size:46px;
+
+margin-top:15px;
+
+margin-bottom:20px;
+
+}
+
+.section-title p{
+
+max-width:760px;
+
+margin:auto;
+
+color:#bfbfbf;
+
+line-height:1.8;
+
+}
+
+
+
+/*=========================================================
+CARDS
+=========================================================*/
+
+.benefits-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:28px;
+
+}
+
+.benefit-card{
+
+padding:40px 30px;
+
+background:#111;
+
+border-radius:24px;
+
+border:1px solid rgba(212,175,55,.15);
+
+transition:.45s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.benefit-card::before{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.05),
+
+transparent
+
+);
+
+transition:.7s;
+
+}
+
+.benefit-card:hover::before{
+
+left:100%;
+
+}
+
+.benefit-card:hover{
+
+transform:translateY(-12px);
+
+border-color:var(--gold);
+
+box-shadow:0 20px 40px rgba(212,175,55,.18);
+
+}
+
+.benefit-icon{
+
+width:75px;
+
+height:75px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin-bottom:25px;
+
+font-size:30px;
+
+background:var(--gradient);
+
+color:#000;
+
+}
+
+.benefit-card h3{
+
+font-size:24px;
+
+margin-bottom:18px;
+
+}
+
+.benefit-card p{
+
+line-height:1.8;
+
+color:#cfcfcf;
+
+}
+
+
+
+/*=========================================================
+ANIMATIONS
+=========================================================*/
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.vip-card-preview{
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes glow{
+
+0%{
+
+box-shadow:0 0 0 rgba(212,175,55,0);
+
+}
+
+50%{
+
+box-shadow:0 0 35px rgba(212,175,55,.25);
+
+}
+
+100%{
+
+box-shadow:0 0 0 rgba(212,175,55,0);
+
+}
+
+}
+
+.gold-badge{
+
+animation:glow 3s infinite;
+
+}
+/*=========================================================
+FORMULES D'ABONNEMENT
+=========================================================*/
+
+.vip-plans{
+
+padding:120px 0;
+
+background:#080808;
+
+position:relative;
+
+}
+
+.vip-plans::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:
+radial-gradient(circle at top,
+rgba(212,175,55,.06),
+transparent 45%);
+
+pointer-events:none;
+
+}
+
+.plans-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.plan-card{
+
+position:relative;
+
+background:#121212;
+
+border:1px solid rgba(212,175,55,.15);
+
+border-radius:28px;
+
+padding:40px;
+
+overflow:hidden;
+
+transition:.45s;
+
+}
+
+.plan-card:hover{
+
+transform:translateY(-15px);
+
+border-color:var(--gold);
+
+box-shadow:0 25px 45px rgba(212,175,55,.18);
+
+}
+
+.plan-header{
+
+text-align:center;
+
+margin-bottom:30px;
+
+}
+
+.plan-header h3{
+
+font-size:30px;
+
+letter-spacing:2px;
+
+margin-bottom:15px;
+
+}
+
+.plan-price h2{
+
+font-size:58px;
+
+color:var(--gold);
+
+line-height:1;
+
+}
+
+.plan-price span{
+
+color:#bcbcbc;
+
+font-size:16px;
+
+}
+
+.plan-card ul{
+
+list-style:none;
+
+margin:35px 0;
+
+padding:0;
+
+}
+
+.plan-card ul li{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:12px;
+
+margin-bottom:18px;
+
+line-height:1.6;
+
+color:#d7d7d7;
+
+}
+
+.plan-card ul li i{
+
+color:var(--gold);
+
+margin-top:4px;
+
+}
+
+.plan-btn{
+
+display:block;
+
+text-align:center;
+
+padding:16px;
+
+border-radius:50px;
+
+background:var(--gradient);
+
+color:#000;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.plan-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 28px rgba(212,175,55,.35);
+
+}
+
+
+
+/*=========================
+SILVER
+=========================*/
+
+.plan-card.silver{
+
+border-top:5px solid #c0c0c0;
+
+}
+
+.plan-card.silver h3{
+
+color:#e6e6e6;
+
+}
+
+
+
+/*=========================
+GOLD
+=========================*/
+
+.plan-card.gold{
+
+transform:scale(1.05);
+
+border:2px solid var(--gold);
+
+background:linear-gradient(
+180deg,
+rgba(212,175,55,.08),
+#111111);
+
+}
+
+.plan-card.gold:hover{
+
+transform:scale(1.08) translateY(-10px);
+
+}
+
+.gold-btn{
+
+background:linear-gradient(
+135deg,
+#ffe58d,
+#d4af37,
+#9f7400);
+
+}
+
+.popular-badge{
+
+position:absolute;
+
+top:20px;
+
+right:-45px;
+
+padding:10px 60px;
+
+background:var(--gradient);
+
+color:#000;
+
+font-weight:700;
+
+font-size:14px;
+
+transform:rotate(45deg);
+
+box-shadow:0 10px 25px rgba(212,175,55,.35);
+
+}
+
+
+
+/*=========================
+PLATINUM
+=========================*/
+
+.plan-card.platinum{
+
+border-top:5px solid #7b68ee;
+
+}
+
+.plan-card.platinum h3{
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#caa9ff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+
+
+/*=========================================================
+ÉCONOMIES
+=========================================================*/
+
+.vip-savings{
+
+padding:110px 0;
+
+}
+
+.saving-box{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:50px;
+
+background:#101010;
+
+border-radius:30px;
+
+padding:60px;
+
+border:1px solid rgba(212,175,55,.15);
+
+}
+
+.saving-left{
+
+flex:1;
+
+}
+
+.saving-left h2{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+.saving-left p{
+
+color:#c8c8c8;
+
+line-height:1.8;
+
+}
+
+.saving-right{
+
+display:flex;
+
+align-items:center;
+
+gap:25px;
+
+}
+
+.saving-card{
+
+width:220px;
+
+padding:35px;
+
+border-radius:22px;
+
+background:#171717;
+
+text-align:center;
+
+border:1px solid rgba(212,175,55,.15);
+
+}
+
+.saving-card h3{
+
+margin-bottom:15px;
+
+font-size:22px;
+
+}
+
+.saving-card h2{
+
+font-size:42px;
+
+margin-bottom:10px;
+
+}
+
+.saving-card.gold{
+
+background:linear-gradient(
+135deg,
+rgba(212,175,55,.12),
+#111);
+
+border:2px solid var(--gold);
+
+}
+
+.saving-card.gold h2{
+
+color:var(--gold);
+
+}
+
+.saving-arrow{
+
+font-size:40px;
+
+color:var(--gold);
+
+animation:float 3s infinite;
+
+}
+/*=========================================================
+BONUS VIP
+=========================================================*/
+
+.vip-bonus{
+
+padding:120px 0;
+
+background:#050505;
+
+}
+
+.bonus-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+margin-top:60px;
+
+}
+
+.bonus-card{
+
+background:#111;
+
+padding:40px 30px;
+
+border-radius:25px;
+
+border:1px solid rgba(212,175,55,.15);
+
+text-align:center;
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.bonus-card::after{
+
+content:"";
+
+position:absolute;
+
+top:-120%;
+
+left:-120%;
+
+width:250%;
+
+height:250%;
+
+background:linear-gradient(
+
+135deg,
+
+transparent,
+
+rgba(212,175,55,.08),
+
+transparent
+
+);
+
+transform:rotate(20deg);
+
+transition:.8s;
+
+}
+
+.bonus-card:hover::after{
+
+top:-40%;
+
+left:-40%;
+
+}
+
+.bonus-card:hover{
+
+transform:translateY(-12px);
+
+border-color:var(--gold);
+
+box-shadow:0 20px 45px rgba(212,175,55,.20);
+
+}
+
+.bonus-card i{
+
+font-size:50px;
+
+color:var(--gold);
+
+margin-bottom:25px;
+
+}
+
+.bonus-card h3{
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+.bonus-card p{
+
+line-height:1.8;
+
+color:#cfcfcf;
+
+}
+
+
+
+/*=========================================================
+TEMOIGNAGES
+=========================================================*/
+
+.vip-testimonials{
+
+padding:120px 0;
+
+}
+
+.testimonial-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.testimonial-card{
+
+background:#101010;
+
+padding:40px;
+
+border-radius:28px;
+
+border:1px solid rgba(212,175,55,.15);
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.testimonial-card:hover{
+
+transform:translateY(-10px);
+
+border-color:var(--gold);
+
+}
+
+.testimonial-card img{
+
+width:95px;
+
+height:95px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:3px solid var(--gold);
+
+margin-bottom:20px;
+
+}
+
+.testimonial-card h3{
+
+margin-bottom:10px;
+
+}
+
+.stars{
+
+color:#FFD700;
+
+font-size:20px;
+
+margin-bottom:20px;
+
+}
+
+.testimonial-card p{
+
+line-height:1.8;
+
+color:#d5d5d5;
+
+}
+
+
+
+/*=========================================================
+FAQ
+=========================================================*/
+
+.vip-faq{
+
+padding:120px 0;
+
+background:#090909;
+
+}
+
+.faq-list{
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.faq-item{
+
+margin-bottom:20px;
+
+border-radius:18px;
+
+overflow:hidden;
+
+border:1px solid rgba(212,175,55,.15);
+
+background:#111;
+
+}
+
+.faq-question{
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px 28px;
+
+background:none;
+
+border:none;
+
+color:#fff;
+
+font-size:18px;
+
+cursor:pointer;
+
+font-weight:600;
+
+}
+
+.faq-question:hover{
+
+background:rgba(212,175,55,.06);
+
+}
+
+.faq-answer{
+
+display:none;
+
+padding:25px 28px;
+
+border-top:1px solid rgba(212,175,55,.12);
+
+}
+
+.faq-answer p{
+
+color:#d2d2d2;
+
+line-height:1.8;
+
+}
+
+
+
+/*=========================================================
+CTA
+=========================================================*/
+
+.vip-cta{
+
+padding:130px 0;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#070707,
+
+#111111,
+
+#050505
+
+);
+
+}
+
+.cta-box{
+
+text-align:center;
+
+padding:80px;
+
+border-radius:35px;
+
+border:1px solid rgba(212,175,55,.20);
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(212,175,55,.08),
+
+rgba(255,255,255,.02)
+
+);
+
+}
+
+.cta-box i{
+
+font-size:70px;
+
+color:var(--gold);
+
+margin-bottom:25px;
+
+}
+
+.cta-box h2{
+
+font-size:52px;
+
+margin-bottom:20px;
+
+}
+
+.cta-box p{
+
+max-width:750px;
+
+margin:auto;
+
+line-height:1.9;
+
+color:#d0d0d0;
+
+margin-bottom:40px;
+
+}
+
+.cta-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+.cta-primary{
+
+padding:18px 45px;
+
+border-radius:50px;
+
+background:var(--gradient);
+
+color:#000;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.35s;
+
+box-shadow:0 15px 35px rgba(212,175,55,.30);
+
+}
+
+.cta-primary:hover{
+
+transform:translateY(-6px);
+
+}
+
+.cta-secondary{
+
+padding:18px 45px;
+
+border-radius:50px;
+
+border:1px solid rgba(255,255,255,.20);
+
+color:#fff;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.cta-secondary:hover{
+
+background:#181818;
+
+}
+
+
+
+/*=========================================================
+FOOTER
+=========================================================*/
+
+.vip-footer{
+
+padding:60px 0;
+
+text-align:center;
+
+border-top:1px solid rgba(212,175,55,.10);
+
+background:#050505;
+
+}
+
+.vip-footer img{
+
+width:90px;
+
+margin-bottom:20px;
+
+}
+
+.vip-footer p{
+
+color:#9f9f9f;
+
+line-height:1.8;
+
+}
+
+.vip-footer .socials{
+
+margin-top:25px;
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.vip-footer .socials a{
+
+width:50px;
+
+height:50px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+background:#111;
+
+color:var(--gold);
+
+font-size:20px;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.vip-footer .socials a:hover{
+
+background:var(--gold);
+
+color:#000;
+
+transform:translateY(-6px);
+
+}
+/*=========================================================*
+ ESPACE ABONNÉ DASHBOARD
+ YMS STORE VIP CLUB
+*=========================================================*/
+
+
+.vip-dashboard{
+
+padding-top:130px;
+padding-bottom:80px;
+
+}
+
+
+/* HEADER PROFIL */
+
+.vip-profile{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+background:#111;
+
+padding:35px;
+
+border-radius:30px;
+
+border:1px solid rgba(212,175,55,.18);
+
+margin-bottom:40px;
+
+}
+
+
+
+.profile-info{
+
+display:flex;
+align-items:center;
+gap:25px;
+
+}
+
+
+.profile-photo{
+
+width:100px;
+height:100px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:3px solid var(--gold);
+
+}
+
+
+
+.profile-info h2{
+
+font-size:30px;
+
+}
+
+
+
+.profile-info span{
+
+color:var(--gold);
+
+}
+
+
+
+.vip-status{
+
+padding:12px 25px;
+
+border-radius:40px;
+
+background:var(--gradient);
+
+color:#000;
+
+font-weight:700;
+
+}
+
+
+
+
+
+/* MENU DASHBOARD */
+
+
+.vip-menu{
+
+display:grid;
+
+grid-template-columns:repeat(6,1fr);
+
+gap:20px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.vip-menu a{
+
+background:#111;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+color:white;
+
+text-decoration:none;
+
+border:1px solid rgba(212,175,55,.15);
+
+transition:.35s;
+
+}
+
+
+
+.vip-menu a i{
+
+display:block;
+
+font-size:35px;
+
+color:var(--gold);
+
+margin-bottom:15px;
+
+}
+
+
+
+.vip-menu a:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--gold);
+
+}
+
+
+
+
+/* CARTES DASHBOARD */
+
+
+.dashboard-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+
+
+.dashboard-card{
+
+background:#111;
+
+padding:35px;
+
+border-radius:25px;
+
+border:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.dashboard-card h3{
+
+font-size:22px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.dashboard-card p{
+
+color:#ccc;
+
+line-height:1.8;
+
+}
+
+
+
+.dashboard-card i{
+
+font-size:40px;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+
+
+
+/* COMMANDES */
+
+
+.order-box{
+
+background:#111;
+
+padding:30px;
+
+border-radius:25px;
+
+border:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.order-item{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.order-status{
+
+padding:8px 18px;
+
+border-radius:30px;
+
+background:#0f9d58;
+
+font-size:14px;
+
+}
+
+
+
+
+/* CHAT */
+
+.vip-chat{
+
+height:400px;
+
+background:#0d0d0d;
+
+border-radius:25px;
+
+padding:25px;
+
+overflow:auto;
+
+}
+
+
+
+.message{
+
+padding:15px;
+
+margin-bottom:15px;
+
+border-radius:20px;
+
+max-width:70%;
+
+}
+
+
+
+.message.client{
+
+background:var(--gold);
+
+color:#000;
+
+margin-left:auto;
+
+}
+
+
+
+.message.admin{
+
+background:#222;
+
+color:white;
+
+}
+
+
+
+
+
+/* BOUTONS COMMUNICATION */
+
+
+.communication-buttons{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.communication-buttons a{
+
+padding:15px 30px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:700;
+
+}
+
+
+
+.audio-btn{
+
+background:#1db954;
+
+color:white;
+
+}
+
+
+
+.video-btn{
+
+background:#e53935;
+
+color:white;
+
+}
+
+
+
+.meeting-btn{
+
+background:var(--gradient);
+
+color:#000;
+
+}
+
+
+
+
+/* TABLEAU REUNION */
+
+
+.meeting-card{
+
+background:#111;
+
+padding:30px;
+
+border-radius:25px;
+
+border:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.meeting-card h3{
+
+color:var(--gold);
+
+margin-bottom:15px;
+
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:1000px){
+
+
+.vip-menu{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+
+.dashboard-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:650px){
+
+
+.vip-profile{
+
+flex-direction:column;
+
+gap:25px;
+
+text-align:center;
+
+}
+
+
+
+.profile-info{
+
+flex-direction:column;
+
+}
+
+
+.vip-menu{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+/*=========================================================*
+ ESPACE MEMBRE DASHBOARD
+ YMS STORE VIP
+*=========================================================*/
+
+
+.member-layout{
+
+display:flex;
+min-height:100vh;
+background:#050505;
+
+}
+
+
+/* SIDEBAR */
+
+.member-sidebar{
+
+width:280px;
+background:#0d0d0d;
+border-right:1px solid rgba(212,175,55,.15);
+padding:35px 20px;
+position:fixed;
+top:0;
+bottom:0;
+left:0;
+
+}
+
+
+.member-logo{
+
+text-align:center;
+margin-bottom:40px;
+
+}
+
+
+.member-logo img{
+
+width:85px;
+height:85px;
+object-fit:contain;
+margin-bottom:15px;
+
+}
+
+
+.member-logo h2{
+
+font-size:24px;
+color:white;
+
+}
+
+
+.member-logo span{
+
+color:var(--gold);
+
+}
+
+
+
+.member-sidebar nav{
+
+display:flex;
+flex-direction:column;
+gap:12px;
+
+}
+
+
+
+.member-sidebar nav a{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+padding:15px 20px;
+
+border-radius:15px;
+
+color:#ddd;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+
+
+.member-sidebar nav a i{
+
+color:var(--gold);
+font-size:18px;
+
+}
+
+
+
+.member-sidebar nav a:hover,
+.member-sidebar nav a.active{
+
+background:rgba(212,175,55,.12);
+
+color:var(--gold);
+
+}
+
+
+
+/* CONTENU */
+
+
+.member-content{
+
+margin-left:280px;
+
+width:calc(100% - 280px);
+
+padding:40px;
+
+}
+
+
+
+/* HEADER */
+
+
+.member-header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:#111;
+
+padding:35px;
+
+border-radius:25px;
+
+border:1px solid rgba(212,175,55,.15);
+
+margin-bottom:35px;
+
+}
+
+
+
+.member-header h1{
+
+font-size:32px;
+
+}
+
+
+
+.member-header p{
+
+color:#aaa;
+
+}
+
+
+
+.member-status{
+
+background:var(--gradient);
+
+padding:15px 25px;
+
+border-radius:40px;
+
+color:#000;
+
+font-weight:700;
+
+}
+
+
+
+
+
+/* PROFIL */
+
+
+.profile-card{
+
+display:flex;
+
+align-items:center;
+
+gap:30px;
+
+background:#111;
+
+padding:35px;
+
+border-radius:25px;
+
+border:1px solid rgba(212,175,55,.15);
+
+margin-bottom:40px;
+
+}
+
+
+
+.profile-photo img{
+
+width:130px;
+
+height:130px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:4px solid var(--gold);
+
+}
+
+
+
+.profile-info h2{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.profile-info p{
+
+color:#ccc;
+
+margin:10px 0;
+
+}
+
+
+
+.profile-info i{
+
+color:var(--gold);
+
+margin-right:10px;
+
+}
+
+
+
+.discount{
+
+background:rgba(212,175,55,.10);
+
+padding:12px 18px;
+
+border-radius:20px;
+
+}
+
+
+
+
+
+/* CARTES */
+
+
+.member-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+
+
+.member-card{
+
+background:#111;
+
+padding:35px 25px;
+
+border-radius:25px;
+
+border:1px solid rgba(212,175,55,.15);
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+
+
+.member-card:hover{
+
+transform:translateY(-10px);
+
+border-color:var(--gold);
+
+}
+
+
+
+.member-card i{
+
+font-size:45px;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+
+
+.member-card h3{
+
+margin-bottom:15px;
+
+}
+
+
+
+.member-card p{
+
+color:#bbb;
+
+line-height:1.7;
+
+}
+
+
+
+.member-card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 28px;
+
+border-radius:30px;
+
+background:var(--gradient);
+
+color:#000;
+
+font-weight:700;
+
+text-decoration:none;
+
+}
+
+
+
+
+
+/* NOTIFICATIONS */
+
+
+.notifications{
+
+margin-top:40px;
+
+background:#111;
+
+padding:35px;
+
+border-radius:25px;
+
+border:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.notifications h2{
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+
+
+#notificationList p{
+
+background:#181818;
+
+padding:18px;
+
+border-radius:15px;
+
+color:#ccc;
+
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:1100px){
+
+.member-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+@media(max-width:800px){
+
+
+.member-sidebar{
+
+position:relative;
+
+width:100%;
+
+height:auto;
+
+}
+
+
+
+.member-layout{
+
+display:block;
+
+}
+
+
+
+.member-content{
+
+margin-left:0;
+
+width:100%;
+
+padding:20px;
+
+}
+
+
+
+.member-header{
+
+flex-direction:column;
+
+gap:20px;
+
+text-align:center;
+
+}
+
+
+
+.profile-card{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+
+.member-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+/*=========================================================
+ LOGIN VIP
+=========================================================*/
+
+
+.login-page{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#050505;
+
+}
+
+
+
+.login-box{
+
+width:420px;
+
+padding:45px;
+
+background:#111;
+
+border-radius:30px;
+
+border:1px solid rgba(212,175,55,.25);
+
+box-shadow:0 25px 60px rgba(0,0,0,.5);
+
+text-align:center;
+
+}
+
+
+
+.login-logo img{
+
+width:90px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.login-logo h1{
+
+font-size:35px;
+
+background:var(--gradient);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+
+
+.login-logo p{
+
+color:#aaa;
+
+margin-bottom:35px;
+
+}
+
+
+
+
+.input-box{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+background:#181818;
+
+border:1px solid rgba(212,175,55,.15);
+
+padding:15px 20px;
+
+border-radius:40px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.input-box i{
+
+color:var(--gold);
+
+}
+
+
+
+.input-box input{
+
+width:100%;
+
+background:none;
+
+border:none;
+
+outline:none;
+
+color:white;
+
+font-family:Poppins;
+
+}
+
+
+
+.login-box button{
+
+width:100%;
+
+border:none;
+
+cursor:pointer;
+
+font-size:16px;
+
+margin-top:10px;
+
+}
+
+
+
+.login-footer{
+
+margin-top:30px;
+
+color:#aaa;
+
+}
+
+
+
+.login-footer a{
+
+color:var(--gold);
+
+text-decoration:none;
+
+}
+/*=========================================================
+ ADMINISTRATION VIP
+=========================================================*/
+
+
+.dashboard-card{
+
+background:#111;
+
+padding:35px;
+
+border-radius:25px;
+
+border:1px solid rgba(212,175,55,.15);
+
+margin-bottom:35px;
+
+}
+
+
+
+.dashboard-card h2{
+
+margin-bottom:25px;
+
+color:white;
+
+}
+
+
+
+.admin-member{
+
+background:#181818;
+
+padding:20px;
+
+border-radius:18px;
+
+margin-bottom:15px;
+
+border:1px solid rgba(212,175,55,.12);
+
+}
+
+
+
+.admin-member h3{
+
+color:var(--gold);
+
+margin-bottom:10px;
+
+}
+
+
+
+.admin-member button{
+
+margin-top:15px;
+
+padding:10px 20px;
+
+border-radius:30px;
+
+border:none;
+
+background:#b00020;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+
+
+.admin-message{
+
+background:#181818;
+
+padding:20px;
+
+border-radius:18px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.admin-message small{
+
+color:#aaa;
+
+}
+/*=========================================================
+ PAIEMENT
+=========================================================*/
+
+
+.payment-select{
+
+width:100%;
+
+padding:15px 20px;
+
+margin-bottom:20px;
+
+border-radius:40px;
+
+background:#181818;
+
+color:white;
+
+border:1px solid rgba(212,175,55,.15);
+
+font-family:Poppins;
+
+outline:none;
+
+}
+
+
+.payment-select option{
+
+background:#111;
+
+}
+/*=========================================================
+ CHAT VIP
+=========================================================*/
+
+
+.chat-box{
+
+height:400px;
+
+overflow-y:auto;
+
+background:#090909;
+
+padding:25px;
+
+border-radius:20px;
+
+margin-bottom:20px;
+
+border:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.chat-message{
+
+background:#181818;
+
+padding:18px;
+
+border-radius:18px;
+
+margin-bottom:15px;
+
+border-left:3px solid var(--gold);
+
+}
+
+
+
+.chat-message strong{
+
+color:var(--gold);
+
+}
+
+
+
+.chat-message small{
+
+color:#999;
+
+}
+
+
+
+.chat-input{
+
+display:flex;
+
+gap:15px;
+
+}
+
+
+
+.chat-input input{
+
+flex:1;
+
+padding:16px 22px;
+
+border-radius:40px;
+
+background:#181818;
+
+border:1px solid rgba(212,175,55,.15);
+
+color:white;
+
+outline:none;
+
+}
+
+
+
+.chat-input button{
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+border:none;
+
+background:var(--gradient);
+
+cursor:pointer;
+
+font-size:20px;
+
+}
+/*=========================================================
+ REUNIONS VIP
+=========================================================*/
+
+
+.plan-btn{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:12px 25px;
+
+border-radius:40px;
+
+background:var(--gradient);
+
+color:#000;
+
+font-weight:700;
+
+text-decoration:none;
+
+}
+
+
+
+.plan-btn:hover{
+
+transform:translateY(-3px);
+
+}
+/*====================================================
+ESPACE ABONNE DASHBOARD
+====================================================*/
+
+.member-layout{
+display:flex;
+min-height:100vh;
+background:#050505;
+}
+
+
+.member-sidebar{
+
+width:280px;
+background:#0d0d0d;
+border-right:1px solid rgba(212,175,55,.15);
+padding:30px 20px;
+position:fixed;
+height:100vh;
+
+}
+
+
+
+.member-logo{
+text-align:center;
+margin-bottom:40px;
+}
+
+
+.member-logo img{
+
+width:80px;
+height:80px;
+object-fit:contain;
+
+}
+
+
+.member-logo h2{
+
+color:white;
+margin-top:15px;
+
+}
+
+
+.member-logo span{
+
+color:#d4af37;
+
+}
+
+
+
+.member-sidebar nav a{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+padding:15px;
+
+margin-bottom:10px;
+
+border-radius:15px;
+
+color:#ccc;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+
+
+.member-sidebar nav a:hover,
+.member-sidebar nav a.active{
+
+background:linear-gradient(
+135deg,
+#f7d774,
+#d4af37
+);
+
+color:#000;
+
+}
+
+
+
+.member-content{
+
+margin-left:280px;
+
+padding:40px;
+
+width:100%;
+
+}
+
+
+
+.member-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:40px;
+
+}
+
+
+
+.member-header h1{
+
+font-size:35px;
+
+}
+
+
+
+.member-status{
+
+background:#111;
+
+border:1px solid #d4af37;
+
+padding:15px 25px;
+
+border-radius:40px;
+
+color:#d4af37;
+
+}
+
+
+
+.dashboard-card,
+.profile-card,
+.member-card{
+
+background:#111;
+
+border:1px solid rgba(212,175,55,.15);
+
+border-radius:25px;
+
+padding:30px;
+
+margin-bottom:30px;
+
+}
+
+
+
+.profile-card{
+
+display:flex;
+
+gap:30px;
+
+align-items:center;
+
+}
+
+
+
+.profile-photo img{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+border:3px solid #d4af37;
+
+}
+
+
+
+.member-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+
+
+.member-card{
+
+text-align:center;
+
+}
+
+
+
+.member-card i{
+
+font-size:40px;
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+}
+
+
+
+.member-card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 25px;
+
+background:#d4af37;
+
+color:#000;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-weight:700;
+
+}
+
+
+
+.chat-box{
+
+height:350px;
+
+overflow:auto;
+
+background:#080808;
+
+padding:20px;
+
+border-radius:20px;
+
+}
+
+
+
+.chat-input{
+
+display:flex;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+
+
+.chat-input input{
+
+flex:1;
+
+padding:15px;
+
+border-radius:30px;
+
+background:#181818;
+
+border:1px solid #333;
+
+color:white;
+
+}
+
+
+
+.chat-input button{
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+border:none;
+
+background:#d4af37;
+
+cursor:pointer;
+
+}
+
+
+
+@media(max-width:900px){
+
+.member-sidebar{
+
+position:relative;
+
+width:100%;
+
+height:auto;
+
+}
+
+
+.member-layout{
+
+display:block;
+
+}
+
+
+.member-content{
+
+margin-left:0;
+
+}
+
+
+.member-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+/*====================================================
+PAGE PAIEMENT VIP
+====================================================*/
+
+
+.input-box{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+background:#181818;
+
+border:1px solid rgba(212,175,55,.15);
+
+padding:15px 20px;
+
+border-radius:18px;
+
+margin:20px 0;
+
+}
+
+
+.input-box i{
+
+color:var(--gold);
+
+font-size:20px;
+
+}
+
+
+.input-box input{
+
+width:100%;
+
+background:none;
+
+border:none;
+
+outline:none;
+
+color:white;
+
+font-size:16px;
+
+}
+
+
+
+.payment-select{
+
+width:100%;
+
+padding:16px 20px;
+
+margin:20px 0;
+
+border-radius:18px;
+
+background:#181818;
+
+color:white;
+
+border:1px solid rgba(212,175,55,.2);
+
+font-family:"Poppins",sans-serif;
+
+font-size:15px;
+
+cursor:pointer;
+
+}
+
+
+
+.dashboard-card h2{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+
+
+.dashboard-card h2 i{
+
+color:var(--gold);
+
+}
+
+
+
+.dashboard-card .vip-btn{
+
+border:none;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+
+
+#paymentList{
+
+margin-top:20px;
+
+}
+
+
+
+.payment-item{
+
+background:#181818;
+
+padding:20px;
+
+border-radius:18px;
+
+border-left:4px solid var(--gold);
+
+margin-bottom:15px;
+
+}
+
+
+
+.payment-item strong{
+
+color:var(--gold);
+
+}
+/*====================================================
+COMMANDES VIP
+====================================================*/
+
+
+#orderList{
+
+margin-top:20px;
+
+}
+
+
+.order-item{
+
+background:#181818;
+
+padding:20px;
+
+border-radius:18px;
+
+border-left:4px solid var(--gold);
+
+margin-bottom:15px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+.order-item h3{
+
+color:white;
+
+margin-bottom:8px;
+
+}
+
+
+
+.order-item p{
+
+color:#bbb;
+
+}
+
+
+
+.order-price{
+
+color:var(--gold);
+
+font-size:22px;
+
+font-weight:700;
+
+}
+/*=========================================================
+ PHOTO PROFIL MEMBRE VIP
+=========================================================*/
+
+
+.profile-photo{
+
+width:140px;
+height:140px;
+border-radius:50%;
+overflow:hidden;
+border:4px solid #d4af37;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#111;
+box-shadow:0 0 20px rgba(212,175,55,0.4);
+
+}
+
+.profile-photo img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+
+}
+/*=========================================================
+ APERCU PHOTO INSCRIPTION VIP
+=========================================================*/
+
+.preview-photo{
+
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+margin:20px auto;
+border:3px solid #d4af37;
+box-shadow:0 0 15px rgba(212,175,55,0.4);
+
+}
+/*=========================================================
+ FORMULAIRE INSCRIPTION VIP
+=========================================================*/
+
+
+.register-box{
+
+max-width:650px;
+margin:40px auto;
+padding:40px;
+
+background:
+rgba(20,20,20,0.95);
+
+border-radius:20px;
+
+border:1px solid rgba(212,175,55,0.4);
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.5);
+
+}
+
+
+
+.register-box label{
+
+display:block;
+
+color:#fff;
+
+font-weight:600;
+
+margin:18px 0 8px;
+
+font-size:15px;
+
+}
+
+
+
+.register-box input,
+.register-box select{
+
+
+width:100%;
+
+padding:15px 18px;
+
+border-radius:12px;
+
+border:1px solid #444;
+
+background:#111;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+
+
+.register-box input:focus,
+.register-box select:focus{
+
+
+border-color:#d4af37;
+
+box-shadow:
+0 0 10px rgba(212,175,55,.4);
+
+}
+
+
+
+.register-box input[type="file"]{
+
+
+padding:12px;
+
+cursor:pointer;
+
+background:#181818;
+
+}
+
+
+
+.register-box .plan-btn{
+
+
+width:100%;
+
+margin-top:30px;
+
+padding:16px;
+
+border:none;
+
+border-radius:30px;
+
+background:
+linear-gradient(135deg,#d4af37,#ffdf70);
+
+color:#111;
+
+font-weight:700;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.register-box .plan-btn:hover{
+
+
+transform:translateY(-3px);
+
+box-shadow:
+0 10px 25px rgba(212,175,55,.5);
+
+}
+/*====================================================
+FORMULAIRE VIP PREMIUM AMELIORE
+====================================================*/
+
+.register-box{
+max-width:700px;
+padding:50px;
+background:
+linear-gradient(
+145deg,
+rgba(25,25,25,.98),
+rgba(10,10,10,.98)
+);
+
+border-radius:35px;
+
+border:1px solid rgba(212,175,55,.35);
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.6);
+
+margin:auto;
+}
+
+
+.register-box label{
+
+display:block;
+
+font-size:15px;
+
+font-weight:600;
+
+color:#f7d774;
+
+margin-bottom:10px;
+
+margin-top:25px;
+
+}
+
+
+.register-box input,
+.register-box select{
+
+width:100%;
+
+height:55px;
+
+padding:0 20px;
+
+background:#181818;
+
+border:
+
+1px solid rgba(212,175,55,.25);
+
+border-radius:30px;
+
+color:white;
+
+font-family:Poppins;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+
+
+.register-box input:focus,
+.register-box select:focus{
+
+border-color:#d4af37;
+
+box-shadow:
+0 0 20px rgba(212,175,55,.25);
+
+}
+
+
+
+
+.register-box input[type="file"]{
+
+height:auto;
+
+padding:15px;
+
+cursor:pointer;
+
+}
+
+
+
+.preview-photo{
+
+width:160px;
+
+height:160px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+display:block;
+
+margin:30px auto;
+
+border:
+
+5px solid #d4af37;
+
+box-shadow:
+
+0 0 35px rgba(212,175,55,.45);
+
+}
+
+
+
+.register-box .plan-btn{
+
+height:60px;
+
+margin-top:35px;
+
+border:none;
+
+border-radius:35px;
+
+font-size:17px;
+
+letter-spacing:.5px;
+
+background:
+linear-gradient(
+135deg,
+#f7d774,
+#d4af37,
+#9d7410
+);
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+
+
+.register-box .plan-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 20px 40px rgba(212,175,55,.45);
+
+}
+
+
+
+/* aperçu photo */
+
+.preview-photo{
+
+
+width:130px;
+
+height:130px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+display:block;
+
+margin:25px auto;
+
+border:4px solid #d4af37;
+
+}
+/*====================================================
+FORMULAIRE VIP PREMIUM
+====================================================*/
+
+.register-box{
+    max-width:650px;
+    margin:50px auto;
+    padding:45px;
+    background:
+    linear-gradient(
+    145deg,
+    #111,
+    #050505
+    );
+
+    border-radius:35px;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.6);
+}
+
+
+.register-box label{
+
+    display:block;
+
+    color:#d4af37;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+    margin-top:20px;
+
+}
+
+
+
+.register-box input,
+.register-box select{
+
+
+    width:100%;
+
+    height:55px;
+
+    padding:0 20px;
+
+    border-radius:30px;
+
+    background:#181818;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+
+
+.register-box input:focus,
+.register-box select:focus{
+
+    outline:none;
+
+    border-color:#d4af37;
+
+    box-shadow:
+    0 0 20px rgba(212,175,55,.25);
+
+}
+
+
+
+.register-box input[type="file"]{
+
+    padding:15px;
+
+    height:auto;
+
+}
+
+
+
+.preview-photo{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:25px auto;
+
+    border:4px solid #d4af37;
+
+    box-shadow:
+    0 0 30px rgba(212,175,55,.35);
+
+}
+
+
+
+.register-box .plan-btn{
+
+    margin-top:35px;
+
+    width:100%;
+
+    height:60px;
+
+    border-radius:40px;
+
+    font-size:17px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #f7d774,
+    #d4af37,
+    #9d7410
+    );
+
+}
+.form-header{
+text-align:center;
+margin-bottom:30px;
+}
+
+
+.form-header h2{
+
+color:#d4af37;
+
+font-size:28px;
+
+}
+
+
+.form-header p{
+
+color:#aaa;
+
+margin-top:10px;
+
+}
+.payment-profile{
+
+display:flex;
+align-items:center;
+gap:20px;
+
+background:#111;
+
+padding:25px;
+
+border-radius:25px;
+
+border:1px solid rgba(212,175,55,.2);
+
+margin-bottom:30px;
+
+}
+
+
+.payment-profile img{
+
+width:90px;
+height:90px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:3px solid #d4af37;
+
+}
+
+
+.payment-profile h3{
+
+color:#fff;
+margin-bottom:8px;
+
+}
+
+
+.payment-profile p{
+
+color:#d4af37;
+
+font-weight:700;
+
+}
+/*=========================================================*
+ YMS STORE VIP
+ DASHBOARD PREMIUM STYLE
+=========================================================*/
+
+
+/*===============================
+ PROFIL MEMBRE PREMIUM
+===============================*/
+
+.profile-card{
+display:flex;
+align-items:center;
+gap:35px;
+background:
+linear-gradient(
+145deg,
+#111,
+#080808
+);
+padding:40px;
+border-radius:30px;
+border:1px solid rgba(212,175,55,.20);
+margin-bottom:40px;
+box-shadow:
+0 20px 45px rgba(0,0,0,.35);
+}
+
+
+.profile-photo{
+width:150px;
+height:150px;
+border-radius:50%;
+overflow:hidden;
+border:4px solid var(--gold);
+background:#111;
+box-shadow:
+0 0 35px rgba(212,175,55,.35);
+flex-shrink:0;
+}
+
+
+.profile-photo img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+
+
+.profile-info h2{
+
+font-size:32px;
+margin-bottom:20px;
+
+}
+
+
+.profile-info p{
+
+color:#cfcfcf;
+margin:12px 0;
+font-size:15px;
+
+}
+
+
+.profile-info i{
+
+color:var(--gold);
+width:25px;
+
+}
+
+
+
+.account-status{
+
+display:inline-flex;
+align-items:center;
+gap:10px;
+margin-top:15px;
+padding:12px 25px;
+border-radius:40px;
+background:
+rgba(212,175,55,.12);
+color:var(--gold);
+
+}
+
+
+
+/*===============================
+ STATISTIQUES VIP
+===============================*/
+
+
+.vip-stats{
+
+display:grid;
+grid-template-columns:
+repeat(4,1fr);
+gap:25px;
+margin-bottom:45px;
+
+}
+
+
+
+.stat-box{
+
+background:
+linear-gradient(
+145deg,
+#151515,
+#090909
+);
+
+padding:30px;
+border-radius:25px;
+
+text-align:center;
+
+border:
+1px solid rgba(212,175,55,.15);
+
+transition:.4s;
+
+}
+
+
+
+.stat-box:hover{
+
+transform:translateY(-10px);
+
+border-color:
+var(--gold);
+
+box-shadow:
+0 20px 40px rgba(212,175,55,.15);
+
+}
+
+
+
+.stat-box i{
+
+font-size:38px;
+color:var(--gold);
+margin-bottom:20px;
+
+}
+
+
+
+.stat-box h3{
+
+font-size:35px;
+margin-bottom:8px;
+
+}
+
+
+
+.stat-box p{
+
+color:#aaa;
+
+}
+
+
+
+/*===============================
+ CARTES ACTIONS VIP
+===============================*/
+
+
+.member-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:25px;
+
+margin-bottom:45px;
+
+}
+
+
+
+
+.member-card{
+
+background:#111;
+
+padding:35px 25px;
+
+border-radius:25px;
+
+border:
+1px solid rgba(212,175,55,.15);
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+
+
+
+.member-card:hover{
+
+transform:
+translateY(-12px);
+
+border-color:
+var(--gold);
+
+box-shadow:
+0 20px 40px rgba(212,175,55,.20);
+
+}
+
+
+
+.member-card i{
+
+font-size:45px;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+
+
+.member-card h3{
+
+font-size:22px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.member-card p{
+
+color:#bbb;
+
+line-height:1.7;
+
+min-height:55px;
+
+}
+
+
+
+.member-card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 30px;
+
+border-radius:40px;
+
+background:
+var(--gradient);
+
+color:#000;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+
+
+.member-card a:hover{
+
+transform:translateY(-4px);
+
+}
+
+
+
+/*===============================
+ PROGRESSION VIP
+===============================*/
+
+
+.vip-level-card{
+
+background:#111;
+
+padding:35px;
+
+border-radius:30px;
+
+border:
+1px solid rgba(212,175,55,.15);
+
+margin-bottom:40px;
+
+}
+
+
+
+.vip-level-card h2{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:25px;
+
+}
+
+
+
+.vip-level-card h2 i{
+
+color:var(--gold);
+
+}
+
+
+
+
+.progress-container{
+
+width:100%;
+
+height:18px;
+
+background:#222;
+
+border-radius:30px;
+
+overflow:hidden;
+
+margin:25px 0;
+
+}
+
+
+
+
+.progress-bar{
+
+height:100%;
+
+width:0%;
+
+background:
+var(--gradient);
+
+border-radius:30px;
+
+transition:
+1s ease;
+
+}
+
+
+
+
+.vip-level-card p{
+
+color:#ccc;
+
+}
+
+
+
+/*===============================
+ NOTIFICATIONS
+===============================*/
+
+
+.notifications{
+
+background:#111;
+
+padding:35px;
+
+border-radius:30px;
+
+border:
+1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.notifications h2{
+
+color:white;
+
+margin-bottom:25px;
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+
+
+.notifications h2 i{
+
+color:var(--gold);
+
+}
+
+
+
+
+.notification-item{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+background:#181818;
+
+padding:18px 25px;
+
+border-radius:18px;
+
+margin-bottom:15px;
+
+color:#ddd;
+
+border-left:
+4px solid var(--gold);
+
+}
+
+
+
+.notification-item i{
+
+color:var(--gold);
+
+}
+
+
+
+/*===============================
+ MOBILE
+===============================*/
+
+
+@media(max-width:1100px){
+
+
+.vip-stats{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+
+.member-grid{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+}
+
+
+
+
+@media(max-width:700px){
+
+
+.profile-card{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+
+.vip-stats{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.member-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.profile-photo{
+
+width:120px;
+height:120px;
+
+}
+
+
+.member-content{
+
+padding:20px;
+
+}
+
+}
+/*======================================================
+PROFIL VIP
+======================================================*/
+
+.profile-container{
+
+display:grid;
+
+grid-template-columns:320px 1fr;
+
+gap:25px;
+
+margin-top:30px;
+
+}
+
+.profile-card{
+
+background:#fff;
+
+border-radius:20px;
+
+padding:30px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.profile-photo{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+overflow:hidden;
+
+margin:auto;
+
+border:6px solid #FFD700;
+
+}
+
+.profile-photo img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+.profile-name{
+
+margin-top:20px;
+
+font-size:24px;
+
+font-weight:700;
+
+}
+
+.plan-badge{
+
+display:inline-block;
+
+padding:8px 20px;
+
+border-radius:40px;
+
+font-weight:700;
+
+margin-top:15px;
+
+color:#fff;
+
+}
+
+.plan-badge.silver{
+
+background:#8c8c8c;
+
+}
+
+.plan-badge.gold{
+
+background:#d4af37;
+
+}
+
+.plan-badge.platinum{
+
+background:linear-gradient(45deg,#111,#d4af37);
+
+}
+
+.profile-info{
+
+background:#fff;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.info-row{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:15px 0;
+
+border-bottom:1px solid #eee;
+
+}
+
+.info-row span:first-child{
+
+font-weight:600;
+
+color:#666;
+
+}
+
+.status-active{
+
+color:#2ecc71;
+
+font-weight:700;
+
+}
+
+.status-pending{
+
+color:#e67e22;
+
+font-weight:700;
+
+}
+
+.payment-history{
+
+margin-top:30px;
+
+}
+
+.payment-item{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px;
+
+margin-bottom:10px;
+
+border-radius:12px;
+
+background:#fafafa;
+
+}
+
+.payment-item .paid{
+
+background:#2ecc71;
+
+color:#fff;
+
+padding:5px 12px;
+
+border-radius:30px;
+
+font-size:13px;
+
+}
+
+.profile-actions{
+
+display:flex;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+margin-top:30px;
+
+}
+
+.profile-actions .vip-btn{
+
+flex:1;
+
+}
+
+.empty{
+
+text-align:center;
+
+padding:30px;
+
+color:#888;
+
+}
+
+@media(max-width:900px){
+
+.profile-container{
+
+grid-template-columns:1fr;
+
+}
+
+.info-row{
+
+flex-direction:column;
+
+gap:5px;
+
+}
+
+.payment-item{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:10px;
+
+}
+
+.profile-actions{
+
+flex-direction:column;
+
+}
+
+}
+/* =========================================================
+   RÉUNIONS VIP
+========================================================= */
+
+.meeting-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 18px;
+    padding: 22px;
+    margin-top: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.06);
+    transition: .3s ease;
+}
+
+.meeting-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.10);
+}
+
+.meeting-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.meeting-header h3 {
+    margin: 8px 0 0;
+    font-size: 19px;
+}
+
+.meeting-status {
+    font-size: 12px;
+    font-weight: 600;
+    color: #22a06b;
+    text-transform: uppercase;
+}
+
+.meeting-status i {
+    font-size: 7px;
+    margin-right: 5px;
+}
+
+.delete-meeting {
+    border: none;
+    background: #fff0f0;
+    color: #d63031;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.meeting-info {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.meeting-info div {
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13px;
+}
+
+.meeting-info i {
+    color: #c89b3c;
+}
+
+.meeting-progress {
+    width: 100%;
+    height: 7px;
+    background: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.meeting-progress-bar {
+    height: 100%;
+    background: #c89b3c;
+    border-radius: 20px;
+    transition: width .3s ease;
+}
+
+.meeting-link {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.meeting-link input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    background: #fafafa;
+    font-size: 13px;
+}
+
+.meeting-link button {
+    width: 48px;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: white;
+    cursor: pointer;
+}
+
+.meeting-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.meeting-actions button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.join-btn {
+    background: #111;
+    color: #fff;
+}
+
+.start-btn {
+    background: #c89b3c;
+    color: #fff;
+}
+
+.empty-meetings {
+    text-align: center;
+    padding: 45px 20px;
+    color: #777;
+}
+
+.empty-meetings i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #c89b3c;
+}
+
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+.meeting-notification {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    color: #fff;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition: .3s ease;
+}
+
+.meeting-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.meeting-notification.success {
+    background: #1e8e5a;
+}
+
+.meeting-notification.error {
+    background: #d63031;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .meeting-info {
+        grid-template-columns: 1fr;
+    }
+
+    .meeting-actions {
+        flex-direction: column;
+    }
+
+    .meeting-actions button {
+        width: 100%;
+    }
+
+    .meeting-link input {
+        min-width: 0;
+    }
+
+    .meeting-notification {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+}

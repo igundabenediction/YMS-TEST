@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Réunions VIP | YMS STORE</title>
+
+
+    <!-- GOOGLE FONT -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/abonnement.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/reunion.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="member-layout">
+
+
+    <!-- ==================================================
+         SIDEBAR
+    =================================================== -->
+
+    <aside class="member-sidebar">
+
+
+        <div class="member-logo">
+
+            <img
+                src="assets/image/IMG_3474.PNG"
+                alt="YMS STORE"
+            >
+
+            <h2>
+                YMS STORE
+            </h2>
+
+            <span>
+                Espace Abonné
+            </span>
+
+        </div>
+
+
+        <nav>
+
+
+            <a href="../dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Accueil
+
+            </a>
+
+
+            <a href="commandes.html">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Commandes
+
+            </a>
+
+
+            <a href="paiement.html">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                Paiements
+
+            </a>
+
+
+            <a href="messages.html">
+
+                <i class="fa-solid fa-comments"></i>
+
+                Messages
+
+            </a>
+
+
+            <a
+                href="reunion.html"
+                class="active"
+            >
+
+                <i class="fa-solid fa-video"></i>
+
+                Réunions
+
+            </a>
+
+
+            <a
+                href="calendrier.html"
+            >
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                Calendrier
+
+            </a>
+
+
+            <a
+                href="participants.html"
+            >
+
+                <i class="fa-solid fa-users"></i>
+
+                Participants
+
+            </a>
+
+
+            <a
+                href="#"
+                id="logout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Déconnexion
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- ==================================================
+         CONTENU PRINCIPAL
+    =================================================== -->
+
+    <main class="member-content">
+
+
+        <!-- HEADER -->
+
+        <header class="member-header">
+
+
+            <div>
+
+                <div class="page-breadcrumb">
+
+                    Espace VIP
+                    <i class="fa-solid fa-chevron-right"></i>
+                    Réunions
+
+                </div>
+
+
+                <h1>
+
+                    Réunions privées VIP
+
+                </h1>
+
+
+                <p>
+
+                    Organisez vos réunions et invitez jusqu'à
+                    10 participants.
+
+                </p>
+
+            </div>
+
+
+            <div class="member-status">
+
+                <i class="fa-solid fa-crown"></i>
+
+                VIP Premium
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==================================================
+             STATISTIQUES
+        =================================================== -->
+
+        <section class="meeting-stats">
+
+
+            <div class="meeting-stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-video"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Réunions
+                    </span>
+
+                    <strong id="totalMeetings">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="meeting-stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        À venir
+                    </span>
+
+                    <strong id="upcomingMeetings">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="meeting-stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Participants max.
+                    </span>
+
+                    <strong>
+                        10
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="meeting-stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Durée max.
+                    </span>
+
+                    <strong>
+                        120 min
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             CREATION REUNION
+        =================================================== -->
+
+        <section class="dashboard-card create-meeting-card">
+
+
+            <div class="card-heading">
+
+
+                <div>
+
+                    <span class="card-label">
+                        PLANIFIER
+                    </span>
+
+                    <h2>
+
+                        <i class="fa-solid fa-video"></i>
+
+                        Créer une réunion
+
+                    </h2>
+
+                    <p>
+
+                        Configurez votre réunion privée
+                        avant d'envoyer les invitations.
+
+                    </p>
+
+                </div>
+
+
+                <div class="meeting-badge">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Réunion privée
+
+                </div>
+
+
+            </div>
+
+
+
+            <form
+                id="meetingForm"
+                autocomplete="off"
+            >
+
+
+                <!-- TITRE -->
+
+                <div class="form-group full-width">
+
+                    <label for="meetingTitle">
+
+                        <i class="fa-solid fa-heading"></i>
+
+                        Nom de la réunion
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="meetingTitle"
+                        placeholder="Ex. Présentation nouvelle collection"
+                        maxlength="100"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- DATE -->
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="meetingDate">
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                            Date
+
+                        </label>
+
+
+                        <input
+                            type="date"
+                            id="meetingDate"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- HEURE -->
+
+                    <div class="form-group">
+
+                        <label for="meetingTime">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            Heure
+
+                        </label>
+
+
+                        <input
+                            type="time"
+                            id="meetingTime"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- DUREE -->
+
+                    <div class="form-group">
+
+                        <label for="meetingDuration">
+
+                            <i class="fa-solid fa-hourglass-half"></i>
+
+                            Durée
+
+                        </label>
+
+
+                        <select id="meetingDuration">
+
+                            <option value="30">
+                                30 minutes
+                            </option>
+
+                            <option value="60" selected>
+                                1 heure
+                            </option>
+
+                            <option value="90">
+                                1 heure 30
+                            </option>
+
+                            <option value="120">
+                                2 heures
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- PARTICIPANTS -->
+
+                    <div class="form-group">
+
+                        <label for="meetingParticipants">
+
+                            <i class="fa-solid fa-users"></i>
+
+                            Participants maximum
+
+                        </label>
+
+
+                        <select id="meetingParticipants">
+
+                            <option value="2">
+                                2 participants
+                            </option>
+
+                            <option value="4">
+                                4 participants
+                            </option>
+
+                            <option value="6">
+                                6 participants
+                            </option>
+
+                            <option value="8">
+                                8 participants
+                            </option>
+
+                            <option value="10" selected>
+                                10 participants
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- MOT DE PASSE -->
+
+                <div class="form-group full-width">
+
+                    <label for="meetingPassword">
+
+                        <i class="fa-solid fa-key"></i>
+
+                        Mot de passe
+
+                    </label>
+
+
+                    <div class="password-field">
+
+                        <input
+                            type="text"
+                            id="meetingPassword"
+                            placeholder="Mot de passe de la réunion"
+                            minlength="4"
+                            maxlength="30"
+                        >
+
+
+                        <button
+                            type="button"
+                            id="generatePassword"
+                            title="Générer un mot de passe"
+                        >
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <small>
+
+                        Le mot de passe sera communiqué
+                        uniquement aux participants invités.
+
+                    </small>
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-group full-width">
+
+                    <label for="meetingDescription">
+
+                        <i class="fa-solid fa-align-left"></i>
+
+                        Description
+
+                    </label>
+
+
+                    <textarea
+                        id="meetingDescription"
+                        rows="4"
+                        maxlength="500"
+                        placeholder="Ajoutez une description ou des informations importantes..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- OPTIONS -->
+
+                <div class="meeting-options">
+
+
+                    <label class="option-item">
+
+                        <input
+                            type="checkbox"
+                            id="hostCamera"
+                            checked
+                        >
+
+                        <span class="custom-checkbox"></span>
+
+                        <i class="fa-solid fa-video"></i>
+
+                        Caméra activée
+
+                    </label>
+
+
+
+                    <label class="option-item">
+
+                        <input
+                            type="checkbox"
+                            id="hostMicro"
+                            checked
+                        >
+
+                        <span class="custom-checkbox"></span>
+
+                        <i class="fa-solid fa-microphone"></i>
+
+                        Micro activé
+
+                    </label>
+
+
+
+                    <label class="option-item">
+
+                        <input
+                            type="checkbox"
+                            id="waitingRoom"
+                            checked
+                        >
+
+                        <span class="custom-checkbox"></span>
+
+                        <i class="fa-solid fa-door-open"></i>
+
+                        Salle d'attente
+
+                    </label>
+
+
+                </div>
+
+
+
+                <!-- ACTIONS -->
+
+                <div class="meeting-actions">
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="resetMeeting"
+                    >
+
+                        <i class="fa-solid fa-rotate-left"></i>
+
+                        Réinitialiser
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="vip-btn"
+                    >
+
+                        <i class="fa-solid fa-video"></i>
+
+                        Créer la réunion
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             LIEN DE REUNION GENERE
+        =================================================== -->
+
+        <section
+            class="dashboard-card meeting-created"
+            id="meetingCreated"
+            style="display:none;"
+        >
+
+
+            <div class="success-icon">
+
+                <i class="fa-solid fa-check"></i>
+
+            </div>
+
+
+            <div class="created-content">
+
+                <span class="success-label">
+                    RÉUNION CRÉÉE
+                </span>
+
+
+                <h2 id="createdMeetingTitle">
+                    Réunion VIP
+                </h2>
+
+
+                <p>
+                    Votre réunion est prête.
+                    Partagez le lien avec vos participants.
+                </p>
+
+
+                <div class="meeting-link-box">
+
+                    <input
+                        type="text"
+                        id="meetingLink"
+                        readonly
+                    >
+
+
+                    <button
+                        type="button"
+                        id="copyMeetingLink"
+                    >
+
+                        <i class="fa-solid fa-copy"></i>
+
+                        Copier
+
+                    </button>
+
+                </div>
+
+
+                <div class="created-actions">
+
+
+                    <button
+                        type="button"
+                        id="startMeeting"
+                        class="vip-btn"
+                    >
+
+                        <i class="fa-solid fa-video"></i>
+
+                        Démarrer la réunion
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="shareMeeting"
+                        class="secondary-btn"
+                    >
+
+                        <i class="fa-solid fa-share-nodes"></i>
+
+                        Inviter
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             REUNIONS
+        =================================================== -->
+
+        <section class="dashboard-card">
+
+
+            <div class="card-heading">
+
+
+                <div>
+
+                    <span class="card-label">
+                        MES RÉUNIONS
+                    </span>
+
+                    <h2>
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                        Réunions programmées
+
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="refresh-btn"
+                    id="refreshMeetings"
+                    title="Actualiser"
+                >
+
+                    <i class="fa-solid fa-arrows-rotate"></i>
+
+                </button>
+
+
+            </div>
+
+
+
+            <div id="meetingList">
+
+
+                <div class="empty-meetings">
+
+                    <div>
+
+                        <i class="fa-solid fa-video-slash"></i>
+
+                    </div>
+
+                    <h3>
+                        Aucune réunion programmée
+                    </h3>
+
+                    <p>
+                        Créez votre première réunion VIP
+                        pour commencer.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     SCRIPTS
+=================================================== -->
+
+<script src="../js/auth-vip.js"></script>
+
+<script src="../js/vip-common.js"></script>
+
+<script src="../js/reunion.js"></script>
+
+
+</body>
+
+</html>

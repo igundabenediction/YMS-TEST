@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Messages VIP | YMS STORE</title>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/abonnement.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/messages.css">
+
+</head>
+
+
+<body>
+
+
+<div class="member-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="member-sidebar">
+
+        <div class="member-logo">
+
+            <!-- IMPORTANT : ../ -->
+            <img
+                src="../assets/image/IMG_3474.PNG"
+                alt="YMS STORE"
+                onerror="this.src='../assets/image/default-user.png';">
+
+            <h2>YMS STORE</h2>
+
+            <span>ESPACE VIP</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="../dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Accueil</span>
+
+            </a>
+
+
+            <a href="commandes.html">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span>Commandes</span>
+
+            </a>
+
+
+            <a href="paiement.html">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Paiements</span>
+
+            </a>
+
+
+            <a
+                href="messages.html"
+                class="active">
+
+                <i class="fa-solid fa-comments"></i>
+
+                <span>Messages</span>
+
+            </a>
+
+
+            <a href="reunion.html">
+
+                <i class="fa-solid fa-video"></i>
+
+                <span>Réunions</span>
+
+            </a>
+
+
+            <a href="../profil.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Mon profil</span>
+
+            </a>
+
+
+            <a
+                href="#"
+                id="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Déconnexion</span>
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTENU
+    ====================================================== -->
+
+    <main class="member-content">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="member-header">
+
+            <div>
+
+                <h1>
+                    Messagerie VIP
+                </h1>
+
+                <p>
+                    Conversation privée et confidentielle
+                    avec YMS STORE.
+                </p>
+
+            </div>
+
+
+            <div class="member-status">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>
+                    Conversation privée
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CHAT
+        ================================================== -->
+
+        <section class="whatsapp-card">
+
+
+            <!-- =================================================
+                 CHAT HEADER
+            ================================================== -->
+
+            <div class="chat-header">
+
+
+                <div class="chat-user">
+
+                    <div class="chat-avatar-wrapper">
+
+                        <img
+                            id="chatPhoto"
+                            src="../assets/image/IMG_3474.PNG"
+                            class="chat-avatar"
+                            alt="YMS STORE"
+                            onerror="this.src='../assets/image/default-user.png';">
+
+                        <span class="online-indicator"></span>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3 id="chatName">
+                            YMS STORE
+                        </h3>
+
+                        <small id="chatStatus">
+
+                            <span class="online-dot"></span>
+
+                            En ligne
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ACTIONS CHAT
+                ================================================== -->
+
+                <div class="chat-header-actions">
+
+
+                    <!-- GMAIL -->
+
+                    <button
+                        type="button"
+                        id="gmailBtn"
+                        title="Ouvrir Gmail">
+
+                        <i class="fa-brands fa-google"></i>
+
+                    </button>
+
+
+                    <!-- APPEL VOCAL -->
+
+                    <button
+                        type="button"
+                        id="voiceCall"
+                        title="Appel vocal">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </button>
+
+
+                    <!-- APPEL VIDÉO -->
+
+                    <button
+                        type="button"
+                        id="videoCall"
+                        title="Appel vidéo">
+
+                        <i class="fa-solid fa-video"></i>
+
+                    </button>
+
+
+                    <!-- MENU -->
+
+                    <button
+                        type="button"
+                        id="chatMenu"
+                        title="Options">
+
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MENU
+            ================================================== -->
+
+            <div
+                id="chatOptions"
+                class="chat-options hidden">
+
+                <button
+                    type="button"
+                    id="clearChat">
+
+                    <i class="fa-solid fa-trash-can"></i>
+
+                    <span>Vider la conversation</span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="changeBackground">
+
+                    <i class="fa-solid fa-images"></i>
+
+                    <span>Changer le fond</span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SLIDER FOND
+            ================================================== -->
+
+            <div
+                id="backgroundPanel"
+                class="background-panel hidden">
+
+
+                <div class="background-title">
+
+                    <div>
+
+                        <i class="fa-solid fa-palette"></i>
+
+                        <strong>
+                            Fond de discussion
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="closeBackground"
+                        title="Fermer">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <div class="background-slider">
+
+
+                    <!-- LOGO YMS -->
+
+                    <button
+                        type="button"
+                        class="background-option active"
+                        data-background="logo">
+
+                        <div class="background-preview background-logo">
+
+                            <img
+                                src="../assets/image/IMG_3474.PNG"
+                                alt="YMS STORE"
+                                onerror="this.src='../assets/image/default-user.png';">
+
+                        </div>
+
+                        <span>
+                            YMS STORE
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- GOLD -->
+
+                    <button
+                        type="button"
+                        class="background-option"
+                        data-background="gold">
+
+                        <div class="background-preview background-gold">
+
+                            <i class="fa-solid fa-crown"></i>
+
+                        </div>
+
+                        <span>
+                            GOLD
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- DARK -->
+
+                    <button
+                        type="button"
+                        class="background-option"
+                        data-background="dark">
+
+                        <div class="background-preview background-dark">
+
+                            <i class="fa-solid fa-moon"></i>
+
+                        </div>
+
+                        <span>
+                            DARK
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- LUXURY -->
+
+                    <button
+                        type="button"
+                        class="background-option"
+                        data-background="luxury">
+
+                        <div class="background-preview background-luxury">
+
+                            <i class="fa-solid fa-gem"></i>
+
+                        </div>
+
+                        <span>
+                            LUXURY
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CHAT BOX
+                 
+                 IMPORTANT :
+                 Aucun historique écrit ici.
+                 messages.js générera les messages.
+            ================================================== -->
+
+            <div
+                id="chatBox"
+                class="chat-box">
+
+                <!-- Messages générés automatiquement par messages.js -->
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ENREGISTREMENT AUDIO
+            ================================================== -->
+
+            <div
+                id="recordingBar"
+                class="recording-bar hidden">
+
+                <span class="recording-circle"></span>
+
+                <span id="recordingTime">
+                    00:00
+                </span>
+
+                <strong>
+                    Enregistrement audio...
+                </strong>
+
+                <button
+                    type="button"
+                    id="cancelRecording"
+                    title="Annuler">
+
+                    <i class="fa-solid fa-trash-can"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 APERÇU FICHIER
+            ================================================== -->
+
+            <div
+                id="filePreview"
+                class="file-preview hidden">
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ZONE DE SAISIE
+            ================================================== -->
+
+            <div class="chat-input">
+
+
+                <!-- PIÈCE JOINTE -->
+
+                <button
+                    type="button"
+                    id="attachBtn"
+                    class="chat-icon-btn"
+                    title="Joindre une photo, vidéo ou fichier">
+
+                    <i class="fa-solid fa-paperclip"></i>
+
+                </button>
+
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    hidden
+                    accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.xls,.xlsx">
+
+
+                <!-- CAMÉRA -->
+
+                <button
+                    type="button"
+                    id="cameraBtn"
+                    class="chat-icon-btn camera-btn"
+                    title="Prendre une photo ou une vidéo">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                </button>
+
+
+                <input
+                    type="file"
+                    id="cameraInput"
+                    hidden
+                    accept="image/*,video/*"
+                    capture="environment">
+
+
+                <!-- EMOJI -->
+
+                <button
+                    type="button"
+                    id="emojiBtn"
+                    class="chat-icon-btn"
+                    title="Emoji">
+
+                    <i class="fa-regular fa-face-smile"></i>
+
+                </button>
+
+
+
+                <!-- MESSAGE -->
+
+                <input
+                    id="messageInput"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Écrire un message...">
+
+
+
+                <!-- MICRO -->
+
+                <button
+                    type="button"
+                    id="recordBtn"
+                    class="record-btn"
+                    title="Enregistrer un message vocal">
+
+                    <i class="fa-solid fa-microphone"></i>
+
+                </button>
+
+
+
+                <!-- ENVOYER -->
+
+                <button
+                    type="button"
+                    id="sendBtn"
+                    class="send-btn"
+                    title="Envoyer le message">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EMOJIS
+            ================================================== -->
+
+            <div
+                id="emojiPanel"
+                class="emoji-panel hidden">
+
+                <button type="button">😀</button>
+                <button type="button">😂</button>
+                <button type="button">😍</button>
+                <button type="button">🥰</button>
+                <button type="button">😎</button>
+                <button type="button">❤️</button>
+                <button type="button">🔥</button>
+                <button type="button">👍</button>
+                <button type="button">👏</button>
+                <button type="button">🙏</button>
+                <button type="button">🎉</button>
+                <button type="button">💯</button>
+                <button type="button">😘</button>
+                <button type="button">🤣</button>
+                <button type="button">🤝</button>
+                <button type="button">⭐</button>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================== -->
+
+<script src="../js/auth-vip.js"></script>
+
+<script src="../js/vip-common.js"></script>
+
+<script src="../js/client.js"></script>
+
+<script src="../js/messages.js"></script>
+
+
+</body>
+
+</html>

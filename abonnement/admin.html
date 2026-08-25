@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Administration VIP | YMS STORE</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="abonnement.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+
+<div class="admin-layout">
+
+
+
+
+
+<aside class="member-sidebar">
+
+
+<div class="member-logo">
+
+
+<img src="../assets/image/IMG_3474.PNG">
+
+
+<h2>
+YMS STORE
+</h2>
+
+
+<span>
+Administration VIP
+</span>
+
+
+</div>
+
+
+
+
+
+<nav>
+
+
+<a href="admin.html" class="active">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Dashboard
+
+</a>
+
+
+
+
+<a href="#members">
+
+<i class="fa-solid fa-users"></i>
+
+Membres
+
+</a>
+
+
+
+
+
+<a href="#payments">
+
+<i class="fa-solid fa-credit-card"></i>
+
+Paiements
+
+</a>
+
+
+
+
+
+<a href="#messages">
+
+<i class="fa-solid fa-comments"></i>
+
+Messages
+
+</a>
+
+
+
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-user"></i>
+
+Espace membre
+
+</a>
+
+
+
+
+<a href="#" id="adminLogout">
+
+<i class="fa-solid fa-power-off"></i>
+
+Quitter
+
+</a>
+
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+<main class="member-content">
+
+
+
+
+
+<header class="member-header">
+
+
+<div>
+
+<h1>
+Dashboard Administrateur VIP
+</h1>
+
+
+<p>
+Gestion YMS STORE Premium Club
+</p>
+
+
+</div>
+
+
+<div class="member-status">
+
+<i class="fa-solid fa-crown"></i>
+
+ADMIN
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<section class="hero-stats">
+
+
+
+<div class="stat-card">
+
+<h2 id="totalMembers">
+0
+</h2>
+
+<p>
+Membres VIP
+</p>
+
+</div>
+
+
+
+
+<div class="stat-card">
+
+<h2 id="totalPayments">
+0
+</h2>
+
+<p>
+Paiements
+</p>
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+<h2 id="totalMessages">
+0
+</h2>
+
+<p>
+Messages
+</p>
+
+</div>
+
+
+
+
+<div class="stat-card">
+
+<h2 id="activeVIP">
+0
+</h2>
+
+<p>
+VIP actifs
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="dashboard-card" id="members">
+
+
+<h2>
+
+<i class="fa-solid fa-user-plus"></i>
+
+Ajouter un membre VIP
+
+</h2>
+
+
+
+<div class="input-box">
+
+
+<input id="memberNewName"
+placeholder="Nom du membre">
+
+
+</div>
+
+
+
+
+<div class="input-box">
+
+
+<input id="memberNewPhone"
+placeholder="Téléphone">
+
+
+</div>
+
+
+
+
+<button class="vip-btn" onclick="addMember()">
+
+Ajouter membre
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="dashboard-card">
+
+
+<h2>
+
+Liste des membres
+
+</h2>
+
+
+
+<div id="membersList">
+
+
+<p>
+Aucun membre enregistré.
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="dashboard-card" id="messages">
+
+
+<h2>
+
+Messages clients
+
+</h2>
+
+
+
+<div id="adminMessages">
+
+
+Aucun message.
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+</div>
+
+
+
+
+
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
