@@ -1,0 +1,194 @@
+/*======================================================
+  YMS STORE
+  SERVICES.CSS
+======================================================*/
+
+
+/*==============================
+SECTION SERVICES
+==============================*/
+
+.services{
+
+    background:#050505;
+
+    padding:60px 0;
+
+}
+
+
+
+/*==============================
+GRILLE SERVICES
+==============================*/
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+/*==============================
+CARTE SERVICE
+==============================*/
+
+.service-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:#111;
+
+    padding:30px 25px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,193,7,.12);
+
+    transition:.35s ease;
+
+}
+
+
+
+/*==============================
+HOVER CARTE
+==============================*/
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--color-primary);
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.5);
+
+}
+
+
+
+/*==============================
+ICONE
+==============================*/
+
+.service-icon{
+
+    width:60px;
+
+    height:60px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,193,7,.1);
+
+    color:var(--color-primary);
+
+    font-size:1.5rem;
+
+    transition:.35s ease;
+
+}
+
+
+
+.service-card:hover .service-icon{
+
+    background:var(--color-primary);
+
+    color:#000;
+
+    transform:rotateY(360deg);
+
+}
+
+
+
+/*==============================
+TITRE
+==============================*/
+
+.service-card h3{
+
+    font-size:1.05rem;
+
+    margin-bottom:8px;
+
+}
+
+
+
+/*==============================
+DESCRIPTION
+==============================*/
+
+.service-card p{
+
+    font-size:.85rem;
+
+    color:#999;
+
+    margin:0;
+
+}
+
+
+
+/*==============================
+TABLETTE
+==============================*/
+
+@media(max-width:1100px){
+
+
+    .services-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+/*==============================
+MOBILE
+==============================*/
+
+@media(max-width:600px){
+
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .service-card{
+
+        padding:25px;
+
+    }
+
+
+}

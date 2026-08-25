@@ -1,0 +1,394 @@
+/*======================================================
+  YMS STORE
+  PRODUCTS.CSS
+======================================================*/
+
+
+/*==============================
+SECTIONS PRODUITS
+==============================*/
+
+.featured-products,
+.best-sellers{
+
+    background:#050505;
+
+    padding:90px 0;
+
+}
+
+
+
+/*==============================
+GRILLE PRODUITS
+==============================*/
+
+.products-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/*==============================
+CARTE PRODUIT
+==============================*/
+
+.product-card{
+
+    background:#111;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,193,7,.12);
+
+    transition:.4s ease;
+
+}
+
+
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--color-primary);
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.5);
+
+}
+
+
+
+/*==============================
+IMAGE PRODUIT
+==============================*/
+
+.product-image{
+
+    position:relative;
+
+    height:330px;
+
+    overflow:hidden;
+
+    background:#0b0b0b;
+
+}
+
+
+
+.product-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s ease;
+
+}
+
+
+
+.product-card:hover .product-image img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/*==============================
+BADGE
+==============================*/
+
+.badge{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    background:var(--color-primary);
+
+    color:#000;
+
+    padding:7px 15px;
+
+    border-radius:30px;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    z-index:2;
+
+}
+
+
+
+.badge.new{
+
+    background:#fff;
+
+}
+
+
+
+/*==============================
+ACTIONS RAPIDES
+==============================*/
+
+.product-actions{
+
+    position:absolute;
+
+    right:20px;
+
+    top:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    opacity:0;
+
+    transform:translateX(20px);
+
+    transition:.4s ease;
+
+}
+
+
+
+.product-card:hover .product-actions{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+
+.product-actions a{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#000;
+
+    color:white;
+
+    border:1px solid rgba(255,193,7,.3);
+
+}
+
+
+
+.product-actions a:hover{
+
+    background:var(--color-primary);
+
+    color:#000;
+
+}
+
+
+
+/*==============================
+INFORMATIONS PRODUIT
+==============================*/
+
+.product-info{
+
+    padding:25px;
+
+}
+
+
+
+.product-info h3{
+
+    font-size:1.1rem;
+
+    margin-bottom:12px;
+
+}
+
+
+
+/*==============================
+NOTATION
+==============================*/
+
+.rating{
+
+    color:#ffc107;
+
+    font-size:.9rem;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.rating span{
+
+    color:#888;
+
+    margin-left:8px;
+
+}
+
+
+
+/*==============================
+PRIX
+==============================*/
+
+.price{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.current-price{
+
+    color:var(--color-primary);
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+}
+
+
+
+.old-price{
+
+    color:#777;
+
+    text-decoration:line-through;
+
+}
+
+
+
+/*==============================
+BOUTON PANIER
+==============================*/
+
+.add-cart{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:50px;
+
+    background:transparent;
+
+    border:1px solid var(--color-primary);
+
+    color:var(--color-primary);
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+
+
+.add-cart:hover{
+
+    background:var(--color-primary);
+
+    color:#000;
+
+}
+
+
+
+/*==============================
+TABLETTE
+==============================*/
+
+@media(max-width:1100px){
+
+
+    .products-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+/*==============================
+MOBILE
+==============================*/
+
+@media(max-width:600px){
+
+
+    .products-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .product-image{
+
+        height:300px;
+
+    }
+
+
+    .product-actions{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+
+}

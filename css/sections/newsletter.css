@@ -1,0 +1,225 @@
+/*======================================================
+  YMS STORE
+  NEWSLETTER.CSS
+======================================================*/
+
+
+/*==============================
+SECTION NEWSLETTER
+==============================*/
+
+.newsletter{
+
+    background:#050505;
+
+    padding:70px 0;
+
+}
+
+
+
+/*==============================
+BOITE NEWSLETTER
+==============================*/
+
+.newsletter-box{
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #111,
+
+    #080808
+
+    );
+
+    padding:50px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,193,7,.15);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+}
+
+
+
+/*==============================
+TEXTE
+==============================*/
+
+.newsletter-box h2{
+
+    margin-bottom:15px;
+
+    font-size:2rem;
+
+}
+
+
+
+.newsletter-box p{
+
+    color:#aaa;
+
+}
+
+
+
+/*==============================
+FORMULAIRE
+==============================*/
+
+.newsletter-box form{
+
+    display:flex;
+
+    width:450px;
+
+    background:#000;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,193,7,.2);
+
+}
+
+
+
+.newsletter-box input{
+
+    flex:1;
+
+    padding:0 25px;
+
+    height:55px;
+
+    color:white;
+
+}
+
+
+
+.newsletter-box input::placeholder{
+
+    color:#777;
+
+}
+
+
+
+.newsletter-box button{
+
+    background:var(--color-primary);
+
+    color:#000;
+
+    padding:0 30px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+
+
+.newsletter-box button:hover{
+
+    background:white;
+
+}
+
+
+
+/*==============================
+TABLETTE
+==============================*/
+
+@media(max-width:900px){
+
+
+    .newsletter-box{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+
+    .newsletter-box form{
+
+        width:100%;
+
+    }
+
+
+}
+
+
+
+/*==============================
+MOBILE
+==============================*/
+
+@media(max-width:600px){
+
+
+    .newsletter-box{
+
+        padding:30px 20px;
+
+    }
+
+
+
+    .newsletter-box form{
+
+        flex-direction:column;
+
+        background:transparent;
+
+        border:none;
+
+        gap:15px;
+
+    }
+
+
+
+    .newsletter-box input{
+
+        background:#000;
+
+        border-radius:50px;
+
+        border:1px solid rgba(255,193,7,.2);
+
+    }
+
+
+
+    .newsletter-box button{
+
+        height:55px;
+
+        border-radius:50px;
+
+    }
+
+
+}

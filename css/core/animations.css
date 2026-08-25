@@ -1,0 +1,496 @@
+/*======================================================
+  YMS STORE
+  ANIMATIONS.CSS
+======================================================*/
+
+
+/*==============================
+FADE
+==============================*/
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+
+.fade-in{
+
+    animation:fadeIn .8s ease forwards;
+
+}
+
+
+
+/*==============================
+FADE UP
+==============================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+
+
+/*==============================
+FADE DOWN
+==============================*/
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+.fade-down{
+
+    animation:fadeDown .8s ease forwards;
+
+}
+
+
+
+/*==============================
+FADE LEFT
+==============================*/
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+.fade-left{
+
+    animation:fadeLeft .8s ease forwards;
+
+}
+
+
+
+/*==============================
+FADE RIGHT
+==============================*/
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+.fade-right{
+
+    animation:fadeRight .8s ease forwards;
+
+}
+
+
+
+/*==============================
+ZOOM
+==============================*/
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+.zoom-in{
+
+    animation:zoomIn .8s ease forwards;
+
+}
+
+
+
+/*==============================
+FLOATING IMAGE
+==============================*/
+
+@keyframes floating{
+
+
+    0%,
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+
+}
+
+
+.floating{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+
+
+/*==============================
+PULSE
+==============================*/
+
+@keyframes pulse{
+
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+
+}
+
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+
+
+/*==============================
+SHINE EFFECT
+==============================*/
+
+.shine{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.shine::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:50%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.4),
+    transparent
+    );
+
+    transition:.6s;
+
+}
+
+
+
+.shine:hover::before{
+
+    left:120%;
+
+}
+
+
+
+/*==============================
+BUTTON RIPPLE
+==============================*/
+
+.ripple{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.ripple::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    background:
+    rgba(255,255,255,.35);
+
+    border-radius:50%;
+
+    transform:translate(-50%,-50%);
+
+    opacity:0;
+
+}
+
+
+
+.ripple:active::after{
+
+    width:250px;
+
+    height:250px;
+
+    opacity:1;
+
+    transition:.5s;
+
+}
+
+
+
+/*==============================
+GLOW GOLD
+==============================*/
+
+.gold-glow{
+
+    transition:.3s ease;
+
+}
+
+
+
+.gold-glow:hover{
+
+    box-shadow:
+
+    0 0 15px rgba(255,193,7,.5),
+
+    0 0 30px rgba(255,193,7,.3);
+
+}
+
+
+
+/*==============================
+IMAGE ZOOM HOVER
+==============================*/
+
+.image-hover{
+
+    overflow:hidden;
+
+}
+
+
+
+.image-hover img{
+
+    transition:.6s ease;
+
+}
+
+
+
+.image-hover:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/*==============================
+ROTATION ICON
+==============================*/
+
+.rotate-hover i{
+
+    transition:.4s ease;
+
+}
+
+
+.rotate-hover:hover i{
+
+    transform:rotate(360deg);
+
+}
+
+
+
+/*==============================
+SCROLL REVEAL PREPARATION
+==============================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s ease;
+
+}
+
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+/*==============================
+DELAY
+==============================*/
+
+.delay-1{
+
+    animation-delay:.2s;
+
+}
+
+.delay-2{
+
+    animation-delay:.4s;
+
+}
+
+.delay-3{
+
+    animation-delay:.6s;
+
+}
+
+.delay-4{
+
+    animation-delay:.8s;
+
+}

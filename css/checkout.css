@@ -1,190 +1,45 @@
-/*==================================
+
+/*======================================================
 YMS STORE
 CHECKOUT PAGE
-===================================*/
+======================================================*/
 
 
 .checkout-section{
 
-padding:80px 0;
+min-height:100vh;
 
-}
-
-
-
-.checkout-section h1{
-
-font-size:45px;
-
-margin-bottom:40px;
-
-}
-
-
-
-
-.checkout-layout{
-
-
-display:grid;
-
-grid-template-columns:1fr 400px;
-
-gap:50px;
-
-
-}
-
-
-
-
-
-
-
-/* FORMULAIRE */
-
-
-.checkout-form{
-
-
-background:white;
-
-
-padding:35px;
-
-
-border-radius:20px;
-
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.05);
-
-
-}
-
-
-
-.checkout-form input[type="text"],
-.checkout-form input[type="tel"]{
-
-
-width:100%;
-
-
-height:55px;
-
-
-padding:0 20px;
-
-
-margin-bottom:15px;
-
-
-border:1px solid #ddd;
-
-
-border-radius:30px;
-
-
-outline:none;
-
-
-}
-
-
-
-
-.checkout-form h2{
-
-
-margin:25px 0;
-
-
-}
-
-
-
-
-
-
-.payment-options label{
-
-
-display:block;
-
-
-padding:15px;
-
-
-background:#f7f7f7;
-
-
-border-radius:15px;
-
-
-margin-bottom:10px;
-
-
-cursor:pointer;
-
-
-}
-
-
-
-
-
-
-
-
-#orderButton{
-
-
-width:100%;
-
-
-height:55px;
-
-
-border:none;
-
-
-border-radius:30px;
-
-
-background:#111;
-
+background:#050505;
 
 color:white;
 
-
-font-size:16px;
-
-
-font-weight:bold;
-
-
-margin-top:30px;
-
-
-cursor:pointer;
-
-
-transition:.3s;
-
+padding:60px 20px;
 
 }
 
 
 
-#orderButton:hover{
+.checkout-container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
+}
 
 
-background:#d4af37;
 
+.checkout-container h1{
 
-color:#111;
+text-align:center;
 
+font-size:35px;
+
+margin-bottom:50px;
+
+color:#d4af37;
 
 }
 
@@ -193,41 +48,78 @@ color:#111;
 
 
 
+.checkout-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
 
 
-/* RESUME */
 
 
-.checkout-summary{
 
+.checkout-card{
 
-background:#f8f8f8;
-
+background:#111;
 
 padding:30px;
 
-
 border-radius:20px;
 
-
-height:max-content;
-
+border:1px solid rgba(212,175,55,.25);
 
 }
 
 
 
-.checkout-product{
+.checkout-card h2{
 
+margin-bottom:25px;
+
+color:#d4af37;
+
+font-size:22px;
+
+}
+
+
+
+
+.checkout-card p{
+
+margin:15px 0;
+
+color:#ddd;
+
+}
+
+
+
+.checkout-card strong{
+
+color:white;
+
+}
+
+
+
+
+
+/* PRODUITS */
+
+.checkout-product{
 
 display:flex;
 
+align-items:center;
 
 gap:15px;
 
-
 margin-bottom:20px;
-
 
 }
 
@@ -235,37 +127,99 @@ margin-bottom:20px;
 
 .checkout-product img{
 
-
 width:70px;
-
 
 height:70px;
 
-
 object-fit:cover;
 
-
 border-radius:10px;
-
 
 }
 
 
 
-.checkout-total{
+.checkout-product h4{
+
+font-size:15px;
+
+}
 
 
-display:flex;
+
+.checkout-product span{
+
+color:#d4af37;
+
+}
 
 
-justify-content:space-between;
 
 
-font-size:22px;
 
 
-margin-top:20px;
 
+/* PAIEMENT */
+
+.checkout-card label{
+
+display:block;
+
+padding:15px;
+
+background:#050505;
+
+border-radius:10px;
+
+margin-bottom:15px;
+
+cursor:pointer;
+
+border:1px solid #333;
+
+}
+
+
+
+.checkout-card label:hover{
+
+border-color:#d4af37;
+
+}
+
+
+
+.checkout-card input{
+
+margin-right:10px;
+
+}
+
+
+
+
+
+#confirmOrder{
+
+width:100%;
+
+border:none;
+
+margin-top:25px;
+
+}
+
+
+
+
+
+/* TOTAL */
+
+#checkoutTotal{
+
+color:#d4af37;
+
+font-size:25px;
 
 }
 
@@ -278,11 +232,16 @@ margin-top:20px;
 @media(max-width:900px){
 
 
-.checkout-layout{
-
+.checkout-grid{
 
 grid-template-columns:1fr;
 
+}
+
+
+.checkout-container h1{
+
+font-size:26px;
 
 }
 

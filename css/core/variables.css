@@ -1,0 +1,118 @@
+/*======================================================
+  YMS STORE - DESIGN SYSTEM
+  Fichier : variables.css
+  Description : Variables globales du thème
+======================================================*/
+
+:root {
+
+    /*==================================================
+      PALETTE DE COULEURS
+    ==================================================*/
+
+    --color-primary: #FFC107;
+    --color-primary-dark: #E0A800;
+    --color-primary-light: #FFD54F;
+
+    --color-black: #050505;
+    --color-bg: #0A0A0A;
+    --color-surface: #111111;
+    --color-surface-2: #181818;
+    --color-surface-3: #202020;
+
+    --color-white: #FFFFFF;
+
+    --color-text: #F5F5F5;
+    --color-text-light: #D8D8D8;
+    --color-text-muted: #9E9E9E;
+
+    --color-success: #2ECC71;
+    --color-warning: #F39C12;
+    --color-danger: #E53935;
+    --color-info: #2196F3;
+
+    --color-border: rgba(255,255,255,.08);
+
+    /*==================================================
+      TYPOGRAPHIE
+    ==================================================*/
+
+    --font-primary: "Poppins", sans-serif;
+
+    --font-size-xs: .75rem;
+    --font-size-sm: .875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.375rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.8rem;
+    --font-size-4xl: 3.8rem;
+
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    --line-height: 1.6;
+
+    /*==================================================
+      ESPACEMENTS
+    ==================================================*/
+
+    --space-1: .5rem;
+    --space-2: .75rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2rem;
+    --space-6: 3rem;
+    --space-7: 4rem;
+    --space-8: 5rem;
+    --space-9: 6rem;
+
+    /*==================================================
+      CONTAINER
+    ==================================================*/
+
+    --container-width: 1400px;
+    --container-padding: 20px;
+
+    /*==================================================
+      BORDURES
+    ==================================================*/
+
+    --radius-xs: 6px;
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+    --radius-xl: 30px;
+    --radius-pill: 999px;
+
+    /*==================================================
+      OMBRES
+    ==================================================*/
+
+    --shadow-sm: 0 5px 15px rgba(0,0,0,.20);
+    --shadow-md: 0 15px 35px rgba(0,0,0,.30);
+    --shadow-lg: 0 25px 60px rgba(0,0,0,.45);
+
+    /*==================================================
+      TRANSITIONS
+    ==================================================*/
+
+    --transition-fast: .2s ease;
+    --transition: .35s ease;
+    --transition-slow: .6s ease;
+
+    /*==================================================
+      Z-INDEX
+    ==================================================*/
+
+    --z-dropdown: 1000;
+    --z-sticky: 1010;
+    --z-fixed: 1020;
+    --z-modal: 1030;
+    --z-tooltip: 1040;
+
+}

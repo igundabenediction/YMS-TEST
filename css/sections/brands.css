@@ -1,0 +1,153 @@
+/*======================================================
+  YMS STORE
+  BRANDS.CSS
+======================================================*/
+
+
+/*==============================
+SECTION BRANDS
+==============================*/
+
+.brands{
+
+    background:#050505;
+
+    padding:80px 0;
+
+}
+
+
+
+/*==============================
+GRILLE LOGOS
+==============================*/
+
+.brands-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+
+
+/*==============================
+LOGOS
+==============================*/
+
+.brands-grid img{
+
+    width:100%;
+
+    max-width:130px;
+
+    margin:auto;
+
+    filter:
+
+    grayscale(100%)
+
+    brightness(.8);
+
+    opacity:.7;
+
+    transition:.4s ease;
+
+}
+
+
+
+/*==============================
+HOVER LOGO
+==============================*/
+
+.brands-grid img:hover{
+
+    filter:
+
+    grayscale(0%)
+
+    brightness(1);
+
+    opacity:1;
+
+    transform:scale(1.1);
+
+}
+
+
+
+/*==============================
+EFFET CARTE
+==============================*/
+
+.brands-grid img{
+
+    background:#111;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    border:1px solid rgba(255,193,7,.1);
+
+}
+
+
+
+.brands-grid img:hover{
+
+    border-color:var(--color-primary);
+
+}
+
+
+
+/*==============================
+TABLETTE
+==============================*/
+
+@media(max-width:1000px){
+
+
+    .brands-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+
+}
+
+
+
+/*==============================
+MOBILE
+==============================*/
+
+@media(max-width:600px){
+
+
+    .brands-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:20px;
+
+    }
+
+
+
+    .brands-grid img{
+
+        max-width:120px;
+
+    }
+
+
+}

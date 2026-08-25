@@ -1,59 +1,34 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Accessoires | YMS STORE</title>
 
-    <!-- =====================================================
-         GOOGLE FONT
-    ====================================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    >
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- =====================================================
-         CSS GLOBAL
-    ====================================================== -->
     <link rel="stylesheet" href="../css/style.css">
-
-    <!-- HEADER -->
     <link rel="stylesheet" href="../css/header.css">
-
-    <!-- PRODUITS -->
     <link rel="stylesheet" href="../css/products.css">
-
-    <!-- BOUTIQUE -->
-    <link rel="stylesheet" href="../boutique/boutique.css">
-
-    <!-- ACCESSOIRES -->
-    <link rel="stylesheet" href="accessoires.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../assets/css/cart.css">
 
 </head>
 
-
 <body>
 
-<!-- =====================================================
-     TOP BAR
-====================================================== -->
-
+<!-- TOP BAR -->
 <div class="top-bar">
 
     <div class="container top-container">
@@ -72,53 +47,27 @@
 
         </div>
 
-
         <div class="top-right">
 
-            <a
-                href="https://wa.me/243971917222"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-            >
+            <a href="https://wa.me/243971917222"
+               target="_blank">
                 <i class="fa-brands fa-whatsapp"></i>
-                <span>WhatsApp</span>
+                WhatsApp
             </a>
 
-            <a
-                href="https://www.facebook.com/share/1GtFgpfAXX/?mibextid=wwXIfr"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-            >
+            <a href="https://www.facebook.com/share/1GtFgpfAXX/"
+               target="_blank">
                 <i class="fa-brands fa-facebook"></i>
             </a>
 
-            <a
-                href="https://www.instagram.com/ymseraphin1"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-            >
+            <a href="https://www.instagram.com/ymseraphin1/"
+               target="_blank">
                 <i class="fa-brands fa-instagram"></i>
             </a>
 
-            <a
-                href="https://www.tiktok.com/@ymseraphin"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-            >
+            <a href="https://www.tiktok.com/@ymseraphin"
+               target="_blank">
                 <i class="fa-brands fa-tiktok"></i>
-            </a>
-
-            <a
-                href="https://www.youtube.com/@seraphinyms"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-            >
-                <i class="fa-brands fa-youtube"></i>
             </a>
 
         </div>
@@ -128,15 +77,11 @@
 </div>
 
 
-<!-- =====================================================
-     HEADER PRINCIPAL
-====================================================== -->
+<!-- HEADER -->
 
 <header class="main-header">
 
     <div class="container header-container">
-
-        <!-- LOGO -->
 
         <div class="logo">
 
@@ -144,78 +89,53 @@
 
                 <img
                     src="../assets/image/IMG_3474.PNG"
-                    alt="YMS STORE"
-                >
+                    alt="YMS STORE">
 
             </a>
 
         </div>
 
 
-        <!-- RECHERCHE -->
-
         <div class="search-box">
-
-            <label
-                for="productSearch"
-                class="sr-only"
-            >
-                Rechercher un produit
-            </label>
 
             <input
                 type="search"
-                id="productSearch"
-                placeholder="Rechercher un produit..."
-                autocomplete="off"
-            >
+                id="searchInput"
+                placeholder="Rechercher un produit...">
 
-            <button
-                type="button"
-                id="searchButton"
-                aria-label="Rechercher"
-            >
+            <button id="searchButton">
+
                 <i class="fa-solid fa-search"></i>
+
             </button>
 
         </div>
 
-
-        <!-- ACTIONS -->
 
         <div class="header-actions">
 
             <a
                 href="../client/login.html"
-                class="header-icon"
-                title="Mon compte"
-                aria-label="Mon compte"
-            >
+                class="header-icon">
+
                 <i class="fa-regular fa-user"></i>
+
             </a>
 
 
-            <button
-                type="button"
+            <a
+                href="../panier/index.html"
                 class="header-icon cart"
-                id="openCart"
-                title="Panier"
-                aria-label="Ouvrir le panier"
-            >
+                id="openCart">
 
                 <i class="fa-solid fa-cart-shopping"></i>
 
                 <span id="cartCount">0</span>
 
-            </button>
+            </a>
 
 
-            <button
-                type="button"
-                class="mobile-menu"
-                aria-label="Ouvrir le menu"
-                aria-expanded="false"
-            >
+            <button class="mobile-menu">
 
                 <i class="fa-solid fa-bars"></i>
 
@@ -228,14 +148,9 @@
 </header>
 
 
-<!-- =====================================================
-     NAVIGATION
-====================================================== -->
+<!-- NAVIGATION -->
 
-<nav
-    class="navigation"
-    id="mainNavigation"
->
+<nav class="navigation">
 
     <div class="container nav-container">
 
@@ -247,51 +162,47 @@
                 </a>
             </li>
 
-
             <li>
-                <a href="../boutique/index.html">
-                    Boutique
-                </a>
-            </li>
-
-
-            <li>
-                <a href="../boutique/homme.html">
+                <a href="../homme/index.html">
                     Homme
                 </a>
             </li>
 
-
             <li>
-                <a href="../boutique/femme.html">
+                <a href="../femme/index.html">
                     Femme
                 </a>
             </li>
 
-
             <li>
-                <a href="../boutique/chaussures.html">
+                <a href="../chaussures/index.html">
                     Chaussures
                 </a>
             </li>
 
+            <li>
+                <a href="../sacs/index.html">
+                    Sacs
+                </a>
+            </li>
 
             <li class="active">
-                <a
-                    href="index.html"
-                    aria-current="page"
-                >
+                <a href="index.html">
                     Accessoires
                 </a>
             </li>
 
-
             <li>
-                <a href="../boutique/promotions.html">
-                    Promotions
+                <a href="../montres/index.html">
+                    Montres
                 </a>
             </li>
 
+            <li class="sale-menu">
+                <a href="../promotions/index.html">
+                    Promotions
+                </a>
+            </li>
 
             <li>
                 <a href="../index.html#contact">
@@ -306,300 +217,59 @@
 </nav>
 
 
-<!-- =====================================================
-     HERO ACCESSOIRES
-====================================================== -->
+<!-- PAGE -->
 
-<section class="shop-hero accessories-hero">
+<main>
 
-    <div class="container">
+    <section class="featured-products">
 
-        <span class="shop-hero-label">
-            YMS STORE
-        </span>
+        <div class="container">
 
-        <h1>
-            Accessoires
-        </h1>
+            <div class="section-header">
 
-        <p>
-            Complétez votre style avec notre sélection
-            d'accessoires premium.
-        </p>
+                <span>
+                    YMS STORE
+                </span>
 
-    </div>
+                <h1>
+                    Accessoires
+                </h1>
 
-</section>
-
-
-<!-- =====================================================
-     CONTENU PRINCIPAL
-====================================================== -->
-
-<main class="shop-container">
-
-    <!-- =================================================
-         EN-TÊTE
-    ================================================== -->
-
-    <div class="shop-header">
-
-        <div class="shop-heading">
-
-            <span class="shop-label">
-                COLLECTION ACCESSOIRES
-            </span>
-
-            <h2>
-                Nos accessoires
-            </h2>
-
-            <p>
-                Découvrez les détails qui font toute la différence.
-            </p>
-
-        </div>
-
-
-        <!-- TRI -->
-
-        <div class="shop-sort">
-
-            <label for="sortProducts">
-                Trier par
-            </label>
-
-            <select id="sortProducts">
-
-                <option value="default">
-                    Pertinence
-                </option>
-
-                <option value="price-low">
-                    Prix croissant
-                </option>
-
-                <option value="price-high">
-                    Prix décroissant
-                </option>
-
-                <option value="name">
-                    Nom A-Z
-                </option>
-
-            </select>
-
-        </div>
-
-    </div>
-
-
-    <!-- =================================================
-         LAYOUT
-    ================================================== -->
-
-    <div class="shop-layout">
-
-
-        <!-- =================================================
-             SIDEBAR
-        ================================================== -->
-
-        <aside class="shop-sidebar">
-
-            <div class="filter-title">
-
-                <h3>
-                    Catégories
-                </h3>
-
-                <i class="fa-solid fa-sliders"></i>
+                <p>
+                    Découvrez notre sélection d'accessoires
+                    pour compléter votre style.
+                </p>
 
             </div>
 
 
-            <div class="category-filters">
-
-                <button
-                    type="button"
-                    class="category-filter active"
-                    data-category="all"
-                >
-                    <span>
-                        Tous les accessoires
-                    </span>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
+            <div class="products-grid">
 
 
-                <button
-                    type="button"
-                    class="category-filter"
-                    data-category="accessoires"
-                >
-                    <span>
-                        Accessoires
-                    </span>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-
-
-                <button
-                    type="button"
-                    class="category-filter"
-                    data-category="montres"
-                >
-                    <span>
-                        Montres
-                    </span>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-
-
-                <button
-                    type="button"
-                    class="category-filter"
-                    data-category="sacs"
-                >
-                    <span>
-                        Sacs
-                    </span>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-
-
-                <button
-                    type="button"
-                    class="category-filter"
-                    data-category="lunettes"
-                >
-                    <span>
-                        Lunettes
-                    </span>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-
-
-                <button
-                    type="button"
-                    class="category-filter"
-                    data-category="ceintures"
-                >
-                    <span>
-                        Ceintures
-                    </span>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-
-
-                <button
-                    type="button"
-                    class="category-filter"
-                    data-category="portefeuilles"
-                >
-                    <span>
-                        Portefeuilles
-                    </span>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-
-
-                <button
-                    type="button"
-                    class="category-filter promotion-filter"
-                    data-category="promotions"
-                >
-                    <span>
-                        Promotions
-                    </span>
-
-                    <i class="fa-solid fa-fire"></i>
-                </button>
-
-            </div>
-
-        </aside>
-
-
-        <!-- =================================================
-             PRODUITS
-        ================================================== -->
-
-        <section class="shop-products">
-
-            <div
-                class="products-grid"
-                id="productsGrid"
-            >
-
-
-                <!-- =========================================
-                     PRODUIT 1
-                ========================================== -->
+                <!-- PRODUIT -->
 
                 <article
                     class="product-card"
-                    data-category="accessoires"
-                    data-name="Accessoire Premium"
-                    data-price="40"
-                    data-new="false"
-                    data-promotion="false"
-                >
+                    data-name="Lunettes Premium"
+                    data-price="35"
+                    data-image="https://images.unsplash.com/photo-1511499767150-a48a237f0083">
 
                     <div class="product-image">
 
+                        <span class="badge new">
+                            Nouveau
+                        </span>
+
                         <img
-                            src="../assets/products/accessoire-premium.jpg"
-                            alt="Accessoire Premium"
-                            loading="lazy"
-                        >
-
-                        <div class="product-actions">
-
-                            <button
-                                type="button"
-                                class="favorite-btn"
-                                aria-label="Ajouter aux favoris"
-                            >
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="view-btn"
-                                aria-label="Voir le produit"
-                            >
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="quick-cart"
-                                aria-label="Ajouter rapidement au panier"
-                            >
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-
-                        </div>
+                            src="https://images.unsplash.com/photo-1511499767150-a48a237f0083"
+                            alt="Lunettes Premium">
 
                     </div>
 
-
                     <div class="product-info">
 
-                        <span class="product-category">
-                            Accessoires
-                        </span>
-
                         <h3>
-                            Accessoire Premium
+                            Lunettes Premium
                         </h3>
 
                         <div class="rating">
@@ -610,15 +280,12 @@
                         <div class="price">
 
                             <span class="current-price">
-                                40$
+                                35$
                             </span>
 
                         </div>
 
-                        <button
-                            type="button"
-                            class="add-cart"
-                        >
+                        <button class="add-cart">
                             Ajouter au panier
                         </button>
 
@@ -627,339 +294,26 @@
                 </article>
 
 
-                <!-- =========================================
-                     PRODUIT 2
-                ========================================== -->
+                <!-- PRODUIT -->
 
                 <article
                     class="product-card"
-                    data-category="montres"
-                    data-name="Montre Luxe"
-                    data-price="120"
-                    data-new="false"
-                    data-promotion="false"
-                >
+                    data-name="Ceinture Homme"
+                    data-price="30"
+                    data-image="https://images.unsplash.com/photo-1553062407-98eeb64c6a62">
 
                     <div class="product-image">
 
                         <img
-                            src="../assets/products/montre-luxe.jpg"
-                            alt="Montre Luxe"
-                            loading="lazy"
-                        >
-
-                        <div class="product-actions">
-
-                            <button
-                                type="button"
-                                class="favorite-btn"
-                                aria-label="Ajouter aux favoris"
-                            >
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="view-btn"
-                                aria-label="Voir le produit"
-                            >
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="quick-cart"
-                                aria-label="Ajouter rapidement au panier"
-                            >
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-
-                        </div>
+                            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62"
+                            alt="Ceinture">
 
                     </div>
-
 
                     <div class="product-info">
 
-                        <span class="product-category">
-                            Montres
-                        </span>
-
                         <h3>
-                            Montre Luxe
-                        </h3>
-
-                        <div class="rating">
-                            ★★★★★
-                            <span>(32)</span>
-                        </div>
-
-                        <div class="price">
-
-                            <span class="current-price">
-                                120$
-                            </span>
-
-                        </div>
-
-                        <button
-                            type="button"
-                            class="add-cart"
-                        >
-                            Ajouter au panier
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =========================================
-                     PRODUIT 3
-                ========================================== -->
-
-                <article
-                    class="product-card"
-                    data-category="sacs"
-                    data-name="Sac Premium Femme"
-                    data-price="75"
-                    data-new="true"
-                    data-promotion="false"
-                >
-
-                    <div class="product-image">
-
-                        <span class="badge new">
-                            Nouveau
-                        </span>
-
-                        <img
-                            src="../assets/products/sac-premium.jpg"
-                            alt="Sac Premium Femme"
-                            loading="lazy"
-                        >
-
-                        <div class="product-actions">
-
-                            <button
-                                type="button"
-                                class="favorite-btn"
-                                aria-label="Ajouter aux favoris"
-                            >
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="view-btn"
-                                aria-label="Voir le produit"
-                            >
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="quick-cart"
-                                aria-label="Ajouter rapidement au panier"
-                            >
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="product-info">
-
-                        <span class="product-category">
-                            Sacs
-                        </span>
-
-                        <h3>
-                            Sac Premium Femme
-                        </h3>
-
-                        <div class="rating">
-                            ★★★★★
-                            <span>(28)</span>
-                        </div>
-
-                        <div class="price">
-
-                            <span class="current-price">
-                                75$
-                            </span>
-
-                        </div>
-
-                        <button
-                            type="button"
-                            class="add-cart"
-                        >
-                            Ajouter au panier
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =========================================
-                     PRODUIT 4
-                ========================================== -->
-
-                <article
-                    class="product-card"
-                    data-category="lunettes"
-                    data-name="Lunettes Élégance"
-                    data-price="45"
-                    data-new="true"
-                    data-promotion="false"
-                >
-
-                    <div class="product-image">
-
-                        <span class="badge new">
-                            Nouveau
-                        </span>
-
-                        <img
-                            src="../assets/products/lunettes-elegance.jpg"
-                            alt="Lunettes Élégance"
-                            loading="lazy"
-                        >
-
-                        <div class="product-actions">
-
-                            <button
-                                type="button"
-                                class="favorite-btn"
-                                aria-label="Ajouter aux favoris"
-                            >
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="view-btn"
-                                aria-label="Voir le produit"
-                            >
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="quick-cart"
-                                aria-label="Ajouter rapidement au panier"
-                            >
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="product-info">
-
-                        <span class="product-category">
-                            Lunettes
-                        </span>
-
-                        <h3>
-                            Lunettes Élégance
-                        </h3>
-
-                        <div class="rating">
-                            ★★★★★
-                            <span>(19)</span>
-                        </div>
-
-                        <div class="price">
-
-                            <span class="current-price">
-                                45$
-                            </span>
-
-                        </div>
-
-                        <button
-                            type="button"
-                            class="add-cart"
-                        >
-                            Ajouter au panier
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =========================================
-                     PRODUIT 5
-                ========================================== -->
-
-                <article
-                    class="product-card"
-                    data-category="ceintures"
-                    data-name="Ceinture Cuir Premium"
-                    data-price="35"
-                    data-new="false"
-                    data-promotion="true"
-                >
-
-                    <div class="product-image">
-
-                        <span class="badge">
-                            -15%
-                        </span>
-
-                        <img
-                            src="../assets/products/ceinture-cuir.jpg"
-                            alt="Ceinture Cuir Premium"
-                            loading="lazy"
-                        >
-
-                        <div class="product-actions">
-
-                            <button
-                                type="button"
-                                class="favorite-btn"
-                                aria-label="Ajouter aux favoris"
-                            >
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="view-btn"
-                                aria-label="Voir le produit"
-                            >
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="quick-cart"
-                                aria-label="Ajouter rapidement au panier"
-                            >
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="product-info">
-
-                        <span class="product-category">
-                            Ceintures
-                        </span>
-
-                        <h3>
-                            Ceinture Cuir Premium
+                            Ceinture Élégance
                         </h3>
 
                         <div class="rating">
@@ -970,106 +324,108 @@
                         <div class="price">
 
                             <span class="current-price">
-                                35$
-                            </span>
-
-                            <span class="old-price">
-                                42$
-                            </span>
-
-                        </div>
-
-                        <button
-                            type="button"
-                            class="add-cart"
-                        >
-                            Ajouter au panier
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =========================================
-                     PRODUIT 6
-                ========================================== -->
-
-                <article
-                    class="product-card"
-                    data-category="portefeuilles"
-                    data-name="Portefeuille Homme Premium"
-                    data-price="30"
-                    data-new="false"
-                    data-promotion="false"
-                >
-
-                    <div class="product-image">
-
-                        <img
-                            src="../assets/products/portefeuille-premium.jpg"
-                            alt="Portefeuille Homme Premium"
-                            loading="lazy"
-                        >
-
-                        <div class="product-actions">
-
-                            <button
-                                type="button"
-                                class="favorite-btn"
-                                aria-label="Ajouter aux favoris"
-                            >
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="view-btn"
-                                aria-label="Voir le produit"
-                            >
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-
-                            <button
-                                type="button"
-                                class="quick-cart"
-                                aria-label="Ajouter rapidement au panier"
-                            >
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="product-info">
-
-                        <span class="product-category">
-                            Portefeuilles
-                        </span>
-
-                        <h3>
-                            Portefeuille Homme Premium
-                        </h3>
-
-                        <div class="rating">
-                            ★★★★★
-                            <span>(26)</span>
-                        </div>
-
-                        <div class="price">
-
-                            <span class="current-price">
                                 30$
                             </span>
 
                         </div>
 
-                        <button
-                            type="button"
-                            class="add-cart"
-                        >
+                        <button class="add-cart">
+                            Ajouter au panier
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUIT -->
+
+                <article
+                    class="product-card"
+                    data-name="Portefeuille Premium"
+                    data-price="40"
+                    data-image="https://images.unsplash.com/photo-1627123424574-724758594e93">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1627123424574-724758594e93"
+                            alt="Portefeuille">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>
+                            Portefeuille Premium
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(42)</span>
+                        </div>
+
+                        <div class="price">
+
+                            <span class="current-price">
+                                40$
+                            </span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Ajouter au panier
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUIT -->
+
+                <article
+                    class="product-card"
+                    data-name="Casquette Premium"
+                    data-price="25"
+                    data-image="https://images.unsplash.com/photo-1521369909029-2afed882baee">
+
+                    <div class="product-image">
+
+                        <span class="badge">
+                            -15%
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1521369909029-2afed882baee"
+                            alt="Casquette">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>
+                            Casquette Premium
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                            <span>(37)</span>
+                        </div>
+
+                        <div class="price">
+
+                            <span class="current-price">
+                                25$
+                            </span>
+
+                            <span class="old-price">
+                                30$
+                            </span>
+
+                        </div>
+
+                        <button class="add-cart">
                             Ajouter au panier
                         </button>
 
@@ -1080,94 +436,127 @@
 
             </div>
 
+        </div>
 
-            <!-- =================================================
-                 MESSAGE AUCUN PRODUIT
-            ================================================== -->
-
-            <div
-                class="no-products"
-                id="noProducts"
-                hidden
-            >
-
-                <i class="fa-solid fa-box-open"></i>
-
-                <h3>
-                    Aucun produit trouvé
-                </h3>
-
-                <p>
-                    Essayez une autre catégorie ou recherchez
-                    un autre produit.
-                </p>
-
-            </div>
-
-        </section>
-
-    </div>
+    </section>
 
 </main>
 
 
-<!-- =====================================================
-     MINI PANIER
-====================================================== -->
+<!-- FOOTER -->
 
-<div
-    class="mini-cart-overlay"
-    id="miniCartOverlay"
-    hidden
-></div>
+<footer class="footer">
 
+    <div class="container footer-grid">
 
-<aside
-    class="mini-cart"
-    id="miniCart"
-    aria-hidden="true"
->
+        <div class="footer-column">
 
-    <div class="mini-cart-header">
+            <img
+                src="../assets/image/IMG_3474.PNG"
+                class="footer-logo"
+                alt="YMS STORE">
 
-        <div>
-
-            <span class="cart-label">
-                YMS STORE
-            </span>
-
-            <h3>
-                Votre panier
-            </h3>
+            <p>
+                Votre boutique de référence pour la mode,
+                les chaussures et accessoires premium.
+            </p>
 
         </div>
 
 
-        <button
-            type="button"
-            class="close-cart"
-            id="closeCart"
-            aria-label="Fermer le panier"
-        >
-            <i class="fa-solid fa-xmark"></i>
-        </button>
+        <div class="footer-column">
 
-    </div>
+            <h3>
+                Boutique
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="../homme/index.html">
+                        Homme
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../femme/index.html">
+                        Femme
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../chaussures/index.html">
+                        Chaussures
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../sacs/index.html">
+                        Sacs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../montres/index.html">
+                        Montres
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
 
 
-    <!-- PRODUITS DU PANIER -->
+        <div class="footer-column">
 
-    <div
-        class="mini-cart-products"
-        id="miniCartProducts"
-    >
+            <h3>
+                Service Client
+            </h3>
 
-        <div class="empty-cart">
+            <ul>
 
-            <i class="fa-solid fa-cart-shopping"></i>
+                <li>
+                    <a href="../index.html#contact">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../panier/index.html">
+                        Mon panier
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../client/login.html">
+                        Mon compte
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
 
             <p>
-                Votre panier est vide.
+                <i class="fa-solid fa-phone"></i>
+                +243 972 215 398
+            </p>
+
+            <p>
+                <i class="fa-brands fa-whatsapp"></i>
+                +243 971 917 222
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Goma / Bukavu - RDC
             </p>
 
         </div>
@@ -1175,171 +564,20 @@
     </div>
 
 
-    <!-- FOOTER PANIER -->
+    <div class="copyright">
 
-    <div class="mini-cart-footer">
-
-        <div class="cart-total">
-
-            <span>
-                Total
-            </span>
-
-            <strong id="cartTotal">
-                0$
-            </strong>
-
-        </div>
-
-
-        <a
-            href="https://wa.me/243971917222"
-            class="checkout-whatsapp"
-            id="checkoutWhatsapp"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-            Commander sur WhatsApp
-
-        </a>
-
-
-        <a
-            href="../client/commande.html"
-            class="checkout-btn"
-        >
-
-            <i class="fa-solid fa-credit-card"></i>
-
-            Finaliser la commande
-
-        </a>
+        <p>
+            © 2026 YMS STORE - Tous droits réservés.
+        </p>
 
     </div>
 
-</aside>
+</footer>
 
-
-<!-- =====================================================
-     MODAL APERÇU PRODUIT
-====================================================== -->
-
-<div
-    class="product-modal"
-    id="productModal"
-    hidden
-    aria-hidden="true"
->
-
-    <div class="product-modal-overlay"></div>
-
-    <div class="product-modal-content">
-
-        <button
-            type="button"
-            class="product-modal-close"
-            id="closeProductModal"
-            aria-label="Fermer"
-        >
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-
-
-        <div class="product-modal-image">
-
-            <img
-                id="modalProductImage"
-                src=""
-                alt=""
-            >
-
-        </div>
-
-
-        <div class="product-modal-info">
-
-            <span
-                id="modalProductCategory"
-                class="product-category"
-            >
-                Produit
-            </span>
-
-            <h2 id="modalProductName">
-                Produit
-            </h2>
-
-            <div
-                id="modalProductRating"
-                class="rating"
-            >
-                ★★★★★
-            </div>
-
-            <div class="price">
-
-                <span
-                    id="modalProductPrice"
-                    class="current-price"
-                >
-                    0$
-                </span>
-
-            </div>
-
-            <button
-                type="button"
-                id="modalAddCart"
-                class="add-cart"
-            >
-                Ajouter au panier
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     TOAST
-====================================================== -->
-
-<div
-    class="shop-toast"
-    id="shopToast"
-    role="status"
-    aria-live="polite"
->
-
-    <i class="fa-solid fa-check"></i>
-
-    <span>
-        Produit ajouté au panier
-    </span>
-
-</div>
-
-
-<!-- =====================================================
-     SCRIPTS
-====================================================== -->
-
-<script src="../js/app.js"></script>
 
 <script src="../js/panier.js"></script>
-
 <script src="../js/recherche.js"></script>
 
-<script src="../boutique/boutique.js"></script>
-
-<script src="accessoires.js"></script>
-
-
 </body>
+
 </html>
-```

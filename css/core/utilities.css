@@ -1,0 +1,190 @@
+/*======================================================
+  YMS STORE
+  UTILITIES.CSS
+======================================================*/
+
+/*==============================
+DISPLAY
+==============================*/
+
+.d-none{display:none!important;}
+.d-block{display:block!important;}
+.d-flex{display:flex!important;}
+.d-grid{display:grid!important;}
+
+/*==============================
+ALIGNEMENTS
+==============================*/
+
+.justify-center{justify-content:center;}
+.justify-between{justify-content:space-between;}
+.justify-around{justify-content:space-around;}
+
+.align-center{align-items:center;}
+.align-start{align-items:flex-start;}
+.align-end{align-items:flex-end;}
+
+/*==============================
+TEXTES
+==============================*/
+
+.text-primary{color:var(--color-primary);}
+.text-white{color:var(--color-white);}
+.text-muted{color:var(--color-text-muted);}
+
+.text-uppercase{text-transform:uppercase;}
+.text-capitalize{text-transform:capitalize;}
+
+.fw-light{font-weight:300;}
+.fw-normal{font-weight:400;}
+.fw-medium{font-weight:500;}
+.fw-semibold{font-weight:600;}
+.fw-bold{font-weight:700;}
+.fw-extrabold{font-weight:800;}
+
+/*==============================
+FONDS
+==============================*/
+
+.bg-primary{
+    background:var(--color-primary);
+    color:#000;
+}
+
+.bg-dark{
+    background:var(--color-bg);
+}
+
+.bg-surface{
+    background:var(--color-surface);
+}
+
+.bg-surface-2{
+    background:var(--color-surface-2);
+}
+
+/*==============================
+RAYONS
+==============================*/
+
+.rounded-sm{border-radius:var(--radius-sm);}
+.rounded-md{border-radius:var(--radius-md);}
+.rounded-lg{border-radius:var(--radius-lg);}
+.rounded-xl{border-radius:var(--radius-xl);}
+.rounded-pill{border-radius:999px;}
+
+/*==============================
+OMBRES
+==============================*/
+
+.shadow-sm{
+    box-shadow:var(--shadow-sm);
+}
+
+.shadow-md{
+    box-shadow:var(--shadow-md);
+}
+
+.shadow-lg{
+    box-shadow:var(--shadow-lg);
+}
+
+/*==============================
+BORDURES
+==============================*/
+
+.border{
+    border:1px solid var(--color-border);
+}
+
+/*==============================
+OVERFLOW
+==============================*/
+
+.overflow-hidden{
+    overflow:hidden;
+}
+
+.position-relative{
+    position:relative;
+}
+
+.position-absolute{
+    position:absolute;
+}
+
+/*==============================
+CURSEUR
+==============================*/
+
+.pointer{
+    cursor:pointer;
+}
+
+/*==============================
+TRANSITIONS
+==============================*/
+
+.transition{
+    transition:var(--transition);
+}
+
+/*==============================
+HOVER
+==============================*/
+
+.hover-lift{
+    transition:var(--transition);
+}
+
+.hover-lift:hover{
+    transform:translateY(-8px);
+}
+
+.hover-scale{
+    transition:var(--transition);
+}
+
+.hover-scale:hover{
+    transform:scale(1.05);
+}
+
+/*==============================
+BOUTONS
+==============================*/
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+}
+
+.btn-primary{
+    background:var(--color-primary);
+    color:#000;
+}
+
+.btn-primary:hover{
+    background:var(--color-primary-dark);
+}
+
+.btn-outline{
+    border:2px solid var(--color-primary);
+    color:var(--color-primary);
+}
+
+.btn-outline:hover{
+    background:var(--color-primary);
+    color:#000;
+}

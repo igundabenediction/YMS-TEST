@@ -1,0 +1,227 @@
+/*======================================================
+  YMS STORE
+  TOPBAR.CSS
+======================================================*/
+
+
+/*==============================
+TOP BAR
+==============================*/
+
+.top-bar{
+
+    background:#000;
+
+    border-bottom:1px solid rgba(255,193,7,.15);
+
+    color:var(--color-text-light);
+
+    font-size:.85rem;
+
+    padding:10px 0;
+
+}
+
+
+
+/*==============================
+CONTAINER
+==============================*/
+
+.top-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+}
+
+
+
+/*==============================
+PARTIE GAUCHE
+==============================*/
+
+.top-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+
+
+.top-left span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#ddd;
+
+}
+
+
+
+.top-left i{
+
+    color:var(--color-primary);
+
+    font-size:1rem;
+
+}
+
+
+
+/*==============================
+PARTIE DROITE
+==============================*/
+
+.top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.top-right a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#ddd;
+
+    font-size:.9rem;
+
+}
+
+
+
+.top-right a:hover{
+
+    color:var(--color-primary);
+
+}
+
+
+
+.top-right i{
+
+    font-size:1rem;
+
+}
+
+
+
+/*==============================
+WHATSAPP SPECIAL
+==============================*/
+
+
+.top-right a:first-child i{
+
+    color:#25D366;
+
+}
+
+
+
+/*==============================
+EFFET HOVER SOCIAL
+==============================*/
+
+.top-right a{
+
+    transition:.3s ease;
+
+}
+
+
+
+.top-right a:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/*==============================
+RESPONSIVE TABLETTE
+==============================*/
+
+
+@media(max-width:900px){
+
+
+    .top-container{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+    }
+
+
+    .top-left{
+
+        gap:15px;
+
+    }
+
+
+}
+
+
+
+/*==============================
+RESPONSIVE MOBILE
+==============================*/
+
+
+@media(max-width:600px){
+
+
+    .top-left{
+
+        flex-direction:column;
+
+        gap:8px;
+
+        text-align:center;
+
+    }
+
+
+    .top-right{
+
+        gap:12px;
+
+    }
+
+
+    .top-right a span{
+
+        display:none;
+
+    }
+
+
+}

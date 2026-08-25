@@ -1,0 +1,455 @@
+/*======================================================
+  YMS STORE
+  HERO.CSS
+======================================================*/
+
+
+/*==============================
+SECTION HERO
+==============================*/
+
+.hero{
+
+    background:
+
+    radial-gradient(
+    circle at right,
+    rgba(255,193,7,.15),
+    transparent 35%
+    ),
+
+    #050505;
+
+    min-height:700px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:0;
+
+}
+
+
+
+/*==============================
+SLIDER
+==============================*/
+
+.hero-slider{
+
+    width:100%;
+
+    position:relative;
+
+}
+
+
+
+.hero-slide{
+
+    display:none;
+
+}
+
+
+
+.hero-slide.active{
+
+    display:block;
+
+    animation:fadeIn .8s ease;
+
+}
+
+
+
+/*==============================
+CONTENEUR HERO
+==============================*/
+
+.hero-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+
+
+/*==============================
+CONTENU TEXTE
+==============================*/
+
+.hero-content{
+
+    max-width:650px;
+
+}
+
+
+
+/*==============================
+TAG
+==============================*/
+
+.hero-tag{
+
+    display:inline-block;
+
+    color:var(--color-primary);
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/*==============================
+TITRE
+==============================*/
+
+.hero-content h1{
+
+    font-size:clamp(3rem,5vw,5rem);
+
+    line-height:1.05;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.hero-content h1::first-letter{
+
+    color:var(--color-primary);
+
+}
+
+
+
+/*==============================
+DESCRIPTION
+==============================*/
+
+.hero-content p{
+
+    max-width:520px;
+
+    font-size:1.1rem;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/*==============================
+BOUTONS HERO
+==============================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+
+/*==============================
+IMAGE HERO
+==============================*/
+
+.hero-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.hero-image img{
+
+    max-height:600px;
+
+    object-fit:contain;
+
+    animation:floating 4s ease-in-out infinite;
+
+    filter:
+
+    drop-shadow(
+    0 25px 40px rgba(0,0,0,.6)
+    );
+
+}
+
+
+
+/*==============================
+EFFET LUMIERE IMAGE
+==============================*/
+
+.hero-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    background:
+
+    radial-gradient(
+    circle,
+    rgba(255,193,7,.25),
+    transparent 70%
+    );
+
+    border-radius:50%;
+
+    z-index:0;
+
+}
+
+
+
+.hero-image img{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+
+
+/*==============================
+CONTROLES SLIDER
+==============================*/
+
+.slider-controls{
+
+    position:absolute;
+
+    bottom:40px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+/*==============================
+BOUTONS FLECHES
+==============================*/
+
+.slider-controls button{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#111;
+
+    border:1px solid rgba(255,193,7,.3);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.3s;
+
+}
+
+
+
+.slider-controls button:hover{
+
+    background:var(--color-primary);
+
+    color:#000;
+
+}
+
+
+
+/*==============================
+DOTS
+==============================*/
+
+.dots{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+
+
+.dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#555;
+
+    cursor:pointer;
+
+}
+
+
+
+.dot.active{
+
+    background:var(--color-primary);
+
+    width:30px;
+
+    border-radius:10px;
+
+}
+
+
+
+/*==============================
+TABLETTE
+==============================*/
+
+@media(max-width:992px){
+
+
+    .hero{
+
+        min-height:auto;
+
+        padding:80px 0;
+
+    }
+
+
+    .hero-container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+
+    .hero-content{
+
+        margin:auto;
+
+    }
+
+
+    .hero-content p{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+
+    .hero-image img{
+
+        max-height:450px;
+
+    }
+
+
+}
+
+
+
+/*==============================
+MOBILE
+==============================*/
+
+@media(max-width:600px){
+
+
+    .hero-content h1{
+
+        font-size:2.4rem;
+
+    }
+
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+
+    .hero-buttons .btn{
+
+        width:100%;
+
+    }
+
+
+    .hero-image img{
+
+        max-height:350px;
+
+    }
+
+
+}

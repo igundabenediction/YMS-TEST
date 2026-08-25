@@ -1,0 +1,250 @@
+/*======================================================
+  YMS STORE
+  PROMO.CSS
+======================================================*/
+
+
+/*==============================
+SECTION PROMOTION
+==============================*/
+
+.promo-banner{
+
+    background:#050505;
+
+    padding:70px 0;
+
+}
+
+
+
+/*==============================
+GRILLE PROMO
+==============================*/
+
+.promo-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:25px;
+
+}
+
+
+
+/*==============================
+BLOC PROMO
+==============================*/
+
+.promo-box{
+
+    position:relative;
+
+    height:350px;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+}
+
+
+
+/*==============================
+IMAGE
+==============================*/
+
+.promo-box img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.7s ease;
+
+}
+
+
+
+.promo-box:hover img{
+
+    transform:scale(1.1);
+
+}
+
+
+
+/*==============================
+OVERLAY
+==============================*/
+
+.promo-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    to right,
+
+    rgba(0,0,0,.75),
+
+    transparent
+
+    );
+
+}
+
+
+
+/*==============================
+CONTENU
+==============================*/
+
+.promo-content{
+
+    position:absolute;
+
+    left:35px;
+
+    bottom:35px;
+
+    z-index:2;
+
+}
+
+
+
+.promo-content span{
+
+    color:var(--color-primary);
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.promo-content h2,
+.promo-content h3{
+
+    color:white;
+
+    margin:10px 0 20px;
+
+}
+
+
+
+/*==============================
+LIEN
+==============================*/
+
+.promo-content a{
+
+    display:inline-flex;
+
+    padding:12px 25px;
+
+    border-radius:50px;
+
+    background:var(--color-primary);
+
+    color:#000;
+
+    font-weight:600;
+
+}
+
+
+
+.promo-content a:hover{
+
+    background:white;
+
+}
+
+
+
+/*==============================
+GRAND BLOC
+==============================*/
+
+.promo-box.large{
+
+    height:400px;
+
+}
+
+
+
+/*==============================
+TABLETTE
+==============================*/
+
+@media(max-width:1000px){
+
+
+    .promo-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+
+    .promo-box.large{
+
+        grid-column:span 2;
+
+    }
+
+
+}
+
+
+
+/*==============================
+MOBILE
+==============================*/
+
+@media(max-width:600px){
+
+
+    .promo-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .promo-box.large{
+
+        grid-column:auto;
+
+    }
+
+
+    .promo-box,
+    .promo-box.large{
+
+        height:320px;
+
+    }
+
+
+}

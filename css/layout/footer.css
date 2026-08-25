@@ -1,0 +1,328 @@
+/*======================================================
+  YMS STORE
+  FOOTER.CSS
+======================================================*/
+
+
+/*==============================
+FOOTER PRINCIPAL
+==============================*/
+
+.footer{
+
+    background:#050505;
+
+    padding-top:80px;
+
+    border-top:1px solid rgba(255,193,7,.15);
+
+}
+
+
+
+/*==============================
+GRILLE FOOTER
+==============================*/
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1.3fr 1.3fr;
+
+    gap:50px;
+
+    padding-bottom:60px;
+
+}
+
+
+
+/*==============================
+COLONNES
+==============================*/
+
+.footer-column h3{
+
+    color:var(--color-primary);
+
+    font-size:1.2rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.footer-column p{
+
+    color:#aaa;
+
+    font-size:.95rem;
+
+}
+
+
+
+/*==============================
+LOGO FOOTER
+==============================*/
+
+.footer-logo{
+
+    width:160px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/*==============================
+RESEAUX SOCIAUX
+==============================*/
+
+.social-links{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:25px;
+
+}
+
+
+
+.social-links a{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#111;
+
+    color:white;
+
+    border:1px solid rgba(255,193,7,.15);
+
+}
+
+
+
+.social-links a:hover{
+
+    background:var(--color-primary);
+
+    color:#000;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*==============================
+LISTES FOOTER
+==============================*/
+
+.footer-column ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+
+.footer-column li a{
+
+    color:#aaa;
+
+    font-size:.95rem;
+
+}
+
+
+
+.footer-column li a:hover{
+
+    color:var(--color-primary);
+
+    padding-left:8px;
+
+}
+
+
+
+/*==============================
+CONTACT
+==============================*/
+
+.footer-column p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.footer-column p i{
+
+    color:var(--color-primary);
+
+}
+
+
+
+/*==============================
+PAIEMENTS
+==============================*/
+
+.payments{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:15px;
+
+}
+
+
+
+.payments i{
+
+    font-size:2rem;
+
+    color:#ddd;
+
+}
+
+
+
+.payments i:hover{
+
+    color:var(--color-primary);
+
+}
+
+
+
+/*==============================
+COPYRIGHT
+==============================*/
+
+.copyright{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:25px 0;
+
+    text-align:center;
+
+}
+
+
+
+.copyright p{
+
+    margin:0;
+
+    font-size:.9rem;
+
+    color:#777;
+
+}
+
+
+
+/*==============================
+RESPONSIVE TABLETTE
+==============================*/
+
+@media(max-width:1000px){
+
+
+    .footer-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+/*==============================
+RESPONSIVE MOBILE
+==============================*/
+
+@media(max-width:600px){
+
+
+    .footer{
+
+        padding-top:60px;
+
+    }
+
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+
+    .footer-column{
+
+        text-align:center;
+
+    }
+
+
+    .footer-column p{
+
+        justify-content:center;
+
+    }
+
+
+    .social-links{
+
+        justify-content:center;
+
+    }
+
+
+    .payments{
+
+        justify-content:center;
+
+    }
+
+
+}
